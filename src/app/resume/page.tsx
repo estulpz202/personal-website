@@ -1,3 +1,3 @@
 export default function ResumePage() {
-  return <main className="p-6 text-xl">Resume Page</main>;
+  return <main className="py-12 px-4">Resume Page (coming soon)</main>;
 }

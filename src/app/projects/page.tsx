@@ -1,3 +1,3 @@
 export default function ProjectsPage() {
-  return <main className="p-6 text-xl">Projects Page</main>;
+  return <main className="py-12 px-4">Projects Page (coming soon)</main>;
 }

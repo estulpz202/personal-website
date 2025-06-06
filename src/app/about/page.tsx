@@ -1,3 +1,3 @@
 export default function AboutPage() {
-  return <main className="p-6 text-xl">About Page</main>;
+  return <main className="py-12 px-4">About Page (coming soon)</main>;
 }

@@ -1,3 +1,3 @@
 export default function ContactPage() {
-  return <main className="p-6 text-xl">Contact Page</main>;
+  return <main className="py-12 px-4">Contact Page (coming soon)</main>;
 }
