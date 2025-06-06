@@ -23,6 +23,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Formatting & Linting
+
+Check and fix style issues:
+
+```bash
+npm run lint
+npm run format
+```
+
 ## Deployment
 
 This site is deployed on [Vercel](https://vercel.com).  
