@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function HomePage() {
   return (
     <section className="flex flex-col gap-8 items-start py-12">

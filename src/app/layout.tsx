@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NavBar />
-        <main className="p-6 max-w-4xl mx-auto">{children}</main>
+        <main className="min-h-screen p-6 max-w-4xl mx-auto">{children}</main>
       </body>
     </html>
   );
