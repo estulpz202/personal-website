@@ -1,19 +1,17 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
     <section className="flex flex-col gap-8 items-start py-12">
-      <h1 className="text-4xl font-bold tracking-tight">
-        Estuardo Lopez Letona
-      </h1>
+      <h1 className="text-4xl font-bold tracking-tight">Estuardo Lopez Letona</h1>
       <h2 className="text-xl text-gray-600 dark:text-gray-300">
         CS @ Carnegie Mellon | SWE Concentration | History Minor
       </h2>
 
       <p className="text-lg leading-relaxed max-w-prose">
-        I'm a software engineer passionate about building impactful, user-centered
-        systems. I've worked across full-stack apps, AI agents, and teaching roles — 
-        and I'm always exploring ways to make tech more accessible and effective.
+        I'm a software engineer passionate about building impactful, user-centered systems. I've
+        worked across full-stack apps, AI agents, and teaching roles — and I'm always exploring ways
+        to make tech more accessible and effective.
       </p>
 
       <div className="flex gap-4 pt-4">
