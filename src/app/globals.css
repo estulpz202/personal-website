@@ -11,15 +11,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 /* Base body styles */
+/* Force light mode — no dark mode media query used */
 body {
   background: var(--background);
   color: var(--foreground);
