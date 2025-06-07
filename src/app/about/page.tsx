@@ -10,19 +10,20 @@ export default function AboutPage() {
           <SectionHeader title="About Me" />
           <p className="text-base text-gray-700 mb-6">
             I'm Estuardo Lopez, a Computer Science student at Carnegie Mellon University, pursuing a
-            concentration in Software Engineering and a minor in History. I'm passionate about building
-            meaningful, impactful software and drawn to projects that challenge me both technically and
-            creatively.
+            concentration in Software Engineering and a minor in History. I'm passionate about
+            building meaningful, impactful software and drawn to projects that challenge me both
+            technically and creatively.
           </p>
           <p className="text-base text-gray-700 mb-6">
-            Through a mix of academic rigor and hands-on experience, I've developed a strong foundation in
-            low-level systems programming, algorithms, OOP, and fullstack development. I've built scalable
-            backends with RESTful APIs, designed responsive frontends with React, and contributed to
-            collaborative engineering teams using GitHub, Docker, and CI/CD workflows.
+            Through a mix of academic rigor and hands-on experience, I've developed a strong
+            foundation in low-level systems programming, algorithms, OOP, and fullstack development.
+            I've built scalable backends with RESTful APIs, designed responsive frontends with
+            React, and contributed to collaborative engineering teams using GitHub, Docker, and
+            CI/CD workflows.
           </p>
           <p className="text-base text-gray-700 mb-6">
-            Beyond technical skills, I value real-world impact, purpose-driven teamwork, and continuous
-            growth as a developer and teammate.
+            Beyond technical skills, I value real-world impact, purpose-driven teamwork, and
+            continuous growth as a developer and teammate.
           </p>
         </section>
 

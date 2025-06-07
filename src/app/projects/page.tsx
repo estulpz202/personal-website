@@ -27,7 +27,9 @@ export default function ProjectsPage() {
       description:
         'Built a full-stack Santorini game with a Java backend and React frontend. Designed comprehensive technical documentation and extensible architecture.',
       tech: ['Java', 'React', 'TypeScript', 'NanoHTTPD', 'UML'],
-      links: [{ label: 'Demo Video', url: 'https://www.loom.com/share/0322bac9ec2d42238ad54261231d5f29' }],
+      links: [
+        { label: 'Demo Video', url: 'https://www.loom.com/share/0322bac9ec2d42238ad54261231d5f29' },
+      ],
     },
     {
       title: 'The Pack',
@@ -36,7 +38,10 @@ export default function ProjectsPage() {
       tech: ['Swift', 'Xcode', 'GitHub'],
       links: [
         { label: 'GitHub Repo', url: 'https://github.com/pflc3/ThePackApp' },
-        { label: 'Demo Video', url: 'https://www.loom.com/share/3ef12a5b6511473c98ca58ffe85ad8f7?sid=d4634914-4af4-45fd-982e-2447691a2b84' },
+        {
+          label: 'Demo Video',
+          url: 'https://www.loom.com/share/3ef12a5b6511473c98ca58ffe85ad8f7?sid=d4634914-4af4-45fd-982e-2447691a2b84',
+        },
       ],
     },
   ];

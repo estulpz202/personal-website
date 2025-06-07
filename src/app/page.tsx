@@ -17,8 +17,9 @@ export default function HomePage() {
         <section className="py-12">
           <SectionHeader title="About Me" />
           <p className="text-base text-gray-700">
-            I'm a Computer Science student passionate about building meaningful software, with a strong
-            foundation in systems programming, algorithms, fullstack development, and impactful projects.
+            I'm a Computer Science student passionate about building meaningful software, with a
+            strong foundation in systems programming, algorithms, fullstack development, and
+            impactful projects.
           </p>
         </section>
 
