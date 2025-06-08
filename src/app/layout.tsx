@@ -34,9 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ul className="flex space-x-6 text-sm font-medium m-0 p-0 list-none">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:underline">
-                    {link.label}
-                  </Link>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -44,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {/* Main content area where each page is rendered */}
-        <main className="flex-grow max-w-5xl mx-auto px-4 py-8">{children}</main>
+        <main className="flex-grow">{children}</main>
 
         {/* Footer shown at bottom of every page */}
         <footer className="border-t py-6 text-center text-sm text-gray-500">

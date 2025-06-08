@@ -19,7 +19,8 @@ export default function HomePage() {
           <p className="text-base text-gray-700">
             I'm a Computer Science student passionate about building meaningful software, with a
             strong foundation in systems programming, algorithms, fullstack development, and
-            impactful projects.
+            impactful projects. I thrive in purpose-driven teams and enjoy contributing to software
+            with real-world impact.
           </p>
         </section>
 
@@ -28,6 +29,7 @@ export default function HomePage() {
           <SectionHeader title="Projects" />
           <p className="text-base text-gray-700">
             Explore my portfolio of fullstack applications, AI agents, game development, and more.
+            These projects showcase my technical skills and collaborative engineering experience.
           </p>
         </section>
       </Container>
