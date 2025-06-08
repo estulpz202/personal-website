@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'Resume', href: '/resume' },
-  { label: 'Leadership', href: '/leadership' },
+  { label: 'Beyond Tech', href: '/beyond-tech' },
   { label: 'Contact', href: '/contact' },
 ];
 
