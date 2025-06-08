@@ -51,6 +51,11 @@ export default function ProjectsPage() {
       <Container>
         <section className="py-12">
           <SectionHeader title="Projects" />
+          <p className="text-base text-gray-700 mb-6">
+            Below are a few selected projects that showcase my technical skills and engineering
+            experience. These projects demonstrate my work across fullstack systems, AI, game
+            development, and iOS apps.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
               <ProjectCard
