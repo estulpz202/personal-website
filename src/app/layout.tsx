@@ -27,14 +27,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b">
           <nav className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             {/* Site title (clickable link to Home page) */}
-            <Link href="/" className="text-lg font-semibold">
+            <Link href="/" className="text-lg font-semibold nav-link">
               Estuardo Lopez
             </Link>
             {/* Navigation links */}
             <ul className="flex space-x-6 text-sm font-medium m-0 p-0 list-none">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={link.href} className="nav-link">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

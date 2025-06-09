@@ -29,8 +29,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* General link styles */
-a {
+/* General link utility */
+.link {
   color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -39,19 +39,36 @@ a {
     filter 0.2s ease;
 }
 
-a:hover {
+.link:hover {
   color: var(--accent-color-hover);
   filter: brightness(65%);
 }
 
-/* Nav link styles */
-header nav a {
+/* Project card link utility */
+.proj-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0;
+  filter: none;
+  transition:
+    color 0.2s ease,
+    filter 0.2s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Nav link utility */
+.nav-link {
   color: inherit;
   text-decoration: none;
   text-underline-offset: 2px;
+  transition:
+    color 0.2s ease,
+    filter 0.2s ease;
 }
 
-header nav a:hover {
+.nav-link:hover {
   color: var(--accent-color-hover);
   filter: brightness(65%);
 }

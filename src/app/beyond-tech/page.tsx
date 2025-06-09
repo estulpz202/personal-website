@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
+import Link from 'next/link';
 
 export default function BeyondTechPage() {
   return (
@@ -175,7 +176,11 @@ export default function BeyondTechPage() {
           <p className="text-base text-gray-700 mb-6">
             Thanks for taking the time to learn a little more about who I am beyond tech. If you'd
             like to connect — whether about CS, AI, martial arts, teaching, dogs, or anything else —
-            I'm always up for a conversation.
+            I'm always up for a conversation. You can reach me{' '}
+            <Link href="/contact" className="link">
+              here
+            </Link>
+            .
           </p>
         </section>
       </Container>

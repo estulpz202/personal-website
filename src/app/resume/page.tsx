@@ -7,7 +7,7 @@ export default function ResumePage() {
         <SectionHeader title="Resume" />
         <p className="text-base text-gray-700 mb-6">
           View my resume below. If the preview does not load, you can also{' '}
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="link">
             download the PDF
           </a>
           .

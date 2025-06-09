@@ -16,7 +16,12 @@ export default function ContactPage() {
           <div className="text-base text-gray-700 mb-6">
             <p className="mb-2">
               <strong>Email:</strong>{' '}
-              <a href="mailto:elopezle@andrew.cmu.edu" target="_blank" rel="noopener noreferrer">
+              <a
+                href="mailto:elopezle@andrew.cmu.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+              >
                 elopezle@andrew.cmu.edu
               </a>
             </p>
@@ -27,6 +32,7 @@ export default function ContactPage() {
                 href="https://www.linkedin.com/in/estuardo-lopez-letona"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="link"
               >
                 linkedin.com/in/estuardo-lopez-letona
               </a>
@@ -34,7 +40,12 @@ export default function ContactPage() {
 
             <p className="mb-2">
               <strong>GitHub:</strong>{' '}
-              <a href="https://github.com/estulpz202" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/estulpz202"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+              >
                 github.com/estulpz202
               </a>
             </p>
