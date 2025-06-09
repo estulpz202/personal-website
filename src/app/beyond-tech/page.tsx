@@ -170,7 +170,7 @@ export default function BeyondTechPage() {
               height={340}
               className="object-cover rounded"
             />
-          </div>                                                                   
+          </div>
 
           <p className="text-base text-gray-700 mb-6">
             Thanks for taking the time to learn a little more about who I am beyond tech. If you'd

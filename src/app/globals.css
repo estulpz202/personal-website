@@ -34,7 +34,9 @@ a {
   color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: color 0.2s ease, filter 0.2s ease;
+  transition:
+    color 0.2s ease,
+    filter 0.2s ease;
 }
 
 a:hover {
