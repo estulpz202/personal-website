@@ -31,9 +31,7 @@ a {
   color: #3b82f6; /* Tailwind blue-500 */
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition:
-    color 0.2s ease,
-    filter 0.2s ease;
+  transition: color 0.2s ease, filter 0.2s ease;
 }
 
 a:hover {

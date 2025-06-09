@@ -12,8 +12,8 @@ export default function BeyondTechPage() {
           <Image
             src="/headshot.jpg"
             alt="Professional headshot"
-            width={200}
-            height={200}
+            width={190}
+            height={190}
             className="rounded-full mb-6 mx-auto object-cover"
           />
           <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
