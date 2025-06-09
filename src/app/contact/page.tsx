@@ -8,18 +8,15 @@ export default function ContactPage() {
         <section className="py-12">
           <SectionHeader title="Contact" />
           <p className="text-base text-gray-700 mb-6">
-            Thanks for visiting my portfolio. If you'd like to get in touch — whether about opportunities, projects, or just to connect —
-            feel free to reach out. I'm always happy to chat.
+            Thanks for visiting my portfolio. If you'd like to get in touch — whether about
+            opportunities, projects, or just to connect — feel free to reach out. I'm always happy
+            to chat.
           </p>
 
           <div className="text-base text-gray-700 mb-6">
             <p className="mb-2">
               <strong>Email:</strong>{' '}
-              <a
-                href="mailto:elopezle@andrew.cmu.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="mailto:elopezle@andrew.cmu.edu" target="_blank" rel="noopener noreferrer">
                 elopezle@andrew.cmu.edu
               </a>
             </p>
@@ -37,11 +34,7 @@ export default function ContactPage() {
 
             <p className="mb-2">
               <strong>GitHub:</strong>{' '}
-              <a
-                href="https://github.com/estulpz202"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/estulpz202" target="_blank" rel="noopener noreferrer">
                 github.com/estulpz202
               </a>
             </p>

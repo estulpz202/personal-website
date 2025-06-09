@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 
@@ -8,15 +9,17 @@ export default function BeyondTechPage() {
         {/* Page Intro */}
         <section className="py-12 text-center">
           <SectionHeader title="Beyond Tech" />
-          <img
+          <Image
             src="/headshot.jpg"
             alt="Professional headshot"
-            className="rounded-full mb-6 mx-auto"
-            style={{ width: '200px', height: '200px', objectFit: 'cover' }}
+            width={200}
+            height={200}
+            className="rounded-full mb-6 mx-auto object-cover"
           />
           <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            While I'm passionate about building software, I believe that who we are outside of work shapes how we collaborate and lead.
-            Here's a look at some of the experiences, communities, and interests that have shaped me beyond tech.
+            While I'm passionate about building software, I believe that who we are outside of work
+            shapes how we collaborate and lead. Here's a look at some of the experiences,
+            communities, and interests that have shaped me beyond tech.
           </p>
         </section>
 
@@ -24,69 +27,79 @@ export default function BeyondTechPage() {
         <section className="py-12">
           <SectionHeader title="A Few Things That Drive Me" />
           <p className="text-base text-gray-700 mb-6">
-            Martial arts has been a big part of my life. I wrestled throughout high school, eventually serving as Varsity Captain
-            and helping lead our team through tournaments and challenging seasons. Wrestling taught me resilience, discipline, and how
-            to support a team—lessons I carry into my work today. Since then, I've explored boxing, grappling, and other martial arts styles.
-            I'm also an active member of the CMU Grappling Club, where I get to keep learning and teaching.
+            Martial arts has been a big part of my life. I wrestled throughout high school,
+            eventually serving as Varsity Captain and helping lead our team through tournaments and
+            challenging seasons. Wrestling taught me resilience, discipline, and how to support a
+            team—lessons I carry into my work today. Since then, I've explored boxing, grappling,
+            and other martial arts styles. I'm also an active member of the CMU Grappling Club,
+            where I get to keep learning and teaching.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <img
+            <Image
               src="/wrestling_team.jpg"
               alt="Wrestling team"
-              className="object-cover w-full h-full"
-              style={{ width: '450px', height: '340px' }}
+              width={450}
+              height={340}
+              className="object-cover rounded"
             />
-            <img
+            <Image
               src="/wrestling_lift.JPG"
               alt="Wrestling competition"
-              className="object-cover w-full h-full"
-              style={{ width: '350px', height: '340px' }}
+              width={350}
+              height={340}
+              className="object-cover rounded"
             />
           </div>
 
           <p className="text-base text-gray-700 mb-6">
-            I also love being outdoors and staying active — whether hiking up Bear Mountain, kayaking with family and friends, or
-            playing volleyball or spikeball. I'm curious about fitness and nutrition as well — it helps me bring energy and balance
-            into my daily life.
+            I also love being outdoors and staying active — whether hiking up Bear Mountain,
+            kayaking with family and friends, or playing volleyball or spikeball. I'm curious about
+            fitness and nutrition as well — it helps me bring energy and balance into my daily life.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <img
+            <Image
               src="/kayaking.JPG"
               alt="Kayaking with family and friends"
-              className="object-cover w-full h-full"
-              style={{ width: '450px', height: '340px' }}
+              width={450}
+              height={340}
+              className="object-cover rounded"
             />
-            <img
+            <Image
               src="/bear_mountain.jpg"
               alt="Hiking on Bear Mountain"
-              className="object-cover w-full h-full"
-              style={{ width: '350px', height: '340px' }}
+              width={350}
+              height={340}
+              className="object-cover rounded"
             />
           </div>
 
           <p className="text-base text-gray-700 mb-6">
-            At home, I'm a huge dog person. We have three amazing dogs, and they always bring joy (and chaos) to the house.
-            Whether it's training them, taking them on walks, or watching them pile onto their bed together — they never fail to make me smile.
+            At home, I'm a huge dog person. We have three amazing dogs, and they always bring joy
+            (and chaos) to the house. Whether it's training them, taking them on walks, or watching
+            them pile onto their bed together — they never fail to make me smile.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <img
+            <Image
               src="/dogs.jpg"
               alt="My three dogs on their bed"
-              className="object-cover w-full h-full"
-              style={{ width: '450px', height: '340px' }}
+              width={450}
+              height={340}
+              className="object-cover rounded"
             />
-            <img
+            <Image
               src="/kane_sunglasses.jpg"
               alt="My dog Kane wearing sunglasses"
-              className="object-cover w-full h-full"
-              style={{ width: '350px', height: '340px' }}
+              width={350}
+              height={340}
+              className="object-cover rounded"
             />
           </div>
 
           <p className="text-base text-gray-700 mb-6">
-            When I'm winding down, you'll probably find me playing board games, catching up on movies (big MCU fan), or learning
-            something new — whether it's about AI, computer science, or world history. I'm also pursuing a History minor at CMU,
-            because I think understanding the past helps us shape better futures.
+            When I'm winding down, you'll probably find me playing board games, catching up on
+            movies (big MCU fan), or learning something new — whether it's about AI, computer
+            science, or world history. I'm also pursuing a History minor at CMU, because I think
+            understanding the past helps us shape better futures.
           </p>
         </section>
 
@@ -94,35 +107,42 @@ export default function BeyondTechPage() {
         <section className="py-12">
           <SectionHeader title="Teaching & Leadership" />
           <p className="text-base text-gray-700 mb-6">
-            Teaching and mentorship are important to me. One of the most rewarding experiences I've had was teaching CS and mobile
-            development to high school students through Prime Factors Learning Lab. I designed and delivered the curriculum and
-            mentored teams through their first app development projects — watching their confidence grow was incredibly fulfilling.
+            Teaching and mentorship are important to me. One of the most rewarding experiences I've
+            had was teaching CS and mobile development to high school students through Prime Factors
+            Learning Lab. I designed and delivered the curriculum and mentored teams through their
+            first app development projects — watching their confidence grow was incredibly
+            fulfilling.
           </p>
 
           <p className="text-base text-gray-700 mb-6">
-            I also helped design and run a <strong>Tech Escape Room</strong> for high school students — a creative and fun way to
-            get them thinking about problem-solving and teamwork.
+            I also helped design and run a <strong>Tech Escape Room</strong> for high school
+            students — a creative and fun way to get them thinking about problem-solving and
+            teamwork.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <img
+            <Image
               src="/gcode_teaching.jpg"
               alt="Teaching students at GCode"
-              className="object-cover w-full h-full"
-              style={{ width: '400px', height: '340px' }}
+              width={400}
+              height={340}
+              className="object-cover rounded"
             />
-            <img
+            <Image
               src="/pfll_escaperoom.jpg"
               alt="Tech Escape Room"
-              className="object-cover w-full h-full"
-              style={{ width: '400px', height: '340px' }}
+              width={400}
+              height={340}
+              className="object-cover rounded"
             />
           </div>
 
           <p className="text-base text-gray-700 mb-6">
-            Earlier leadership experiences — from Peer Leadership in high school to wrestling captain, to organizing community events
-            with the Red Cross and Glamour Gals — have shaped how I think about impact and community. Today, I'm involved with Acts2Fellowship
-            (faith and mentorship) and SALSA (uplifting Latino and Spanish-speaking communities) at CMU.
+            Earlier leadership experiences — from Peer Leadership in high school to wrestling
+            captain, to organizing community events with the Red Cross and Glamour Gals — have
+            shaped how I think about impact and community. Today, I'm involved with Acts2Fellowship
+            (faith and mentorship) and SALSA (uplifting Latino and Spanish-speaking communities) at
+            CMU.
           </p>
         </section>
 
@@ -130,26 +150,32 @@ export default function BeyondTechPage() {
         <section className="py-12">
           <SectionHeader title="Family & Community" />
           <p className="text-base text-gray-700 mb-6">
-            Family is very important to me, and I'm grateful to be surrounded by people who support and inspire me. I love spending time with them — whether it's celebrating the holidays or welcoming new members into the family. This past year, I got to meet and hold my newborn nephew — an experience I'll never forget.
+            Family is very important to me, and I'm grateful to be surrounded by people who support
+            and inspire me. I love spending time with them — whether it's celebrating the holidays
+            or welcoming new members into the family. This past year, I got to meet and hold my
+            newborn nephew — an experience I'll never forget.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <img
+            <Image
               src="/christmas.jpg"
               alt="Family Christmas photo"
-              className="object-cover w-full h-full"
-              style={{ width: '430px', height: '340px' }}
+              width={430}
+              height={340}
+              className="object-cover rounded"
             />
-            <img
+            <Image
               src="/nephew.jpg"
               alt="Holding my newborn nephew"
-              className="object-cover w-full h-full"
-              style={{ width: '370px', height: '340px' }}
+              width={370}
+              height={340}
+              className="object-cover rounded"
             />
           </div>
 
           <p className="text-base text-gray-700 mb-6">
-            Thanks for taking the time to learn a little more about who I am beyond tech. If you'd like to connect — whether about CS, AI,
-            martial arts, teaching, dogs, or anything else — I'm always up for a conversation.
+            Thanks for taking the time to learn a little more about who I am beyond tech. If you'd
+            like to connect — whether about CS, AI, martial arts, teaching, dogs, or anything else —
+            I'm always up for a conversation.
           </p>
         </section>
       </Container>
