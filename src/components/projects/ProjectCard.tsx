@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, tech, links }: ProjectCardProps) {
   return (
-    <div className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div className="border rounded-lg p-6 shadow-sm hover:shadow-lg transition-transform transform hover:scale-[1.02] fade-in-up">
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-base text-gray-700 mb-4">{description}</p>
       <div className="text-sm text-gray-600 mb-4">

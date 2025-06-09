@@ -9,10 +9,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Accent color (Indigo theme) */
+  --accent-color: #6366f1; /* Indigo-500 */
+  --accent-color-hover: #818cf8; /* Indigo-400 */
 }
 
 /* Base body styles */
-/* Force light mode — no dark mode media query used */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -21,21 +24,22 @@ body {
   font-size: 1rem; /* Base font size */
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
 /* General link styles */
 a {
-  color: #3b82f6; /* Tailwind blue-500 */
+  color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s ease, filter 0.2s ease;
 }
 
 a:hover {
-  filter: brightness(70%); /* Subtle hover effect */
+  color: var(--accent-color-hover);
+  filter: brightness(65%);
 }
 
 /* Nav link styles */
@@ -46,7 +50,8 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #9cacc2; /* Subtle hover color */
+  color: var(--accent-color-hover);
+  filter: brightness(65%);
 }
 
 /* Heading styles (H1-H6) */
@@ -60,4 +65,20 @@ h6 {
   line-height: 1.25;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+/* Fade-in animation */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
 }

@@ -6,7 +6,7 @@ export default function AboutPage() {
     <main>
       <Container>
         {/* About Me Section */}
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="About Me" />
           <p className="text-base text-gray-700 mb-6">
             I'm Estuardo Lopez, a Computer Science student at Carnegie Mellon University, pursuing a
@@ -28,7 +28,7 @@ export default function AboutPage() {
         </section>
 
         {/* Skills Section */}
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="Skills" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-gray-700">
             {skills.map((section) => (

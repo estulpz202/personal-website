@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <main>
       <Container>
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="Contact" />
           <p className="text-base text-gray-700 mb-6">
             Thanks for visiting my portfolio. If you'd like to get in touch — whether about

@@ -49,7 +49,7 @@ export default function ProjectsPage() {
   return (
     <main>
       <Container>
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="Projects" />
           <p className="text-base text-gray-700 mb-6">
             Below are a few selected projects that showcase my technical skills and engineering

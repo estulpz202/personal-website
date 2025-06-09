@@ -7,7 +7,7 @@ export default function BeyondTechPage() {
     <main>
       <Container>
         {/* Page Intro */}
-        <section className="py-12 text-center">
+        <section className="py-12 text-center fade-in-up">
           <SectionHeader title="Beyond Tech" />
           <Image
             src="/headshot.jpg"
@@ -24,7 +24,7 @@ export default function BeyondTechPage() {
         </section>
 
         {/* Personal Narrative */}
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="A Few Things That Drive Me" />
           <p className="text-base text-gray-700 mb-6">
             Martial arts has been a big part of my life. I wrestled throughout high school,
@@ -104,7 +104,7 @@ export default function BeyondTechPage() {
         </section>
 
         {/* Leadership Story */}
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="Teaching & Leadership" />
           <p className="text-base text-gray-700 mb-6">
             Teaching and mentorship are important to me. One of the most rewarding experiences I've
@@ -147,7 +147,7 @@ export default function BeyondTechPage() {
         </section>
 
         {/* Personal Life / Family */}
-        <section className="py-12">
+        <section className="py-12 fade-in-up">
           <SectionHeader title="Family & Community" />
           <p className="text-base text-gray-700 mb-6">
             Family is very important to me, and I'm grateful to be surrounded by people who support
@@ -170,7 +170,7 @@ export default function BeyondTechPage() {
               height={340}
               className="object-cover rounded"
             />
-          </div>
+          </div>                                                                   
 
           <p className="text-base text-gray-700 mb-6">
             Thanks for taking the time to learn a little more about who I am beyond tech. If you'd

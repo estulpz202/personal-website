@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-grow">{children}</main>
 
         {/* Footer shown at bottom of every page */}
-        <footer className="border-t py-6 text-center text-sm text-gray-500">
+        <footer className="border-t py-6 text-center text-sm text-gray-400">
           © {new Date().getFullYear()} Estuardo Lopez. All rights reserved.
         </footer>
       </body>
