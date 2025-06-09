@@ -8,8 +8,9 @@ interface ProjectPageProps {
   params: { slug: string };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -32,12 +33,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <ul className="list-disc pl-5">
                 {project.links.map((link) => (
                   <li key={link.url}>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link"
-                    >
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="link">
                       {link.label}
                     </a>
                   </li>

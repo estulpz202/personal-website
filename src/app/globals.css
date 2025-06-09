@@ -44,20 +44,6 @@ html {
   filter: brightness(65%);
 }
 
-/* Project card link utility */
-.proj-card-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  text-underline-offset: 0;
-  filter: none;
-  transition:
-    color 0.2s ease,
-    filter 0.2s ease,
-    transform 0.2s ease;
-  cursor: pointer;
-}
-
 /* Nav link utility */
 .nav-link {
   color: inherit;
@@ -71,6 +57,20 @@ html {
 .nav-link:hover {
   color: var(--accent-color-hover);
   filter: brightness(65%);
+}
+
+/* Project card link utility */
+.proj-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease,
+    filter 0.2s ease;
+  cursor: pointer;
 }
 
 /* Heading styles (H1-H6) */
