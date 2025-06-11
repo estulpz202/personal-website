@@ -3,13 +3,13 @@ import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 import Link from 'next/link';
 
-export default function BeyondTechPage() {
+export default function LifePage() {
   return (
     <main>
       <Container>
         {/* Page Intro */}
         <section className="py-12 text-center fade-in-up">
-          <SectionHeader title="Beyond Tech" />
+          <SectionHeader title="Life Beyond Tech" />
           <Image
             src="/headshot.jpg"
             alt="Professional headshot"
