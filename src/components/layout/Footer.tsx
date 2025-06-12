@@ -44,12 +44,16 @@ export default function Footer() {
       </div>
 
       {/* Footer content */}
-      <div className="max-w-5xl mx-auto px-7 py-7 relative">
+      <div className="max-w-5xl mx-auto px-7 py-6 relative">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-3 md:mb-0">© {new Date().getFullYear()} Estuardo Lopez</div>
+          <div className="mb-3 md:mb-0">
+            <Link href="/">
+              © {new Date().getFullYear()} Estuardo Lopez
+            </Link>
+          </div>
 
           <nav aria-label="Footer navigation">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-6">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-indigo-400 transition-colors">
