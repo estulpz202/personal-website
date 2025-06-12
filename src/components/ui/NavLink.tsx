@@ -13,10 +13,10 @@ type NavLinkProps = {
 export default function NavLink({ href, children, className = '' }: NavLinkProps) {
   const pathname = usePathname();
   const isActive = pathname === href;
-  
+
   return (
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       className={`nav-link relative py-2 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
     >
       {children}
