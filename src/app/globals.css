@@ -7,13 +7,13 @@
   --black: #171717;
   --primary: #6366f1; /* Indigo-500 */
   --primary-hover: #818cf8; /* Indigo-400 */
-  
+
   /* Styles */
   --background: var(--white);
   --foreground: var(--black);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
+
   /* Focus outline styles */
   --focus-ring: 0 0 0 2px var(--primary);
 }
@@ -33,7 +33,7 @@ html {
 }
 
 /* Improved keyboard focus styles */
-a:focus-visible, 
+a:focus-visible,
 button:focus-visible {
   outline: none;
   box-shadow: var(--focus-ring);
@@ -66,13 +66,11 @@ button:focus-visible {
 
 .nav-link:hover {
   color: var(--primary-hover);
-  filter: brightness(65%);
 }
 
 /* Active nav link utility */
 .nav-link-active {
   color: var(--primary-hover);
-  filter: brightness(65%);
 }
 
 /* Project card link utility */
