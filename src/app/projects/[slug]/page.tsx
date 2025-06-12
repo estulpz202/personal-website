@@ -4,9 +4,9 @@ import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 import Link from 'next/link';
 
-interface ProjectPageProps {
-  params: { slug: string };
-}
+type ProjectPageProps = {
+  params: Promise<{ slug: string }>;
+};
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;

@@ -47,9 +47,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-7 py-6 relative">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-3 md:mb-0">
-            <Link href="/">
-              © {new Date().getFullYear()} Estuardo Lopez
-            </Link>
+            <Link href="/">© {new Date().getFullYear()} Estuardo Lopez</Link>
           </div>
 
           <nav aria-label="Footer navigation">
