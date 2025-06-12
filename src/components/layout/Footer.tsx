@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Icon from '@/components/ui/Icon';
 
 const footerLinks = [
   { label: 'About', href: '/about' },
@@ -37,39 +38,21 @@ export default function Footer() {
           aria-label="Scroll to top"
         >
           <div className="pt-0 pb-8 flex items-center justify-center">
-            <svg
-              className="h-12 w-14 text-gray-400"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 15l-6-6-6 6"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <Icon name="arrow-up" className="h-12 w-14 text-gray-400" />
           </div>
         </div>
       </div>
 
       {/* Footer content */}
-      <div className="max-w-5xl mx-auto px-7 py-8 relative">
+      <div className="max-w-5xl mx-auto px-7 py-7 relative">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-3 md:mb-0">
-            © {new Date().getFullYear()} Estuardo Lopez
-          </div>
+          <div className="mb-3 md:mb-0">© {new Date().getFullYear()} Estuardo Lopez</div>
 
           <nav aria-label="Footer navigation">
             <ul className="flex space-x-8">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="hover:text-indigo-400 transition-colors"
-                  >
+                  <Link href={link.href} className="hover:text-indigo-400 transition-colors">
                     {link.label}
                   </Link>
                 </li>

@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-type IconName = 'github' | 'linkedin' | 'e-logo';
+type IconName = 'github' | 'linkedin' | 'e-logo' | 'arrow-up';
 type IconProps = {
   name: IconName;
   className?: string;
@@ -59,6 +59,19 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
         <svg {...svgProps} aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="2" />
           <path d="M7 7.5h10M7 12h5M7 16.5h10" strokeWidth="2.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'arrow-up':
+      return (
+        <svg {...svgProps} aria-label="Scroll to top">
+          <path
+            d="M18 15l-6-6-6 6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
 
