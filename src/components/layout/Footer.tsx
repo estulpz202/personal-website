@@ -19,9 +19,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gray-100 border-t border-gray-200 shadow-md">
+    <footer className="relative bg-gray-100 border-t border-gray-200 shadow-md text-gray-500 text-base font-extralight">
       {/* Scroll to top button */}
-      <div className="absolute left-1/2 -translate-x-1/2 -top-9">
+      <div className="absolute left-1/2 -translate-x-1/2 -top-9 z-10">
         <div
           onClick={scrollToTop}
           className="
@@ -29,15 +29,16 @@ export default function Footer() {
             bg-gray-100 rounded-full flex items-center justify-center cursor-pointer
             transition-transform duration-300 
             hover:-translate-y-2
+            shadow-lg
           "
           style={{
-            boxShadow: '0 -4px 3.2px -3.75px rgba(0, 0, 0, 0.2)',
+            boxShadow: '0 -3.75px 4px -3.5px rgba(0, 0, 0, 0.25)',
           }}
           aria-label="Scroll to top"
         >
-          <div className="pt-0 pb-7.5 flex items-center justify-center">
+          <div className="pt-0 pb-8 flex items-center justify-center">
             <svg
-              className="h-12 w-12 text-gray-600"
+              className="h-12 w-14 text-gray-400"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -55,19 +56,19 @@ export default function Footer() {
       </div>
 
       {/* Footer content */}
-      <div className="max-w-5xl mx-auto px-7 py-8 relative z-10">
+      <div className="max-w-5xl mx-auto px-7 py-8 relative">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-600 text-sm mb-3 md:mb-0">
+          <div className="mb-3 md:mb-0">
             © {new Date().getFullYear()} Estuardo Lopez
           </div>
 
           <nav aria-label="Footer navigation">
-            <ul className="flex space-x-8 text-sm">
+            <ul className="flex space-x-8">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-indigo-500 transition-colors"
+                    className="hover:text-indigo-400 transition-colors"
                   >
                     {link.label}
                   </Link>
