@@ -5,19 +5,56 @@ import Footer from '@/components/layout/Footer';
 
 // Define comprehensive metadata for better SEO
 export const metadata: Metadata = {
-  title: 'Estuardo Lopez',
+  title: {
+    default: 'Estuardo Lopez',
+    template: '%s | Estuardo Lopez',
+  },
   description:
-    'Personal website of Estuardo Lopez, a Computer Science student at Carnegie Mellon University focused on software engineering and fullstack development.',
+    'Estuardo Lopez is a Computer Science student at Carnegie Mellon University specializing in software engineering and full stack development.',
   keywords: [
     'Estuardo Lopez',
-    'CMU',
-    'Computer Science',
     'Software Engineer',
+    'Carnegie Mellon University',
+    'Full Stack Developer',
+    'Computer Science',
+    'CMU',
+    'Web Development',
+    'Programming',
+    'Python',
+    'TypeScript',
+    'Next.js',
     'Portfolio',
-    'Projects',
   ],
+  creator: 'Estuardo Lopez',
+  publisher: 'Estuardo Lopez',
   authors: [{ name: 'Estuardo Lopez' }],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  applicationName: 'Estuardo Lopez Portfolio',
+  generator: 'Next.js',
+  category: 'portfolio',
 };
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+export const themeColor = '#4f46e5';
 
 // RootLayout is the base layout for your entire site
 export default function RootLayout({ children }: { children: React.ReactNode }) {
