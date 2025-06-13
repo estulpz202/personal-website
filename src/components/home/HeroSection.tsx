@@ -24,13 +24,22 @@ export default function HeroSection() {
           </div>
 
           {/* Education */}
-          <div className="bg-gray-50 border-l-4 border-indigo-500 pl-4 py-3 mb-8">
-            <p className="text-lg text-gray-700">
-              Computer Science @ <span className="font-semibold">Carnegie Mellon University</span>
-            </p>
-            <p className="text-gray-600">
-              Software Engineering Concentration • History Minor • 2027
-            </p>
+          <div className="bg-gray-50 border-l-4 border-indigo-500 pl-4 pr-4 py-3 mb-8 max-w-xl flex justify-between items-center">
+            <div>
+              <p className="text-lg text-gray-700">
+                Computer Science @ <span className="font-semibold">Carnegie Mellon University</span>
+              </p>
+              <p className="text-gray-600">
+                Software Engineering Concentration • History Minor • 2027
+              </p>
+            </div>
+            <div className="flex-shrink-0 ml-4">
+              <img
+                src="/cmu_logo.jpg"
+                alt="Carnegie Mellon University logo"
+                className="h-14 w-auto"
+              />
+            </div>
           </div>
 
           {/* Short bio */}
