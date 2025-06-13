@@ -9,10 +9,10 @@ export default function HomePage() {
         {/* Hero Section */}
         <HeroSection />
 
+        <div className="w-full border-t border-gray-200 my-6"></div>
+
         {/* Featured Projects Section */}
         <RecentWorkSection />
-
-        {/* Additional sections to come */}
       </Container>
     </main>
   );
