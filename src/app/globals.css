@@ -1,24 +1,27 @@
 @import 'tailwindcss';
 
-/* Define CSS variables for consistent theming */
+/* 
+ * CSS variables for consistent theming across the site
+ * These provide a single source of truth for colors and styles
+ */
 :root {
-  /* Colors */
+  /* Core color palette */
   --white: #ffffff;
   --black: #171717;
   --primary: #6366f1; /* Indigo-500 */
   --primary-hover: #818cf8; /* Indigo-400 */
 
-  /* Styles */
+  /* Semantic variable assignments */
   --background: var(--white);
   --foreground: var(--black);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Focus outline styles */
+  /* Accessibility and interaction styles */
   --focus-ring: 0 0 0 2px var(--primary);
 }
 
-/* Base body styles */
+/* Base typography and layout styles */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -27,12 +30,12 @@ body {
   font-size: 1rem;
 }
 
-/* Smooth scrolling */
+/* Enable smooth scrolling behavior site-wide */
 html {
   scroll-behavior: smooth;
 }
 
-/* Improved keyboard focus styles */
+/* Accessibility: Enhanced keyboard focus indicators */
 a:focus-visible,
 button:focus-visible {
   outline: none;
@@ -40,7 +43,12 @@ button:focus-visible {
   border-radius: 0.25rem;
 }
 
-/* General link utility */
+/* 
+ * Link styling utilities
+ * Different link types have specific styling for better UX
+ */
+
+/* Standard text links */
 .link {
   color: var(--primary);
   text-decoration: underline;
@@ -55,7 +63,7 @@ button:focus-visible {
   filter: brightness(65%);
 }
 
-/* Nav link utility */
+/* Navigation links */
 .nav-link {
   text-decoration: none;
   text-underline-offset: 2px;
@@ -68,12 +76,12 @@ button:focus-visible {
   color: var(--primary-hover);
 }
 
-/* Active nav link utility */
+/* Active state for navigation links */
 .nav-link-active {
   color: var(--primary-hover);
 }
 
-/* Project card link utility */
+/* Project card wrapper links */
 .proj-card-link {
   display: block;
   color: inherit;
@@ -87,7 +95,7 @@ button:focus-visible {
   cursor: pointer;
 }
 
-/* Heading styles (H1-H6) */
+/* Typography: Heading styles */
 h1,
 h2,
 h3,
@@ -100,7 +108,12 @@ h6 {
   margin-bottom: 0.75rem;
 }
 
-/* Fade-in animation */
+/* 
+ * Animations
+ * Used for enhancing perceived performance and visual interest
+ */
+
+/* Subtle entrance animation for content sections */
 @keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -112,6 +125,7 @@ h6 {
   }
 }
 
+/* Apply the fade-in-up animation */
 .fade-in-up {
   animation: fade-in-up 0.6s ease-out both;
 }

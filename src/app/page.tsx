@@ -4,22 +4,26 @@ import RecentWorkSection from '@/components/home/RecentWorkSection';
 import SkillsSection from '@/components/skills/SkillsSection';
 import ContactCTA from '@/components/home/ContactCTA';
 
+/**
+ * HomePage component - main landing page of the portfolio site
+ */
 export default function HomePage() {
   return (
     <main>
       <Container>
-        {/* Hero Section */}
+        {/* Personal introduction with photo, education, and bio */}
         <HeroSection />
 
+        {/* Visual separator between main sections */}
         <div className="w-full border-t border-gray-200 my-6"></div>
 
-        {/* Recent Work Section */}
+        {/* Featured projects showcase */}
         <RecentWorkSection />
 
-        {/* Skills Section */}
+        {/* Technical capabilities and expertise */}
         <SkillsSection />
 
-        {/* Contact Section */}
+        {/* Call-to-action for potential collaborators */}
         <ContactCTA />
       </Container>
     </main>
