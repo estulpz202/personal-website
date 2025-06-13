@@ -1,38 +1,70 @@
 # Estuardo Lopez – Personal Website & Portfolio
 
-This is my personal website and portfolio, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).  
-I use this site to showcase my projects, resume, and contact information.
+A modern, responsive personal website and portfolio built with Next.js and Tailwind CSS. Designed to showcase my projects, skills, experience, and provide professional contact information.
 
-**Tech Stack:**
+## 🚀 Features
 
-- [Next.js](https://nextjs.org) (App Router)
-- [React](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [TypeScript](https://www.typescriptlang.org)
-- [Prettier](https://prettier.io)
-- [ESLint](https://eslint.org)
+- **Responsive Design** - Optimized for all device sizes
+- **Project Showcase** - Detailed project pages with descriptions and links
+- **Resume Viewer** - Embedded PDF viewer with download option
+- **Animations** - Subtle animations for improved user experience
+- **SEO Optimized** - Meta tags and structured data for better search visibility
+- **Accessibility** - Keyboard navigation support
 
-## Getting Started
+## 🛠️ Tech Stack
 
-To run the development server:
+- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **UI**: [React](https://react.dev)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+- **Code Quality**:
+  - [Prettier](https://prettier.io) for consistent formatting
+  - [ESLint](https://eslint.org) for code quality
+- **Performance**: Optimized image loading with Next.js Image component
+- **Deployment**: [Vercel](https://vercel.com) (Planned)
 
-```bash
-npm install
-npm run dev
+## 🧰 Development Commands
+
+| Command          | Description                 |
+| ---------------- | --------------------------- |
+| `npm run dev`    | Start development server    |
+| `npm run build`  | Build for production        |
+| `npm run start`  | Start production server     |
+| `npm run lint`   | Run ESLint                  |
+| `npm run format` | Run Prettier to format code |
+
+## 📂 Project Structure
+
+```
+public/               # Static assets (images, resume PDF)
+src/
+├── app/              # Next.js App Router pages
+│   ├── about/
+│   ├── contact/
+│   ├── life/
+│   ├── projects/
+│   │   └── [slug]/
+│   ├── resume/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+└── components/       # Reusable React components
+    ├── common/
+    ├── home/
+    ├── layout/
+    ├── projects/
+    ├── skills/
+    └── ui/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+## 🚀 Deployment
 
-## Formatting & Linting
+This site will be deployed on [Vercel](https://vercel.com) with continuous deployment from the main branch.
 
-Check and fix style issues:
+## 📧 Contact
 
-```bash
-npm run lint
-npm run format
-```
+If you have any questions or feedback, feel free to reach out
 
-## Deployment
-
-This site is deployed on [Vercel](https://vercel.com).  
-See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: [elopezle@andrew.cmu.edu](mailto:elopezle@andrew.cmu.edu)
+- LinkedIn: [linkedin.com/in/estuardo-lopez-letona](https://www.linkedin.com/in/estuardo-lopez-letona)
+- GitHub: [github.com/estulpz202](https://github.com/estulpz202)
