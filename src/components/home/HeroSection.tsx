@@ -1,15 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
-
-// Simple CTA button component for hero section
-const CTAButton = ({ href, label }: { href: string; label: string }) => (
-  <Link
-    href={href}
-    className="px-6 py-3 rounded-md font-medium transition-all bg-indigo-500 text-white hover:bg-indigo-600"
-  >
-    {label}
-  </Link>
-);
+import { PrimaryButton, SecondaryButton } from '@/components/ui/Button';
 
 export default function HeroSection() {
   return (
@@ -52,9 +42,9 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <CTAButton href="/about" label="About Me" />
-            <CTAButton href="/projects" label="View Projects" />
-            <CTAButton href="/resume" label="Resume" />
+            <PrimaryButton href="/projects">View Projects</PrimaryButton>
+            <SecondaryButton href="/about">About Me</SecondaryButton>
+            <SecondaryButton href="/resume">Resume</SecondaryButton>
           </div>
         </div>
 

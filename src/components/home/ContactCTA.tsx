@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import { SecondaryButton } from '@/components/ui/Button';
 
 export default function ContactCTA() {
   return (
-    <section className="pt-10 pb-15 fade-in-up">
+    <section className="pt-10 pb-12.5 fade-in-up">
       <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-3">Ready to Collaborate?</h2>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -10,12 +10,7 @@ export default function ContactCTA() {
         </p>
 
         <div className="flex justify-center">
-          <Link
-            href="/contact"
-            className="bg-white text-indigo-600 border border-indigo-200 font-medium py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center hover:bg-indigo-500 hover:text-white hover:border-indigo-500 hover:shadow-lg"
-          >
-            Get in Touch
-          </Link>
+          <SecondaryButton href="/contact">Get in Touch</SecondaryButton>
         </div>
       </div>
     </section>
