@@ -1,6 +1,7 @@
 import Container from '@/components/common/Container';
 import HeroSection from '@/components/home/HeroSection';
 import RecentWorkSection from '@/components/home/RecentWorkSection';
+import SkillsSection from '@/components/home/SkillsSection';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,9 @@ export default function HomePage() {
 
         {/* Recent Work Section */}
         <RecentWorkSection />
+
+        {/* Skills Section */}
+        <SkillsSection />
       </Container>
     </main>
   );
