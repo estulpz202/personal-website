@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SectionHeader from '@/components/common/SectionHeader';
-import SkillIcon from './SkillIcon';
+import SkillsIcon from './SkillsIcon';
 import Icon from '@/components/ui/Icon';
 
 // Skill types and data
@@ -49,7 +49,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
     <div className="flex items-center gap-2 p-2 bg-white rounded-lg border border-gray-200 shadow-sm">
       <div className="flex-shrink-0">
-        <SkillIcon name={skill.icon} className="h-6 w-6" />
+        <SkillsIcon name={skill.icon} className="h-6 w-6" />
       </div>
       <span className="font-medium text-gray-800 text-sm">{skill.name}</span>
     </div>
@@ -59,7 +59,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 export default function SkillsSection() {
   return (
     <section className="pt-8 pb-10 fade-in-up">
-      <SectionHeader title="Technical Highlights TttttttTTTTTTTTTTTTTTTTTTT" />
+      <SectionHeader title="Technical Highlights" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {skillsData.map((category) => (

@@ -1,11 +1,17 @@
 import React from 'react';
 
+/**
+ * Props for the SkillIcon component
+ */
 type SkillIconProps = {
   name: string;
   className?: string;
 };
 
-export default function SkillIcon({ name, className = 'h-6 w-6' }: SkillIconProps) {
+/**
+ * SkillIcon - Renders SVG icons for various programming languages and technologies
+ */
+export default function SkillsIcon({ name, className = 'h-6 w-6' }: SkillIconProps) {
   // Map of skill names to their SVG content
   const iconMap: Record<string, React.ReactNode> = {
     python: (
