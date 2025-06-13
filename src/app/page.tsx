@@ -11,7 +11,7 @@ export default function HomePage() {
 
         <div className="w-full border-t border-gray-200 my-6"></div>
 
-        {/* Featured Projects Section */}
+        {/* Recent Work Section */}
         <RecentWorkSection />
       </Container>
     </main>

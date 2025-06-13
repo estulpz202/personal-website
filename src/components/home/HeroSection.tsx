@@ -34,10 +34,11 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex-shrink-0 ml-4">
-              <img
+              <Image
                 src="/cmu_logo.jpg"
                 alt="Carnegie Mellon University logo"
-                className="h-14 w-auto"
+                width={56}
+                height={56}
               />
             </div>
           </div>
