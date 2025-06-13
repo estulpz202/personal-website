@@ -4,11 +4,15 @@ import MinimalProjCard from './MinimalProjCard';
 import { recentProjs } from './RecentProjData';
 import Icon from '@/components/ui/Icon';
 
+/**
+ * RecentWorkSection - Featured projects showcase for homepage
+ */
 export default function RecentWorkSection() {
   return (
     <section className="pt-10 pb-8 fade-in-up">
       <SectionHeader title="Recent Work" />
 
+      {/* Project cards grid - single column on mobile, two columns on larger screens */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {recentProjs.map((project) => (
           <MinimalProjCard
@@ -21,6 +25,7 @@ export default function RecentWorkSection() {
         ))}
       </div>
 
+      {/* "View all" link with animated arrow icon */}
       <div className="mt-6 text-center">
         <Link
           href="/projects"

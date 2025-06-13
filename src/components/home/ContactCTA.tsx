@@ -1,5 +1,8 @@
 import { SecondaryButton } from '@/components/ui/Button';
 
+/**
+ * ContactCTA - Call-to-action section encouraging visitor engagement
+ */
 export default function ContactCTA() {
   return (
     <section className="py-15 fade-in-up">

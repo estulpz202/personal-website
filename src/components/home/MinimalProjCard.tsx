@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+/**
+ * Props for the MinimalProjectCard component
+ */
 interface MinimalProjectCardProps {
   title: string;
   description: string;
@@ -7,6 +10,9 @@ interface MinimalProjectCardProps {
   href: string;
 }
 
+/**
+ * MinimalProjectCard - Simplified project card for homepage display
+ */
 export default function MinimalProjectCard({
   title,
   description,

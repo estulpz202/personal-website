@@ -1,4 +1,6 @@
-// Simplified version of project data specifically for the homepage
+/**
+ * Featured projects data for homepage display
+ */
 export const recentProjs = [
   {
     title: 'Hive',
