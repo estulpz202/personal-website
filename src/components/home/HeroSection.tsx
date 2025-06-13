@@ -48,10 +48,10 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Headshot with subtle styling */}
+        {/* Headshot */}
         <div className="md:w-1/3 flex justify-center">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-indigo-300 blur-md opacity-20 transform -rotate-6 scale-105"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-600 to-indigo-400 blur-md opacity-20 transform -rotate-6 scale-105"></div>
             <Image
               src="/headshot.jpg"
               alt="Estuardo Lopez"
