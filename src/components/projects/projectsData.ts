@@ -1,3 +1,8 @@
+/**
+ * Comprehensive project data for the portfolio.
+ * Contains detailed information about each project.
+ * This data is used on both the projects page and individual project detail pages.
+ */
 export const projects = [
   {
     slug: 'hive',

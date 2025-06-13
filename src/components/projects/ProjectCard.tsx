@@ -3,6 +3,9 @@
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
+/**
+ * Props for the ProjectCard component
+ */
 interface ProjectCardProps {
   slug: string;
   title: string;
@@ -11,9 +14,17 @@ interface ProjectCardProps {
   links?: { label: string; url: string }[];
 }
 
+/**
+ * ProjectCard - Interactive project display for the projects page
+ *
+ * Renders a clickable card showing project details with hover effects.
+ * The entire card navigates to the project detail page, while maintaining
+ * accessibility and allowing direct access to external links.
+ */
 export default function ProjectCard({ slug, title, description, tech, links }: ProjectCardProps) {
   const router = useRouter();
 
+  // Navigation handler for clicking on the card
   const handleCardClick = useCallback(() => {
     router.push(`/projects/${slug}`);
   }, [router, slug]);
@@ -31,7 +42,7 @@ export default function ProjectCard({ slug, title, description, tech, links }: P
         }
       }}
     >
-      {/* Top content */}
+      {/* Main content area with title, description and technologies */}
       <div className="p-6 pb-16">
         <h3 className="text-xl font-semibold mb-2 group-hover:text-[color:var(--accent-color)] transition-colors">
           {title}
@@ -42,7 +53,7 @@ export default function ProjectCard({ slug, title, description, tech, links }: P
         </div>
       </div>
 
-      {/* Bottom content */}
+      {/* Footer with external links and "more details" indicator */}
       <div className="absolute bottom-0 left-0 right-0 p-6 pt-4 border-t border-gray-100 bg-white rounded-b-lg">
         <div className="flex justify-between items-center text-sm">
           <div

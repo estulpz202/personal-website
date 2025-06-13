@@ -8,10 +8,18 @@ type ProjectPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+/**
+ * ProjectPage - Individual project detail page
+ *
+ * Renders a detailed page for a specific project based on the URL slug
+ * Returns 404 if the project is not found
+ */
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  // Extract and find the project data based on the URL slug
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
+  // Return 404 if no matching project is found
   if (!project) {
     notFound();
   }
@@ -20,15 +28,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main>
       <Container>
         <section className="py-12 fade-in-up">
+          {/* Project title as page header */}
           <SectionHeader title={project.title} />
 
+          {/* Project description */}
           <p className="text-base text-gray-700 mb-6">{project.description}</p>
 
+          {/* Technologies used */}
           <div className="text-base text-gray-700 mb-6">
             <strong>Technologies:</strong> {project.tech.join(', ')}
           </div>
 
-          {/* Add Highlights section */}
+          {/* Key project highlights as a bulleted list */}
           {project.highlights && project.highlights.length > 0 && (
             <div className="mb-6">
               <strong className="block mb-2">Highlights:</strong>
@@ -42,7 +53,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           )}
 
-          {/* Links section */}
+          {/* External links to repositories, demos, etc. */}
           {project.links && project.links.length > 0 && (
             <div className="mb-6">
               <strong className="block mb-2">Links:</strong>
@@ -58,6 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           )}
 
+          {/* Navigation back to the main projects page */}
           <Link href="/projects" className="link text-sm">
             ← Back to Projects
           </Link>
