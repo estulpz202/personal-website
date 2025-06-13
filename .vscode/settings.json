@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "[javascript,typescript,typescriptreact,json,markdown,css,html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

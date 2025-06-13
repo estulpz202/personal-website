@@ -22,4 +22,5 @@ npm-debug.log*
 *.tsbuildinfo
 
 # editor 
-.vscode
+.vscode/*
+!.vscode/settings.json
