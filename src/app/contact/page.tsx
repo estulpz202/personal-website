@@ -1,18 +1,27 @@
 import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 
+/**
+ * ContactPage - Professional contact information
+ *
+ * Provides various ways to connect, including email, social profiles,
+ * and location. Serves as a straightforward way for visitors to reach out.
+ */
 export default function ContactPage() {
   return (
     <main>
       <Container>
         <section className="py-12 fade-in-up">
           <SectionHeader title="Contact" />
+
+          {/* Introductory message */}
           <p className="text-base text-gray-700 mb-6">
             Thanks for visiting my portfolio. If you'd like to get in touch — whether about
             opportunities, projects, or just to connect — feel free to reach out. I'm always happy
             to chat.
           </p>
 
+          {/* Contact information */}
           <div className="text-base text-gray-700 mb-6">
             <p className="mb-2">
               <strong>Email:</strong>{' '}
@@ -55,6 +64,7 @@ export default function ContactPage() {
             </p>
           </div>
 
+          {/* Closing message */}
           <p className="text-base text-gray-700">
             I'll get back to you as soon as I can — thanks again for stopping by!
           </p>

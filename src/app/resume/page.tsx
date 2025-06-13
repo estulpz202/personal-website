@@ -1,8 +1,12 @@
 import SectionHeader from '@/components/common/SectionHeader';
 
+/**
+ * ResumePage - Professional resume/CV display
+ */
 export default function ResumePage() {
   return (
     <main>
+      {/* Page header and download option */}
       <section className="py-12 px-4 max-w-5xl mx-auto fade-in-up">
         <SectionHeader title="Resume" />
         <p className="text-base text-gray-700 mb-6">
@@ -14,7 +18,7 @@ export default function ResumePage() {
         </p>
       </section>
 
-      {/* PDF Viewer nicely centered and limited in width */}
+      {/* Embedded PDF viewer with responsive sizing */}
       <section className="mb-12 px-4 fade-in-up">
         <div className="max-w-screen-lg mx-auto border rounded overflow-hidden shadow">
           <iframe

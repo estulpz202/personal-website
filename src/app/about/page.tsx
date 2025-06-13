@@ -1,19 +1,29 @@
 import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 
+/**
+ * AboutPage - Professional background and skills overview
+ *
+ * Provides a comprehensive view of background, approach to software engineering,
+ * and technical capabilities across various domains.
+ */
 export default function AboutPage() {
   return (
     <main>
       <Container>
-        {/* About Me Section */}
+        {/* Personal introduction and background */}
         <section className="py-12 fade-in-up">
           <SectionHeader title="About Me" />
+
+          {/* Education and professional interests */}
           <p className="text-base text-gray-700 mb-6">
             I'm Estuardo Lopez, a Computer Science student at Carnegie Mellon University, pursuing a
             concentration in Software Engineering and a minor in History. I'm passionate about
             building meaningful, impactful software and drawn to projects that challenge me both
             technically and creatively.
           </p>
+
+          {/* Technical background and experience */}
           <p className="text-base text-gray-700 mb-6">
             Through a mix of academic rigor and hands-on experience, I've developed a strong
             foundation in low-level systems programming, algorithms, OOP, and fullstack development.
@@ -21,15 +31,19 @@ export default function AboutPage() {
             React, and contributed to collaborative engineering teams using GitHub, Docker, and
             CI/CD workflows.
           </p>
+
+          {/* Professional values and approach */}
           <p className="text-base text-gray-700 mb-6">
             Beyond technical skills, I value real-world impact, purpose-driven teamwork, and
             continuous growth as a developer and teammate.
           </p>
         </section>
 
-        {/* Skills Section */}
+        {/* Technical and professional skills overview */}
         <section className="py-12 fade-in-up">
           <SectionHeader title="Skills" />
+
+          {/* Skills displayed in a responsive two-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-gray-700">
             {skills.map((section) => (
               <div key={section.category}>
@@ -48,6 +62,9 @@ export default function AboutPage() {
   );
 }
 
+/**
+ * Organized skill categories for display in the skills section
+ */
 const skills = [
   {
     category: 'Programming Languages',

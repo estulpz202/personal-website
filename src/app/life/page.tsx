@@ -3,11 +3,17 @@ import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 import Link from 'next/link';
 
+/**
+ * LifePage - Personal interests and activities beyond tech
+ *
+ * Showcases personality, hobbies, and values through a narrative-driven
+ * approach with photos and stories. Helps visitors connect on a personal level.
+ */
 export default function LifePage() {
   return (
     <main>
       <Container>
-        {/* Page Intro */}
+        {/* Introduction with photo and overview */}
         <section className="py-12 text-center fade-in-up">
           <SectionHeader title="Life Beyond Tech" />
           <Image
@@ -24,9 +30,11 @@ export default function LifePage() {
           </p>
         </section>
 
-        {/* Personal Narrative */}
+        {/* Hobbies and personal interests section */}
         <section className="py-12 fade-in-up">
           <SectionHeader title="A Few Things That Drive Me" />
+
+          {/* Martial arts and wrestling */}
           <p className="text-base text-gray-700 mb-6">
             Martial arts has been a big part of my life. I wrestled throughout high school,
             eventually serving as Varsity Captain and helping lead our team through tournaments and
@@ -52,6 +60,7 @@ export default function LifePage() {
             />
           </div>
 
+          {/* Outdoor activities */}
           <p className="text-base text-gray-700 mb-6">
             I also love being outdoors and staying active — whether hiking up Bear Mountain,
             kayaking with family and friends, or playing volleyball or spikeball. I'm curious about
@@ -74,6 +83,7 @@ export default function LifePage() {
             />
           </div>
 
+          {/* Pets and home life */}
           <p className="text-base text-gray-700 mb-6">
             At home, I'm a huge dog person. We have three amazing dogs, and they always bring joy
             (and chaos) to the house. Whether it's training them, taking them on walks, or watching
@@ -96,6 +106,7 @@ export default function LifePage() {
             />
           </div>
 
+          {/* Other interests */}
           <p className="text-base text-gray-700 mb-6">
             When I'm winding down, you'll probably find me playing board games, catching up on
             movies (big MCU fan), or learning something new — whether it's about AI, computer
@@ -104,7 +115,7 @@ export default function LifePage() {
           </p>
         </section>
 
-        {/* Leadership Story */}
+        {/* Teaching and leadership experiences */}
         <section className="py-12 fade-in-up">
           <SectionHeader title="Teaching & Leadership" />
           <p className="text-base text-gray-700 mb-6">
@@ -114,13 +125,11 @@ export default function LifePage() {
             first app development projects — watching their confidence grow was incredibly
             fulfilling.
           </p>
-
           <p className="text-base text-gray-700 mb-6">
             I also helped design and run a <strong>Tech Escape Room</strong> for high school
             students — a creative and fun way to get them thinking about problem-solving and
             teamwork.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
               src="/gcode_teaching.jpg"
@@ -137,7 +146,6 @@ export default function LifePage() {
               className="object-cover rounded"
             />
           </div>
-
           <p className="text-base text-gray-700 mb-6">
             Earlier leadership experiences — from Peer Leadership in high school to wrestling
             captain, to organizing community events with the Red Cross and Glamour Gals — have
@@ -147,7 +155,7 @@ export default function LifePage() {
           </p>
         </section>
 
-        {/* Personal Life / Family */}
+        {/* Family and community section */}
         <section className="py-12 fade-in-up">
           <SectionHeader title="Family & Community" />
           <p className="text-base text-gray-700 mb-6">
@@ -173,6 +181,7 @@ export default function LifePage() {
             />
           </div>
 
+          {/* Closing and call to action */}
           <p className="text-base text-gray-700 mb-6">
             Thanks for taking the time to learn a little more about who I am beyond tech. If you'd
             like to connect — whether about CS, AI, martial arts, teaching, dogs, or anything else —
