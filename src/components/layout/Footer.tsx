@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gray-100 border-t border-gray-200 shadow-md text-gray-500 text-base font-extralight mt-12">
+    <footer className="relative bg-gray-100 border-t border-gray-200 shadow-md text-gray-500 text-base font-extralight mt-16">
       {/* Scroll to top button */}
       <div className="absolute left-1/2 -translate-x-1/2 -top-9 z-10">
         <div
