@@ -58,8 +58,8 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 
 export default function SkillsSection() {
   return (
-    <section className="pt-7.5 pb-10 fade-in-up">
-      <SectionHeader title="Technical Highlights" />
+    <section className="pt-8 pb-10 fade-in-up">
+      <SectionHeader title="Technical Highlights TttttttTTTTTTTTTTTTTTTTTTT" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {skillsData.map((category) => (

@@ -6,7 +6,7 @@ import Icon from '@/components/ui/Icon';
 
 export default function RecentWorkSection() {
   return (
-    <section className="pt-10 pb-7.5 fade-in-up">
+    <section className="pt-10 pb-8 fade-in-up">
       <SectionHeader title="Recent Work" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
