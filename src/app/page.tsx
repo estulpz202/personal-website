@@ -1,7 +1,7 @@
 import Container from '@/components/common/Container';
 import HeroSection from '@/components/home/HeroSection';
 import RecentWorkSection from '@/components/home/RecentWorkSection';
-import SkillsSection from '@/components/home/SkillsSection';
+import SkillsSection from '@/components/skills/SkillsSection';
 
 export default function HomePage() {
   return (

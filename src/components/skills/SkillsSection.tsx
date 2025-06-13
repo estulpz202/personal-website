@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SectionHeader from '@/components/common/SectionHeader';
-import SkillIcon from '@/components/skills/SkillIcon';
+import SkillIcon from './SkillIcon';
 import Icon from '@/components/ui/Icon';
 
 // Skill types and data
