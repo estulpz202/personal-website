@@ -22,9 +22,7 @@ export default function HeroSection() {
               <p className="text-lg text-gray-700">
                 Computer Science @ <span className="font-semibold">Carnegie Mellon University</span>
               </p>
-              <p className="text-gray-600">
-                Software Engineering Concentration • History Minor • 2027
-              </p>
+              <p className="text-gray-600">SWE Concentration • History Minor • 2027</p>
             </div>
             <div className="flex-shrink-0 ml-4">
               <Image
