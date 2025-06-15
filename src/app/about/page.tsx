@@ -1,4 +1,5 @@
 import Container from '@/components/common/Container';
+import EducationSection from '@/components/about/EducationSection';
 
 /**
  * Page metadata for browser tab display
@@ -21,6 +22,9 @@ export default function AboutPage() {
             Building software that matters with purpose, precision, and passion.
           </p>
         </div>
+
+        {/* Education Section Component */}
+        <EducationSection />
       </Container>
     </main>
   );
