@@ -40,7 +40,7 @@ export default function EducationSection() {
         >
           {/* Front Side */}
           <div
-            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden cursor-pointer hover:border-indigo-200 transition-colors"
+            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden cursor-pointer hover:shadow-md transition-all duration-200"
             onClick={() => setIsFlipped(true)}
           >
             <div className="flex items-start">
@@ -55,21 +55,24 @@ export default function EducationSection() {
               </div>
               <div className="ml-5 flex-grow">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    Carnegie Mellon University
-                  </h3>
-                  <span className="text-gray-600 text-base font-normal">Aug 2023 - May 2027</span>
+                  <h3 className="text-xl font-bold">Carnegie Mellon University</h3>
+                  <span className="text-gray-600">Aug 2023 - May 2027</span>
                 </div>
-                <p className="text-indigo-600 font-medium mt-1">B.S. in Computer Science</p>
-                <p className="text-gray-600">
+                <p className="text-indigo-600 font-medium mt-1 text-lg">B.S. in Computer Science</p>
+                <p className="text-gray-700">
                   Concentration in SWE • Minor in Social & Political History
                 </p>
-                <p className="text-gray-700 mt-2">QPA: 3.65</p>
+                <div className="flex items-center mt-4">
+                  <span className="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-sm font-medium">
+                    QPA: 3.65
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Flip indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-400 bg-gray-50 rounded-full p-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
+              <span className="text-sm">More</span>
               <svg
                 width="20"
                 height="20"
@@ -78,7 +81,7 @@ export default function EducationSection() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M7.5 14.25L3 9.75M3 9.75L7.5 5.25M3 9.75H16.5C18.7091 9.75 20.5 11.5409 20.5 13.75V14.25"
+                  d="M16.5 9.75L21 14.25M21 14.25L16.5 18.75M21 14.25H7.5C5.29086 14.25 3.5 12.4591 3.5 10.25V9.75"
                   stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
@@ -90,35 +93,31 @@ export default function EducationSection() {
 
           {/* Back Side */}
           <div
-            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden rotate-y-180 cursor-pointer hover:border-indigo-200 transition-colors"
+            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden rotate-y-180 cursor-pointer hover:shadow-md transition-all duration-200"
             onClick={() => setIsFlipped(false)}
           >
             <div className="flex h-full">
               {/* Campus Involvement */}
-              <div className="w-2/5 border-r border-gray-100 pr-4">
-                <h4 className="font-medium text-gray-800 mb-3 text-sm uppercase tracking-wider">
-                  Campus Involvement
-                </h4>
+              <div className="w-[35%] border-r border-gray-100 pr-4">
+                <h4 className="text-gray-800 mb-3 tracking-wider">Campus Involvement</h4>
                 <ul className="space-y-3">
                   {activities.map((activity) => (
-                    <li key={activity} className="flex items-start">
+                    <li key={activity} className="flex items-center">
                       <span className="text-indigo-500 mr-2">•</span>
-                      <span className="text-gray-700 text-sm">{activity}</span>
+                      <span className="text-gray-700 text-sm font-medium">{activity}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Coursework */}
-              <div className="w-3/5 pl-6">
-                <h4 className="font-medium text-gray-800 mb-3 text-sm uppercase tracking-wider">
-                  Coursework
-                </h4>
+              <div className="w-[65%] pl-6">
+                <h4 className="text-gray-800 mb-3 tracking-wider">Coursework</h4>
                 <div className="flex flex-wrap gap-2">
                   {courses.map((course) => (
                     <span
                       key={course}
-                      className="inline-block px-2.5 py-0.5 mb-1.5 text-xs bg-gray-100 text-gray-700 rounded"
+                      className="inline-block px-3 py-1 mb-1.5 text-xs bg-gray-100 text-gray-700 font-medium rounded"
                     >
                       {course}
                     </span>
@@ -128,7 +127,8 @@ export default function EducationSection() {
             </div>
 
             {/* Back indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-400 bg-gray-50 rounded-full p-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
+              <span className="text-sm">Back</span>
               <svg
                 width="20"
                 height="20"
@@ -137,7 +137,7 @@ export default function EducationSection() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M16.5 9.75L21 14.25M21 14.25L16.5 18.75M21 14.25H7.5C5.29086 14.25 3.5 12.4591 3.5 10.25V9.75"
+                  d="M7.5 14.25L3 9.75M3 9.75L7.5 5.25M3 9.75H16.5C18.7091 9.75 20.5 11.5409 20.5 13.75V14.25"
                   stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
