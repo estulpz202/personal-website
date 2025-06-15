@@ -3,7 +3,14 @@ import { SVGProps } from 'react';
 /**
  * Supported icon names in the icon system
  */
-type IconName = 'github' | 'linkedin' | 'e-logo' | 'arrow-up' | 'arrow-right';
+type IconName =
+  | 'github'
+  | 'linkedin'
+  | 'e-logo'
+  | 'arrow-up'
+  | 'arrow-right'
+  | 'flip-right'
+  | 'flip-left';
 
 /**
  * Props for the Icon component
@@ -97,6 +104,32 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
           <path
             d="M13 7l5 5m0 0l-5 5m5-5H6"
             strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+
+    case 'flip-right':
+      return (
+        // Flip right icon (for card flipping to details)
+        <svg {...svgProps} aria-hidden="true">
+          <path
+            d="M16.5 9.75L21 14.25M21 14.25L16.5 18.75M21 14.25H7.5C5.29086 14.25 3.5 12.4591 3.5 10.25V9.75"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+
+    case 'flip-left':
+      return (
+        // Flip left icon (for card flipping back)
+        <svg {...svgProps} aria-hidden="true">
+          <path
+            d="M7.5 14.25L3 9.75M3 9.75L7.5 5.25M3 9.75H16.5C18.7091 9.75 20.5 11.5409 20.5 13.75V14.25"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />

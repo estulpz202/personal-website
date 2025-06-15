@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SectionHeader from '@/components/common/SectionHeader';
 import Image from 'next/image';
+import Icon from '@/components/ui/Icon';
 
 /**
  * List of notable courses
@@ -31,7 +32,7 @@ export default function EducationSection() {
     <section className="py-10 fade-in-up">
       <SectionHeader title="Education" />
 
-      <div className="relative h-[220px] perspective">
+      <div className="relative h-[235px] perspective">
         {/* Card Container */}
         <div
           className={`absolute w-full h-full transform-style-3d transition-transform duration-700 ${
@@ -72,22 +73,8 @@ export default function EducationSection() {
 
             {/* Flip indicator */}
             <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
-              <span className="text-sm">More</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.5 9.75L21 14.25M21 14.25L16.5 18.75M21 14.25H7.5C5.29086 14.25 3.5 12.4591 3.5 10.25V9.75"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <span className="text-sm">Details</span>
+              <Icon name="flip-right" className="w-5 h-5" />
             </div>
           </div>
 
@@ -129,21 +116,7 @@ export default function EducationSection() {
             {/* Back indicator */}
             <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
               <span className="text-sm">Back</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 14.25L3 9.75M3 9.75L7.5 5.25M3 9.75H16.5C18.7091 9.75 20.5 11.5409 20.5 13.75V14.25"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <Icon name="flip-left" className="w-5 h-5" />
             </div>
           </div>
         </div>
