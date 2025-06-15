@@ -37,10 +37,10 @@ export default function HeroSection() {
           </div>
 
           {/* Professional summary and interests */}
-          <p className="text-base text-gray-700 mb-8 max-w-2xl">
-            Building meaningful software with a focus on clean code, thoughtful design, and real
-            world impact. Passionate about full-stack development, systems programming, OOP, and
-            collaborative engineering. Always learning, both by design and by curiosity.
+          <p className="text-base text-gray-700 mb-8 max-w-xl">
+            Building meaningful software with a focus on thoughtful design and real world impact.
+            Passionate about full-stack development, especially backend systems and collaborative
+            engineering. Always learning, both by design and by curiosity.
           </p>
 
           {/* Navigation buttons to key sections */}
