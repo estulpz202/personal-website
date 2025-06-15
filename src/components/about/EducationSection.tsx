@@ -32,16 +32,12 @@ export default function EducationSection() {
     <section className="py-10 fade-in-up">
       <SectionHeader title="Education" />
 
-      <div className="relative h-[235px] perspective">
+      <div className={`relative h-[235px] perspective flip-card ${isFlipped ? 'flipped' : ''}`}>
         {/* Card Container */}
-        <div
-          className={`absolute w-full h-full transform-style-3d transition-transform duration-700 ${
-            isFlipped ? 'rotate-y-180' : ''
-          }`}
-        >
+        <div className="flip-card-inner">
           {/* Front Side */}
           <div
-            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden cursor-pointer hover:shadow-md transition-all duration-200"
+            className="flip-card-front bg-white rounded-xl shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-all duration-300"
             onClick={() => setIsFlipped(true)}
           >
             <div className="flex items-start">
@@ -54,7 +50,7 @@ export default function EducationSection() {
                   className="rounded-lg"
                 />
               </div>
-              <div className="ml-5 flex-grow">
+              <div className="ml-5 flex-grow text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                   <h3 className="text-xl font-bold">Carnegie Mellon University</h3>
                   <span className="text-gray-600">Aug 2023 - May 2027</span>
@@ -72,7 +68,7 @@ export default function EducationSection() {
             </div>
 
             {/* Flip indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 flip-hover transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Details</span>
               <Icon name="flip-right" className="w-5 h-5" />
             </div>
@@ -80,7 +76,7 @@ export default function EducationSection() {
 
           {/* Back Side */}
           <div
-            className="absolute w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 p-6 backface-hidden rotate-y-180 cursor-pointer hover:shadow-md transition-all duration-200"
+            className="flip-card-back bg-white rounded-xl shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-all duration-300 text-left"
             onClick={() => setIsFlipped(false)}
           >
             <div className="flex h-full">
@@ -114,29 +110,13 @@ export default function EducationSection() {
             </div>
 
             {/* Back indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 transition-colors flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 flip-hover transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Back</span>
               <Icon name="flip-left" className="w-5 h-5" />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Add custom CSS for 3D transforms */}
-      <style jsx global>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        .transform-style-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </section>
   );
 }

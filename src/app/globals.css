@@ -19,6 +19,10 @@
 
   /* Accessibility and interaction styles */
   --focus-ring: 0 0 0 2px var(--primary);
+
+  /* Animation timings */
+  --flip-duration: 700ms;
+  --flip-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 /* Base typography and layout styles */
@@ -128,4 +132,45 @@ h6 {
 /* Apply the fade-in-up animation */
 .fade-in-up {
   animation: fade-in-up 0.6s ease-out both;
+}
+
+/*
+ * 3D Card Flip Utilities
+ * Used for interactive flip card components
+ */
+.perspective {
+  perspective: 2000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--flip-duration) var(--flip-timing-function);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  transform: rotateX(0deg); /* Fix for Safari */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Hover effects for buttons */
+.flip-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
