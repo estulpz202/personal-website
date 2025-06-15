@@ -2,6 +2,13 @@ import Container from '@/components/common/Container';
 import SectionHeader from '@/components/common/SectionHeader';
 
 /**
+ * Page metadata for browser tab display
+ */
+export const metadata = {
+  title: 'Contact',
+};
+
+/**
  * ContactPage - Professional contact information
  *
  * Provides various ways to connect, including email, social profiles,

@@ -4,6 +4,13 @@ import SectionHeader from '@/components/common/SectionHeader';
 import Link from 'next/link';
 
 /**
+ * Page metadata for browser tab display
+ */
+export const metadata = {
+  title: 'Life',
+};
+
+/**
  * LifePage - Personal interests and activities beyond tech
  *
  * Showcases personality, hobbies, and values through a narrative-driven

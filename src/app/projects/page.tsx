@@ -4,6 +4,13 @@ import ProjectCard from '@/components/projects/ProjectCard';
 import { projects } from '@/components/projects/projectsData';
 
 /**
+ * Page metadata for browser tab display
+ */
+export const metadata = {
+  title: 'Projects',
+};
+
+/**
  * ProjectsPage - Main projects showcase page
  *
  * Displays all portfolio projects in a responsive grid layout with

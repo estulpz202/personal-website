@@ -1,6 +1,13 @@
 import SectionHeader from '@/components/common/SectionHeader';
 
 /**
+ * Page metadata for browser tab display
+ */
+export const metadata = {
+  title: 'Resume',
+};
+
+/**
  * ResumePage - Professional resume/CV display
  */
 export default function ResumePage() {
