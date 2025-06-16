@@ -49,19 +49,19 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                     href={companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link font-medium flex items-center gap-1 text-[15]"
+                    className="link font-medium flex items-center gap-1 text-[15px]"
                   >
                     {company}
                     <Icon name="external-link" className="w-4 h-4" />
                   </Link>
                 ) : (
-                  <span className="text-indigo-600 font-medium text-sm">{company}</span>
+                  <span className="text-indigo-600 font-medium text-[15px]">{company}</span>
                 )}
               </div>
             </div>
             <div className="mt-2 md:mt-0">
-              <span className="bg-white px-3 py-1 rounded-full text-gray-700 text-sm border border-indigo-100 inline-flex items-center">
-                <Icon name="calendar" className="w-3.5 h-3.5 mr-1.5 text-indigo-500" />
+              <span className="bg-white mb-1.5 px-3 py-1 rounded-full text-gray-700 text-[14.5px] border border-indigo-100 inline-flex items-center">
+                <Icon name="calendar" className="w-4 h-4 mr-2 text-indigo-500" />
                 {period}
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           <ul className="space-y-2 mb-4">
             {highlights.map((highlight, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-indigo-500 mr-2 mt-1">•</span>
+                <span className="text-indigo-500 mr-2">•</span>
                 <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: highlight }} />
               </li>
             ))}

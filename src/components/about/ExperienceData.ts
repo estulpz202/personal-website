@@ -11,9 +11,9 @@ export const experiences: Experience[] = [
     period: 'Summer 2024',
     logoSrc: '/PfL_logo.jpg',
     highlights: [
-      'Designed curriculum for 30 high school students covering CS fundamentals, hardware concepts, and mobile app development',
-      'Guided student teams through complete development cycles from concept to deployment',
-      'Taught UI/UX principles, Swift programming, and version control for <a href="/projects/the-pack" class="link">The Pack</a> app',
+      'Designed CS curriculum for 30 high school students covering fundamentals, hardware, and mobile dev',
+      'Taught UI/UX design, Swift programming, and Git version control best practices',
+      'Led student team through full development cycle of <a href="/projects/the-pack" class="link">The Pack</a>, a dog care management app',
     ],
     skills: ['Swift', 'GitHub', 'SDLC', 'Communication', 'Team Management'],
   },

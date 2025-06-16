@@ -8,7 +8,7 @@ import { experiences } from '@/components/about/ExperienceData';
 export default function ExperienceSection() {
   return (
     <section className="py-10 fade-in-up">
-      <SectionHeader title="Featured Experience" />
+      <SectionHeader title="Key Experience" />
 
       <div className="space-y-6">
         {experiences.map((experience, index) => (
