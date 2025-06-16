@@ -4,20 +4,24 @@ import SkillsIcon from './SkillsIcon';
 import Icon from '@/components/ui/Icon';
 import { homeSkillsData, Skill } from './SkillsData';
 
-// Single skill card component
+/**
+ * Single skill card component
+ */
 const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
     <div className="flex items-center gap-2 p-2 bg-white rounded-lg border border-gray-200 shadow-sm">
-      <div className="flex-shrink-0">
-        <SkillsIcon name={skill.icon} className="h-6 w-6" />
-      </div>
+      {skill.icon && (
+        <div className="flex-shrink-0">
+          <SkillsIcon name={skill.icon} className="h-6 w-6" />
+        </div>
+      )}
       <span className="font-medium text-gray-800 text-sm">{skill.name}</span>
     </div>
   );
 };
 
 /**
- * SkillsSectionHome - A simplified version of the skills section for the home page
+ * SkillsSectionHome - Compact skills display for the home page
  */
 export default function SkillsSectionHome() {
   return (

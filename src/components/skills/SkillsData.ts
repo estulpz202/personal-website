@@ -1,91 +1,23 @@
 /**
- * Types and data for skills section
- */
-
-export type SkillCategory = 'languages' | 'tools' | 'development' | 'soft';
-
-export const skillsData: Record<
-  SkillCategory,
-  {
-    title: string;
-    skills: Array<{ name: string }>;
-  }
-> = {
-  languages: {
-    title: 'Programming Languages',
-    skills: [
-      { name: 'Python' },
-      { name: 'TypeScript' },
-      { name: 'Java' },
-      { name: 'C' },
-      { name: 'JavaScript' },
-      { name: 'Swift' },
-      { name: 'SML' },
-      { name: 'HTML/CSS' },
-    ],
-  },
-  tools: {
-    title: 'Technical Tools',
-    skills: [
-      { name: 'GitHub' },
-      { name: 'Docker' },
-      { name: 'FastAPI' },
-      { name: 'React' },
-      { name: 'Next.js' },
-      { name: 'NPM/Yarn' },
-      { name: 'Maven' },
-      { name: 'Poetry' },
-      { name: 'Command Line' },
-      { name: 'Firebase' },
-      { name: 'Tailwind CSS' },
-    ],
-  },
-  development: {
-    title: 'Development Skills',
-    skills: [
-      { name: 'Algorithms' },
-      { name: 'Data Structures' },
-      { name: 'OOP' },
-      { name: 'Functional Programming' },
-      { name: 'REST APIs' },
-      { name: 'System Design' },
-      { name: 'Full Stack Development' },
-      { name: 'Testing' },
-      { name: 'CI/CD' },
-      { name: 'Version Control' },
-      { name: 'UI/UX Basics' },
-      { name: 'DevOps Basics' },
-    ],
-  },
-  soft: {
-    title: 'Soft Skills',
-    skills: [
-      { name: 'Communication' },
-      { name: 'Team Leadership' },
-      { name: 'Project Management' },
-      { name: 'Problem Solving' },
-      { name: 'Mentorship' },
-      { name: 'Time Management' },
-      { name: 'Adaptability' },
-      { name: 'Critical Thinking' },
-    ],
-  },
-};
-
-/**
- * Home page simplified skills data (subset for homepage)
+ * Type definitions for a single skill, category, and skills data
  */
 export type Skill = {
   name: string;
-  icon: string;
+  proficiency?: number; // Optional: 1-5 scale for the about page
+  icon?: string; // Optional: icon name for the home page
 };
 
-export type HomeSkillCategory = {
+export type SkillCategory = {
   title: string;
   skills: Skill[];
 };
 
-export const homeSkillsData: HomeSkillCategory[] = [
+export type SkillsDataType = Record<string, SkillCategory>;
+
+/**
+ * Home page skills data
+ */
+export const homeSkillsData: SkillCategory[] = [
   {
     title: 'Languages',
     skills: [
@@ -114,3 +46,87 @@ export const homeSkillsData: HomeSkillCategory[] = [
     ],
   },
 ];
+
+/**
+ * Comprehensive skills data for the about page
+ */
+export const skillsData: SkillsDataType = {
+  languages: {
+    title: 'Programming Languages',
+    skills: [
+      { name: 'Python', proficiency: 5 },
+      { name: 'TypeScript', proficiency: 4 },
+      { name: 'Java', proficiency: 4 },
+      { name: 'C', proficiency: 3 },
+      { name: 'JavaScript', proficiency: 4 },
+      { name: 'Swift', proficiency: 3 },
+      { name: 'SML', proficiency: 3 },
+      { name: 'HTML/CSS', proficiency: 4 },
+    ],
+  },
+  frameworks: {
+    title: 'Frameworks & Libraries',
+    skills: [
+      { name: 'FastAPI', proficiency: 5 },
+      { name: 'Node.js', proficiency: 4 },
+      { name: 'Next.js', proficiency: 4 },
+      { name: 'Tailwind CSS', proficiency: 4 },
+      { name: 'React', proficiency: 4 },
+      { name: 'Express.js', proficiency: 3 },
+      { name: 'Spring Boot', proficiency: 3 },
+      { name: 'UIKit', proficiency: 3 },
+    ],
+  },
+  tools: {
+    title: 'Tools & Platforms',
+    skills: [
+      { name: 'GitHub', proficiency: 5 },
+      { name: 'Git', proficiency: 5 },
+      { name: 'Docker', proficiency: 4 },
+      { name: 'VS Code', proficiency: 5 },
+      { name: 'Firebase', proficiency: 3 },
+      { name: 'AWS', proficiency: 3 },
+      { name: 'Jira', proficiency: 4 },
+      { name: 'Figma', proficiency: 3 },
+    ],
+  },
+  practices: {
+    title: 'Development Practices',
+    skills: [
+      { name: 'Testing', proficiency: 4 },
+      { name: 'DevOps', proficiency: 3 },
+      { name: 'LLM API Integration', proficiency: 4 },
+      { name: 'CI/CD', proficiency: 3 },
+      { name: 'Agile/Scrum', proficiency: 4 },
+      { name: 'REST API Design', proficiency: 5 },
+      { name: 'Code Review', proficiency: 4 },
+      { name: 'System Design', proficiency: 4 },
+    ],
+  },
+  concepts: {
+    title: 'Computer Science',
+    skills: [
+      { name: 'Data Structures', proficiency: 5 },
+      { name: 'Algorithms', proficiency: 5 },
+      { name: 'Object-Oriented Programming', proficiency: 5 },
+      { name: 'Functional Programming', proficiency: 4 },
+      { name: 'Database Design', proficiency: 4 },
+      { name: 'Computer Architecture', proficiency: 3 },
+      { name: 'Operating Systems', proficiency: 3 },
+      { name: 'Networking', proficiency: 3 },
+    ],
+  },
+  soft: {
+    title: 'Soft Skills',
+    skills: [
+      { name: 'Communication', proficiency: 5 },
+      { name: 'Team Leadership', proficiency: 4 },
+      { name: 'Project Management', proficiency: 4 },
+      { name: 'Problem Solving', proficiency: 5 },
+      { name: 'Mentorship', proficiency: 4 },
+      { name: 'Time Management', proficiency: 4 },
+      { name: 'Adaptability', proficiency: 5 },
+      { name: 'Critical Thinking', proficiency: 5 },
+    ],
+  },
+};
