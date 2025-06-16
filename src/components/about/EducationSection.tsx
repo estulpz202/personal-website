@@ -68,7 +68,7 @@ export default function EducationSection() {
             </div>
 
             {/* Flip indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 flip-hover transition-all duration-200 flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Details</span>
               <Icon name="flip-right" className="w-5 h-5" />
             </div>
@@ -79,9 +79,9 @@ export default function EducationSection() {
             className="flip-card-back bg-white rounded-xl shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-all duration-300 text-left"
             onClick={() => setIsFlipped(false)}
           >
-            <div className="flex h-full">
+            <div className="flex h-full pl-4">
               {/* Campus Involvement */}
-              <div className="w-[35%] border-r border-gray-100 pr-4">
+              <div className="w-[34%] border-r border-gray-100 pr-4">
                 <h4 className="text-gray-800 mb-3 tracking-wider">Campus Involvement</h4>
                 <ul className="space-y-3">
                   {activities.map((activity) => (
@@ -94,7 +94,7 @@ export default function EducationSection() {
               </div>
 
               {/* Coursework */}
-              <div className="w-[65%] pl-6">
+              <div className="w-[66%] pl-6">
                 <h4 className="text-gray-800 mb-3 tracking-wider">Coursework</h4>
                 <div className="flex flex-wrap gap-2">
                   {courses.map((course) => (
@@ -110,7 +110,7 @@ export default function EducationSection() {
             </div>
 
             {/* Back indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 flip-hover transition-all duration-200 flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Back</span>
               <Icon name="flip-left" className="w-5 h-5" />
             </div>

@@ -168,9 +168,3 @@ h6 {
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
-
-/* Hover effects for buttons */
-.flip-hover:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
