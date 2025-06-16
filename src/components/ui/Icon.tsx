@@ -10,7 +10,9 @@ type IconName =
   | 'arrow-up'
   | 'arrow-right'
   | 'flip-right'
-  | 'flip-left';
+  | 'flip-left'
+  | 'external-link'
+  | 'calendar';
 
 /**
  * Props for the Icon component
@@ -133,6 +135,30 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
+        </svg>
+      );
+
+    case 'external-link':
+      return (
+        // External link icon (for external website links)
+        <svg {...svgProps} aria-hidden="true">
+          <path
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+
+    case 'calendar':
+      return (
+        // Calendar icon (for dates)
+        <svg {...svgProps} aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
+          <line x1="16" y1="2" x2="16" y2="6" strokeWidth="1.5" />
+          <line x1="8" y1="2" x2="8" y2="6" strokeWidth="1.5" />
+          <line x1="3" y1="10" x2="21" y2="10" strokeWidth="1.5" />
         </svg>
       );
 

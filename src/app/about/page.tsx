@@ -1,5 +1,6 @@
 import Container from '@/components/common/Container';
 import EducationSection from '@/components/about/EducationSection';
+import ExperienceSection from '@/components/about/ExperienceSection';
 
 /**
  * Page metadata for browser tab display
@@ -25,6 +26,9 @@ export default function AboutPage() {
 
         {/* Education Section Component */}
         <EducationSection />
+
+        {/* Experience Section Component */}
+        <ExperienceSection />
       </Container>
     </main>
   );
