@@ -2,47 +2,7 @@ import Link from 'next/link';
 import SectionHeader from '@/components/common/SectionHeader';
 import SkillsIcon from './SkillsIcon';
 import Icon from '@/components/ui/Icon';
-
-// Skill types and data
-type Skill = {
-  name: string;
-  icon: string;
-};
-
-type SkillCategory = {
-  title: string;
-  skills: Skill[];
-};
-
-const skillsData: SkillCategory[] = [
-  {
-    title: 'Languages',
-    skills: [
-      { name: 'Python', icon: 'python' },
-      { name: 'TypeScript', icon: 'typescript' },
-      { name: 'Java', icon: 'java' },
-      { name: 'C', icon: 'c' },
-    ],
-  },
-  {
-    title: 'Full Stack',
-    skills: [
-      { name: 'FastAPI', icon: 'fastapi' },
-      { name: 'Node.js', icon: 'nodejs' },
-      { name: 'Next.js', icon: 'nextjs' },
-      { name: 'Tailwind CSS', icon: 'tailwindcss' },
-    ],
-  },
-  {
-    title: 'Tools & Practices',
-    skills: [
-      { name: 'GitHub', icon: 'github' },
-      { name: 'LLM API', icon: 'llmapi' },
-      { name: 'DevOps', icon: 'devops' },
-      { name: 'Testing', icon: 'testing' },
-    ],
-  },
-];
+import { homeSkillsData, Skill } from './SkillsData';
 
 // Single skill card component
 const SkillCard = ({ skill }: { skill: Skill }) => {
@@ -56,13 +16,16 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
   );
 };
 
-export default function SkillsSection() {
+/**
+ * SkillsSectionHome - A simplified version of the skills section for the home page
+ */
+export default function SkillsSectionHome() {
   return (
     <section className="pt-8 pb-10 fade-in-up">
       <SectionHeader title="Technical Highlights" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {skillsData.map((category) => (
+        {homeSkillsData.map((category) => (
           <div key={category.title} className="space-y-3">
             <h3 className="text-lg font-medium text-gray-700 mb-2">{category.title}</h3>
             <div className="grid grid-cols-1 gap-2">
