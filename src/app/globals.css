@@ -8,8 +8,9 @@
   /* Core color palette */
   --white: #ffffff;
   --black: #171717;
-  --indigo-500: #6366f1; /* Indigo-500 */
-  --indigo-400: #818cf8; /* Indigo-400 */
+  --indigo-600: #4f46e5;
+  --indigo-450: #6d73f4;
+  --indigo-400: #818cf8;
 
   /* Semantic variable assignments */
   --background: var(--white);
@@ -18,7 +19,7 @@
   --font-mono: var(--font-geist-mono);
 
   /* Accessibility and interaction styles */
-  --focus-ring: 0 0 0 2px var(--indigo-500);
+  --focus-ring: 0 0 0 2px var(--indigo-600);
 
   /* Animation timings */
   --flip-duration: 700ms;
@@ -54,8 +55,8 @@ button:focus-visible {
 
 /* Standard text links */
 .link {
-  color: var(--indigo-500);
-  text-decoration: underline;
+  color: var(--indigo-600);
+  text-decoration: none;
   text-underline-offset: 2px;
   transition:
     color 0.2s ease,
@@ -63,8 +64,7 @@ button:focus-visible {
 }
 
 .link:hover {
-  color: var(--indigo-400);
-  filter: brightness(65%);
+  color: var(--indigo-450);
 }
 
 /* Navigation links */

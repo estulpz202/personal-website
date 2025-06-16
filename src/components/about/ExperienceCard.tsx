@@ -49,10 +49,10 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                     href={companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 hover:text-indigo-800 font-medium transition-colors flex items-center gap-1 text-sm"
+                    className="link font-medium flex items-center gap-1 text-[15]"
                   >
                     {company}
-                    <Icon name="external-link" className="w-3.5 h-3.5" />
+                    <Icon name="external-link" className="w-4 h-4" />
                   </Link>
                 ) : (
                   <span className="text-indigo-600 font-medium text-sm">{company}</span>
