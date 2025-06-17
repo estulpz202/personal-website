@@ -2,6 +2,7 @@ import Container from '@/components/common/Container';
 import EducationSection from '@/components/about/EducationSection';
 import ExperienceSection from '@/components/about/ExperienceSection';
 import SkillsSection from '@/components/skills/SkillsSection';
+import JourneySection from '@/components/about/JourneySection';
 
 /**
  * Page metadata for browser tab display
@@ -33,6 +34,9 @@ export default function AboutPage() {
 
         {/* Skills Section Component */}
         <SkillsSection />
+
+        {/* Journey Section Component */}
+        <JourneySection />
       </Container>
     </main>
   );
