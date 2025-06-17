@@ -1,7 +1,7 @@
 /**
  * ProjectCategory - Types of projects
  */
-export type ProjectCategory = 'fullstack' | 'ai' | 'mobile' | 'web';
+export type ProjectCategory = 'fullstack' | 'ai' | 'web' | 'mobile';
 
 /**
  * Project - Core project data structure
@@ -140,20 +140,19 @@ export const projects: Project[] = [
 ];
 
 /**
- * Get all project categories with counts
+ * Get all project categories for filtering
  */
-export function getProjectCategories(): { id: ProjectCategory; label: string; count: number }[] {
-  const categories: ProjectCategory[] = ['fullstack', 'ai', 'mobile', 'web'];
+export function getProjectCategories(): { id: ProjectCategory; label: string }[] {
+  const categories: ProjectCategory[] = ['fullstack', 'ai', 'web', 'mobile'];
   const labels: Record<ProjectCategory, string> = {
     fullstack: 'Fullstack',
     ai: 'AI & ML',
-    mobile: 'Mobile',
     web: 'Web Development',
+    mobile: 'Mobile',
   };
 
   return categories.map((cat) => ({
     id: cat,
     label: labels[cat],
-    count: projects.filter((p) => p.category.includes(cat)).length,
   }));
 }

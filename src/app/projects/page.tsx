@@ -1,5 +1,4 @@
-import ProjectCard from '@/components/projects/ProjectCard';
-import { projects } from '@/components/projects/projectsData';
+import FilteredProjects from '@/components/projects/FilteredProjects';
 
 /**
  * Page metadata for browser tab display
@@ -18,11 +17,11 @@ function ProjectsContainer({ children }: { children: React.ReactNode }) {
 /**
  * ProjectsPage - Main projects showcase page
  *
- * Displays all portfolio projects in a responsive grid layout.
+ * Displays all portfolio projects in a responsive grid layout with filtering options.
  */
 export default function ProjectsPage() {
   return (
-    <main className="pb-16">
+    <main className="pb-10">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50">
         <ProjectsContainer>
@@ -37,13 +36,9 @@ export default function ProjectsPage() {
       </div>
 
       <ProjectsContainer>
-        {/* Projects Grid */}
+        {/* Projects Section with Filtering */}
         <div className="py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))}
-          </div>
+          <FilteredProjects />
         </div>
       </ProjectsContainer>
     </main>
