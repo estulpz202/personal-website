@@ -1,3 +1,5 @@
+// components/skills/SkillsSection.tsx
+
 'use client';
 
 import { useState } from 'react';
@@ -33,11 +35,10 @@ export default function SkillsSection() {
 
       {/* Skills Content */}
       <div className="bg-gradient-to-b from-white to-gray-50 rounded-xl shadow-sm border border-gray-200 pb-6 pr-6 pl-6 pt-2">
-        <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-          <span className="bg-indigo-600 w-1 h-6 rounded-sm mr-3"></span>
+        <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-6">
           {skillsData[activeTab].title}
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
           {skillsData[activeTab].skills.map((skill) => (
             <div
               key={skill.name}
