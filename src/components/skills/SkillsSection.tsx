@@ -20,10 +20,10 @@ export default function SkillsSection() {
           <button
             key={key}
             onClick={() => setActiveTab(key)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
+            className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200 ${
               activeTab === key
-                ? 'bg-indigo-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-indigo-600 text-white shadow-md'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'
             }`}
           >
             {data.title}
@@ -32,9 +32,12 @@ export default function SkillsSection() {
       </div>
 
       {/* Skills Content */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">{skillsData[activeTab].title}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="bg-gradient-to-b from-white to-gray-50 rounded-xl shadow-sm border border-gray-200 pb-6 pr-6 pl-6 pt-2">
+        <h3 className="text-xl font-semibold text-gray-800 flex items-center">
+          <span className="bg-indigo-600 w-1 h-6 rounded-sm mr-3"></span>
+          {skillsData[activeTab].title}
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
           {skillsData[activeTab].skills.map((skill) => (
             <div
               key={skill.name}
