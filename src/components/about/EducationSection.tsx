@@ -43,7 +43,7 @@ export default function EducationSection() {
             <div className="flex items-start">
               <div className="flex-shrink-0 mt-5">
                 <Image
-                  src="/cmu_logo.jpg"
+                  src="/images/logos/cmu_logo.jpg"
                   alt="Carnegie Mellon University Logo"
                   width={70}
                   height={70}

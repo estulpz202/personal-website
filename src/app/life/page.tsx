@@ -24,7 +24,7 @@ export default function LifePage() {
         <section className="py-12 text-center fade-in-up">
           <SectionHeader title="Life Beyond Tech" />
           <Image
-            src="/headshot.jpg"
+            src="/images/profile/headshot.jpg"
             alt="Professional headshot"
             width={190}
             height={190}
@@ -52,14 +52,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/wrestling_team.jpg"
+              src="/images/life/wrestling_team.jpg"
               alt="Wrestling team"
               width={450}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/wrestling_lift.JPG"
+              src="/images/life/wrestling_lift.jpg"
               alt="Wrestling competition"
               width={350}
               height={340}
@@ -75,14 +75,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/kayaking.JPG"
+              src="/images/life/kayaking.jpg"
               alt="Kayaking with family and friends"
               width={450}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/bear_mountain.jpg"
+              src="/images/life/bear_mountain.jpg"
               alt="Hiking on Bear Mountain"
               width={350}
               height={340}
@@ -98,14 +98,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/dogs.jpg"
+              src="/images/life/dogs.jpg"
               alt="My three dogs on their bed"
               width={450}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/kane_sunglasses.jpg"
+              src="/images/life/kane_sunglasses.jpg"
               alt="My dog Kane wearing sunglasses"
               width={350}
               height={340}
@@ -139,14 +139,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/gcode_teaching.jpg"
+              src="/images/life/gcode_teaching.jpg"
               alt="Teaching students at GCode"
               width={400}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/pfll_escaperoom.jpg"
+              src="/images/life/pfll_escaperoom.jpg"
               alt="Tech Escape Room"
               width={400}
               height={340}
@@ -173,14 +173,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/christmas.jpg"
+              src="/images/life/christmas.jpg"
               alt="Family Christmas photo"
               width={430}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/nephew.jpg"
+              src="/images/life/nephew.jpg"
               alt="Holding my newborn nephew"
               width={370}
               height={340}

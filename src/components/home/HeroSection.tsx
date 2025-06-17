@@ -26,7 +26,7 @@ export default function HeroSection() {
             </div>
             <div className="flex-shrink-0 ml-4">
               <Image
-                src="/cmu_logo.jpg"
+                src="/images/logos/cmu_logo.jpg"
                 alt="Carnegie Mellon University logo"
                 width={56}
                 height={56}
@@ -54,7 +54,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-600 to-indigo-400 blur-md opacity-20 transform -rotate-6 scale-105"></div>
             <Image
-              src="/headshot.jpg"
+              src="/images/profile/headshot.jpg"
               alt="Estuardo Lopez"
               width={280}
               height={280}

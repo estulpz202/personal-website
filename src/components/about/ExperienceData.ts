@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     company: 'Prime Factors Learning Lab',
     companyUrl: 'https://primefactors.org/',
     period: 'Summer 2024',
-    logoSrc: '/PfL_logo.jpg',
+    logoSrc: '/images/logos/pfl_logo.jpg',
     highlights: [
       'Designed CS curriculum for 30 high school students covering fundamentals, hardware, and mobile dev',
       'Taught UI/UX design, Swift programming, and Git version control best practices',
