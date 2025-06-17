@@ -27,7 +27,7 @@ export const homeSkillsData: SkillCategory[] = [
     ],
   },
   {
-    title: 'Full Stack',
+    title: 'Fullstack',
     skills: [
       { name: 'FastAPI', icon: 'fastapi' },
       { name: 'Node.js', icon: 'nodejs' },

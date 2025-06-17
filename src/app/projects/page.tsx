@@ -6,8 +6,6 @@ import { projects } from '@/components/projects/projectsData';
  */
 export const metadata = {
   title: 'Projects | Estuardo Lopez',
-  description:
-    'Explore my portfolio of software development projects including web applications, full-stack systems, AI tools, and mobile apps.',
 };
 
 /**

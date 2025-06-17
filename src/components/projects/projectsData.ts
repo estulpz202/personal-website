@@ -31,14 +31,14 @@ export const projects: Project[] = [
   {
     slug: 'hive',
     title: 'Hive',
-    subtitle: 'Strategic Board Game Implementation',
+    subtitle: 'Strategic Board Game',
     description:
-      'A full-stack implementation of the award-winning Hive board game with a Python backend and React frontend, featuring responsive design and advanced game logic.',
+      'A Python and React fullstack implementation of Hive, featuring a responsive UI, modular backend, and advanced game logic.',
     imageUrl: '/images/projects/hive.jpg',
     category: ['fullstack'],
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'REST APIs', 'Pytest', 'Poetry'],
     highlights: [
-      'Developed a full-stack Hive game with a Python backend (FastAPI, Pytest, Poetry) and React (TypeScript) frontend',
+      'Developed a fullstack Hive game with a Python backend (FastAPI, Pytest, Poetry) and React (TypeScript) frontend',
       'Designed a modular MVC-style system with separation between game logic, API endpoints, and UI',
       'Managed robust REST API design and scalable game state with clear schemas',
       'Implemented turn-based gameplay with a responsive hex grid, drag/zoom, action highlights, and graph-based movement logic',
@@ -56,9 +56,9 @@ export const projects: Project[] = [
   {
     slug: 'gcode-agent',
     title: 'Gcode Agent',
-    subtitle: 'LLM-Powered Recruitment Chatbot',
+    subtitle: 'LLM Recruitment Chatbot',
     description:
-      "An AI agent built with Mastra to support PFLL's recruiting efforts. Focused on backend behavior, DevOps workflows, and LLM features like retrieval-augmented generation.",
+      'An AI recruitment agent built with Mastra. Focused on backend behavior, DevOps workflows, and LLM features like retrieval-augmented generation.',
     imageUrl: '/images/projects/gcode_agent.jpg',
     category: ['ai'],
     tech: ['Mastra', 'LLM', 'CI/CD', 'TypeScript', 'GitHub Actions', 'Docker', 'Codespaces'],
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   {
     slug: 'personal-website',
     title: 'Personal Website',
-    subtitle: 'Modern Portfolio with Next.js',
+    subtitle: 'Modern Portfolio Site',
     description:
       'A responsive personal portfolio website built with Next.js and Tailwind CSS, featuring a clean design, project showcase, and contact functionality.',
     imageUrl: '/images/projects/website.jpg',
@@ -93,14 +93,14 @@ export const projects: Project[] = [
   {
     slug: 'santorini',
     title: 'Santorini',
-    subtitle: 'Strategy Board Game Implementation',
+    subtitle: 'Strategic Board Game',
     description:
-      'A complete digital implementation of the Santorini board game with a Java backend and React frontend, featuring comprehensive technical documentation.',
+      'Built Santorini with a Java backend and React frontend, supported by comprehensive technical documentation.',
     imageUrl: '/images/projects/santorini.jpg',
     category: ['fullstack'],
     tech: ['Java', 'NanoHTTPD', 'UML', 'React', 'TypeScript'],
     highlights: [
-      'Built a full-stack Santorini game with a Java backend (NanoHTTPD) and a React (TypeScript) frontend',
+      'Built a fullstack Santorini game with a Java backend (NanoHTTPD) and a React (TypeScript) frontend',
       'Authored comprehensive technical documentation, including UML class diagrams, object/domain models, and sequence diagrams to support future extensibility',
       'Private repository per academic policy. Access available upon request at elopezle@andrew.cmu.edu',
     ],
@@ -116,9 +116,9 @@ export const projects: Project[] = [
   {
     slug: 'the-pack',
     title: 'The Pack',
-    subtitle: 'iOS Pet Care Management App',
+    subtitle: 'iOS Pet Care App',
     description:
-      'An iOS application designed to help dog owners track, learn about, and manage pet care responsibilities with an intuitive user interface.',
+      'An intuitive iOS app built with Swift to help users manage and track pet care routines. Developed with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
     category: ['mobile'],
     tech: ['Swift', 'UI/UX Design', 'Xcode', 'GitHub', 'Leadership'],
@@ -145,7 +145,7 @@ export const projects: Project[] = [
 export function getProjectCategories(): { id: ProjectCategory; label: string; count: number }[] {
   const categories: ProjectCategory[] = ['fullstack', 'ai', 'mobile', 'web'];
   const labels: Record<ProjectCategory, string> = {
-    fullstack: 'Full-Stack',
+    fullstack: 'Fullstack',
     ai: 'AI & ML',
     mobile: 'Mobile',
     web: 'Web Development',
