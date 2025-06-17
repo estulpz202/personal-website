@@ -27,7 +27,7 @@ export default function JourneySection() {
   return (
     <section className="py-7 fade-in-up">
       <SectionHeader title="My Journey" />
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl px-6 pt-6 pb-4 border border-indigo-100">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Journey Text */}
           <div className="flex-1 text-gray-800">
@@ -55,15 +55,13 @@ export default function JourneySection() {
             {keyValues.map((value) => (
               <div
                 key={value.id}
-                className="bg-white p-4 rounded-lg shadow-sm border border-indigo-100 hover:shadow-md transition-shadow duration-300"
+                className="bg-white px-4 py-1.25 rounded-lg shadow-sm border border-indigo-100 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex items-center gap-4">
-                  <div className="bg-indigo-50 p-2.5 rounded-lg flex items-center justify-center">
+                  <div className="bg-indigo-50 p-2.5 ml-4.75 rounded-lg flex items-center justify-center">
                     <Icon name={value.icon as any} className="w-5 h-5 text-indigo-600" />
                   </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">{value.title}</h3>
-                  </div>
+                  <h3 className="font-medium text-gray-900 pb-3.25">{value.title}</h3>
                 </div>
               </div>
             ))}
