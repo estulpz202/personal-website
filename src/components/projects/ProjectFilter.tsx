@@ -7,34 +7,32 @@ interface ProjectFilterProps {
 
 /**
  * ProjectFilter - A component that handles category filtering
- *
- * Features a clean tab-like UI for filtering projects by category
  */
 export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectFilterProps) {
   const categories = getProjectCategories();
 
   return (
-    <div className="pb-4">
+    <div className="mb-4">
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => onFilterChange(null)}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+          className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
             activeFilter === null
-              ? 'bg-indigo-100 text-indigo-700'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              ? 'border-indigo-500 bg-indigo-500 text-white'
+              : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
           }`}
         >
-          All
+          All Projects
         </button>
 
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => onFilterChange(category.id)}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
               activeFilter === category.id
-                ? 'bg-indigo-100 text-indigo-700'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'border-indigo-500 bg-indigo-500 text-white'
+                : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
             }`}
           >
             {category.label}
