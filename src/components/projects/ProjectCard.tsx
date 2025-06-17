@@ -3,7 +3,7 @@
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Icon from '@/components/ui/Icon';
+import Icon, { IconName } from '@/components/ui/Icon';
 import { Project, ProjectCategory } from './projectsData';
 
 /**
@@ -113,7 +113,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="text-gray-500 hover:text-indigo-600 transition-colors"
               aria-label={link.label}
             >
-              <Icon name={link.icon || 'external-link'} className="w-5 h-5" />
+              <Icon name={(link.icon || 'external-link') as IconName} className="w-5 h-5" />
             </a>
           ))}
         </div>

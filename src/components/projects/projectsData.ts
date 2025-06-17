@@ -48,7 +48,7 @@ export const projects: Project[] = [
       {
         label: 'Demo',
         url: 'https://www.loom.com/share/97c65783f69949c595e1f93234da9af1',
-        icon: 'external-link',
+        icon: 'video',
       },
     ],
     year: 2025,
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       {
         label: 'Demo',
         url: 'https://www.loom.com/share/0322bac9ec2d42238ad54261231d5f29',
-        icon: 'external-link',
+        icon: 'video',
       },
     ],
     year: 2025,
@@ -132,7 +132,7 @@ export const projects: Project[] = [
       {
         label: 'Demo',
         url: 'https://www.loom.com/share/3ef12a5b6511473c98ca58ffe85ad8f7?sid=d4634914-4af4-45fd-982e-2447691a2b84',
-        icon: 'external-link',
+        icon: 'video',
       },
     ],
     year: 2024,
