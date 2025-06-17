@@ -1,12 +1,16 @@
 import SectionHeader from '@/components/common/SectionHeader';
-import Icon from '@/components/ui/Icon';
+import Icon, { type IconName } from '@/components/ui/Icon';
 
 /**
  * JourneySection - Professional journey and approach to software development
  */
 export default function JourneySection() {
   // Define the key values to display as an array of objects for better maintainability
-  const keyValues = [
+  const keyValues: Array<{
+    id: string;
+    icon: IconName;
+    title: string;
+  }> = [
     {
       id: 'technical-excellence',
       icon: 'code-brackets',
@@ -59,7 +63,7 @@ export default function JourneySection() {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-indigo-50 p-2.5 ml-4.75 rounded-lg flex items-center justify-center">
-                    <Icon name={value.icon as any} className="w-5 h-5 text-indigo-600" />
+                    <Icon name={value.icon} className="w-5 h-5 text-indigo-600" />
                   </div>
                   <h3 className="font-medium text-gray-900 pb-3.25">{value.title}</h3>
                 </div>

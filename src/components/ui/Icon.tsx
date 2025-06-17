@@ -3,7 +3,7 @@ import { SVGProps } from 'react';
 /**
  * Supported icon names in the icon system
  */
-type IconName =
+export type IconName =
   | 'github'
   | 'linkedin'
   | 'e-logo'
