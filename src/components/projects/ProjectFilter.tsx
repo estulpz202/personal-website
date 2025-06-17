@@ -12,7 +12,7 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
   const categories = getProjectCategories();
 
   return (
-    <div className="mb-4">
+    <div className="mb-6">
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => onFilterChange(null)}
