@@ -34,7 +34,7 @@ export default function JourneySection() {
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl px-6 pt-6 pb-4 border border-indigo-100">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Journey Text */}
-          <div className="flex-1 text-gray-800">
+          <div className="flex-1 text-gray-700">
             <p className="text-lg mb-4">
               I'm a Computer Science student at Carnegie Mellon University, pursuing a concentration
               in Software Engineering and a minor in History. My path in tech has been driven by a

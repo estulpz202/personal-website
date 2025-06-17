@@ -11,7 +11,7 @@ export const recentProjs = [
   {
     title: 'Gcode Agent',
     description: 'Contributing to LLM-powered chatbot built with Mastra framework',
-    tech: ['Mastra', 'LLM', 'DevOps'],
+    tech: ['Mastra', 'LLM', 'CI/CD', 'Docker'],
     href: '/projects/gcode-agent',
   },
 ];
