@@ -7,7 +7,7 @@ import Icon from '@/components/ui/Icon';
  */
 export default function JourneySection() {
   return (
-    <section className="py-10 fade-in-up">
+    <section className="py-7 fade-in-up">
       <SectionHeader title="My Journey" />
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-indigo-100">
         <div className="flex flex-col lg:flex-row gap-8">

@@ -11,7 +11,7 @@ export default function SkillsSection() {
   const [activeTab, setActiveTab] = useState<string>('languages');
 
   return (
-    <section className="py-10 fade-in-up" id="skills">
+    <section className="py-7 fade-in-up" id="skills">
       <SectionHeader title="Technical Skills" />
 
       {/* Skills Navigation */}

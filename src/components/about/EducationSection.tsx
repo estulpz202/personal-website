@@ -29,7 +29,7 @@ export default function EducationSection() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <section className="py-10 fade-in-up">
+    <section className="pt-3 pb-7 fade-in-up">
       <SectionHeader title="Education" />
 
       <div className={`relative h-[235px] perspective flip-card ${isFlipped ? 'flipped' : ''}`}>
@@ -53,7 +53,7 @@ export default function EducationSection() {
               <div className="ml-5 flex-grow text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                   <h3 className="text-xl font-bold">Carnegie Mellon University</h3>
-                  <span className="text-gray-600">Aug 2023 - May 2027</span>
+                  <span className="text-gray-600 mt-1">Aug 2023 - May 2027</span>
                 </div>
                 <p className="text-indigo-600 font-medium mt-1 text-lg">B.S. in Computer Science</p>
                 <p className="text-gray-700">

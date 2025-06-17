@@ -60,7 +60,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
               </div>
             </div>
             <div className="mt-2 md:mt-0">
-              <span className="bg-white mb-1.5 px-3 py-1 rounded-full text-gray-700 text-[14.5px] border border-indigo-100 inline-flex items-center">
+              <span className="bg-white mb-2 px-3 py-1 rounded-full text-gray-700 text-[14.5px] border border-indigo-100 inline-flex items-center">
                 <Icon name="calendar" className="w-4 h-4 mr-2 text-indigo-500" />
                 {period}
               </span>
