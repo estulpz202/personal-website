@@ -3,6 +3,7 @@ import EducationSection from '@/components/about/EducationSection';
 import ExperienceSection from '@/components/about/ExperienceSection';
 import SkillsSection from '@/components/skills/SkillsSection';
 import JourneySection from '@/components/about/JourneySection';
+import BeyondCodeSection from '@/components/about/BeyondCodeSection';
 
 /**
  * Page metadata for browser tab display
@@ -37,6 +38,9 @@ export default function AboutPage() {
 
         {/* Journey Section Component */}
         <JourneySection />
+
+        {/* Beyond Code Section - Link to Life Page */}
+        <BeyondCodeSection />
       </Container>
     </main>
   );
