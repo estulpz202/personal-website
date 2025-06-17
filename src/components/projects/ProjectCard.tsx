@@ -2,37 +2,45 @@
 
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Icon from '@/components/ui/Icon';
+import { Project, ProjectCategory } from './projectsData';
 
 /**
  * Props for the ProjectCard component
  */
 interface ProjectCardProps {
-  slug: string;
-  title: string;
-  description: string;
-  tech: string[];
-  links?: { label: string; url: string }[];
+  project: Project;
 }
 
 /**
- * ProjectCard - Interactive project display for the projects page
- *
- * Renders a clickable card showing project details with hover effects.
- * The entire card navigates to the project detail page, while maintaining
- * accessibility and allowing direct access to external links.
+ * Category badge colors mapped by category type
  */
-export default function ProjectCard({ slug, title, description, tech, links }: ProjectCardProps) {
+const categoryColors: Record<ProjectCategory, { bg: string; text: string }> = {
+  fullstack: { bg: 'bg-blue-100', text: 'text-blue-700' },
+  ai: { bg: 'bg-purple-100', text: 'text-purple-700' },
+  mobile: { bg: 'bg-green-100', text: 'text-green-700' },
+  web: { bg: 'bg-amber-100', text: 'text-amber-700' },
+};
+
+/**
+ * ProjectCard - Displays a single project with image, details, and links
+ *
+ * Features a clean, modern design with hover effects and category badges.
+ * The entire card is clickable to navigate to the project detail page.
+ */
+export default function ProjectCard({ project }: ProjectCardProps) {
   const router = useRouter();
 
   // Navigation handler for clicking on the card
   const handleCardClick = useCallback(() => {
-    router.push(`/projects/${slug}`);
-  }, [router, slug]);
+    router.push(`/projects/${project.slug}`);
+  }, [router, project.slug]);
 
   return (
     <div
       onClick={handleCardClick}
-      className="group proj-card-link border rounded-lg shadow-sm hover:shadow-lg transition-transform transform hover:scale-[1.025] fade-in-up relative"
+      className="group cursor-pointer bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
       role="link"
       tabIndex={0}
       onKeyDown={(e) => {
@@ -42,40 +50,79 @@ export default function ProjectCard({ slug, title, description, tech, links }: P
         }
       }}
     >
-      {/* Main content area with title, description and technologies */}
-      <div className="p-6 pb-16">
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-[color:var(--accent-color)] transition-colors">
-          {title}
-        </h3>
-        <p className="text-base text-gray-700 mb-4">{description}</p>
-        <div className="text-sm text-gray-600 mb-4">
-          <strong>Technologies:</strong> {tech.join(', ')}
+      {/* Project Image */}
+      <div className="relative h-52 w-full overflow-hidden">
+        <Image
+          src={project.imageUrl}
+          alt={`${project.title} project screenshot`}
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+        />
+
+        {/* Category badges overlay */}
+        <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+          {project.category.map((cat) => (
+            <span
+              key={cat}
+              className={`text-xs font-medium px-2 py-1 rounded-full ${categoryColors[cat].bg} ${categoryColors[cat].text}`}
+            >
+              {cat === 'ai' ? 'AI & ML' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </span>
+          ))}
         </div>
       </div>
 
-      {/* Footer with external links and "more details" indicator */}
-      <div className="absolute bottom-0 left-0 right-0 p-6 pt-4 border-t border-gray-100 bg-white rounded-b-lg">
-        <div className="flex justify-between items-center text-sm">
-          <div
-            className="flex flex-wrap gap-4"
-            onClick={(e) => e.stopPropagation()}
-            onKeyDown={(e) => e.stopPropagation()}
-          >
-            {links?.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link"
-              >
-                {link.label}
-              </a>
+      {/* Content */}
+      <div className="flex flex-col flex-grow p-5">
+        <h3 className="text-xl font-bold text-gray-800 mb-1 group-hover:text-indigo-600 transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-sm text-gray-500 mb-3">{project.subtitle}</p>
+        <p className="text-gray-700 text-sm mb-4 line-clamp-3">{project.description}</p>
+
+        {/* Tech stack */}
+        <div className="mt-auto">
+          <div className="flex flex-wrap gap-1.5 mb-1">
+            {project.tech.slice(0, 4).map((tech) => (
+              <span key={tech} className="px-2 py-0.5 bg-gray-100 rounded-md text-xs text-gray-700">
+                {tech}
+              </span>
             ))}
+            {project.tech.length > 4 && (
+              <span className="px-2 py-0.5 bg-gray-100 rounded-md text-xs text-gray-700">
+                +{project.tech.length - 4}
+              </span>
+            )}
           </div>
-          <span className="text-sm text-gray-600 group-hover:text-[color:var(--accent-color)] transition-colors">
-            More details →
-          </span>
+        </div>
+      </div>
+
+      {/* Footer with links and "View Details" */}
+      <div className="px-5 py-3 border-t border-gray-100 flex justify-between items-center">
+        <div
+          className="flex items-center gap-3"
+          onClick={(e) => e.stopPropagation()}
+          onKeyDown={(e) => e.stopPropagation()}
+        >
+          {project.links.slice(0, 2).map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-indigo-600 transition-colors"
+              aria-label={link.label}
+            >
+              {/* <Icon name={link.icon || 'external-link'} className="w-5 h-5" /> */}
+            </a>
+          ))}
+        </div>
+        <div className="flex items-center text-indigo-600 text-sm font-medium">
+          View Details
+          <Icon
+            name="arrow-right"
+            className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+          />
         </div>
       </div>
     </div>
