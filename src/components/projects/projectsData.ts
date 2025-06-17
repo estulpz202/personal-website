@@ -29,26 +29,6 @@ export interface Project {
  */
 export const projects: Project[] = [
   {
-    slug: 'personal-website',
-    title: 'Personal Website',
-    subtitle: 'Modern Portfolio with Next.js',
-    description:
-      'A responsive personal portfolio website built with Next.js and Tailwind CSS, featuring a clean design, project showcase, and contact functionality.',
-    imageUrl: '/images/projects/website.jpg',
-    category: ['web'],
-    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    highlights: [
-      'Designed and developed a responsive portfolio website with a modern, minimalist aesthetic',
-      'Implemented with Next.js and App Router for improved SEO and performance',
-      'Utilized Tailwind CSS for responsive design and consistent styling',
-      'Created custom components for project showcase, skills visualization, and navigation',
-    ],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/estulpz202/personal-website', icon: 'github' },
-    ],
-    year: 2025,
-  },
-  {
     slug: 'hive',
     title: 'Hive',
     subtitle: 'Strategic Board Game Implementation',
@@ -56,7 +36,7 @@ export const projects: Project[] = [
       'A full-stack implementation of the award-winning Hive board game with a Python backend and React frontend, featuring responsive design and advanced game logic.',
     imageUrl: '/images/projects/hive.jpg',
     category: ['fullstack'],
-    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'REST APIs', 'Poetry', 'Pytest'],
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'REST APIs', 'Pytest', 'Poetry'],
     highlights: [
       'Developed a full-stack Hive game with a Python backend (FastAPI, Pytest, Poetry) and React (TypeScript) frontend',
       'Designed a modular MVC-style system with separation between game logic, API endpoints, and UI',
@@ -81,13 +61,33 @@ export const projects: Project[] = [
       "An AI agent built with Mastra to support PFLL's recruiting efforts. Focused on backend behavior, DevOps workflows, and LLM features like retrieval-augmented generation.",
     imageUrl: '/images/projects/gcode_agent.jpg',
     category: ['ai'],
-    tech: ['TypeScript', 'Docker', 'LLM', 'Mastra', 'GitHub Actions', 'Codespaces'],
+    tech: ['Mastra', 'LLM', 'CI/CD', 'TypeScript', 'GitHub Actions', 'Docker', 'Codespaces'],
     highlights: [
       'Explored the Mastra framework and gained exposure to behavior-driven backend design with LLMs and RAG',
       'Gained hands-on experience with Docker, Codespaces, and GitHub Actions for development, testing, and CI',
       'Worked under mentorship to understand modular backend design and infrastructure setup in an AI agent context',
     ],
     links: [],
+    year: 2025,
+  },
+  {
+    slug: 'personal-website',
+    title: 'Personal Website',
+    subtitle: 'Modern Portfolio with Next.js',
+    description:
+      'A responsive personal portfolio website built with Next.js and Tailwind CSS, featuring a clean design, project showcase, and contact functionality.',
+    imageUrl: '/images/projects/website.jpg',
+    category: ['web'],
+    tech: ['Next.js', 'Tailwind CSS', 'Vercel', 'React', 'TypeScript'],
+    highlights: [
+      'Designed and developed a responsive portfolio website with a modern, minimalist aesthetic',
+      'Implemented with Next.js and App Router for improved SEO and performance',
+      'Utilized Tailwind CSS for responsive design and consistent styling',
+      'Created custom components for project showcase, skills visualization, and navigation',
+    ],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/estulpz202/personal-website', icon: 'github' },
+    ],
     year: 2025,
   },
   {
@@ -98,7 +98,7 @@ export const projects: Project[] = [
       'A complete digital implementation of the Santorini board game with a Java backend and React frontend, featuring comprehensive technical documentation.',
     imageUrl: '/images/projects/santorini.jpg',
     category: ['fullstack'],
-    tech: ['Java', 'React', 'TypeScript', 'NanoHTTPD', 'UML'],
+    tech: ['Java', 'NanoHTTPD', 'UML', 'React', 'TypeScript'],
     highlights: [
       'Built a full-stack Santorini game with a Java backend (NanoHTTPD) and a React (TypeScript) frontend',
       'Authored comprehensive technical documentation, including UML class diagrams, object/domain models, and sequence diagrams to support future extensibility',
@@ -119,9 +119,9 @@ export const projects: Project[] = [
     subtitle: 'iOS Pet Care Management App',
     description:
       'An iOS application designed to help dog owners track, learn about, and manage pet care responsibilities with an intuitive user interface.',
-    imageUrl: '/images/projects/the.png',
+    imageUrl: '/images/projects/thepack.jpg',
     category: ['mobile'],
-    tech: ['Swift', 'Xcode', 'GitHub'],
+    tech: ['Swift', 'UI/UX Design', 'Xcode', 'GitHub', 'Leadership'],
     highlights: [
       'Developed an iOS app called The Pack to help dog owners track, learn about, and manage pet care',
       'Led development using Swift in Xcode, utilizing GitHub for version control and task management',

@@ -73,24 +73,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-grow p-5">
-        <h3 className="text-xl font-bold text-gray-800 mb-1 group-hover:text-indigo-600 transition-colors">
+      <div className="flex flex-col flex-grow px-4 pb-4">
+        <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-indigo-600 transition-colors">
           {project.title}
         </h3>
-        <p className="text-sm text-gray-500 mb-3">{project.subtitle}</p>
-        <p className="text-gray-700 text-sm mb-4 line-clamp-3">{project.description}</p>
+        <p className="text-sm text-gray-500 mb-2">{project.subtitle}</p>
+        <p className="text-gray-700 text-sm mb-3 line-clamp-2">{project.description}</p>
 
         {/* Tech stack */}
         <div className="mt-auto">
           <div className="flex flex-wrap gap-1.5 mb-1">
-            {project.tech.slice(0, 4).map((tech) => (
+            {project.tech.slice(0, 3).map((tech) => (
               <span key={tech} className="px-2 py-0.5 bg-gray-100 rounded-md text-xs text-gray-700">
                 {tech}
               </span>
             ))}
-            {project.tech.length > 4 && (
+            {project.tech.length > 3 && (
               <span className="px-2 py-0.5 bg-gray-100 rounded-md text-xs text-gray-700">
-                +{project.tech.length - 4}
+                +{project.tech.length - 3}
               </span>
             )}
           </div>
@@ -98,9 +98,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Footer with links and "View Details" */}
-      <div className="px-5 py-3 border-t border-gray-100 flex justify-between items-center">
+      <div className="px-4 py-3 border-t border-gray-100 flex justify-between items-center">
         <div
-          className="flex items-center gap-3"
+          className="flex items-center gap-2"
           onClick={(e) => e.stopPropagation()}
           onKeyDown={(e) => e.stopPropagation()}
         >
@@ -113,7 +113,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="text-gray-500 hover:text-indigo-600 transition-colors"
               aria-label={link.label}
             >
-              {/* <Icon name={link.icon || 'external-link'} className="w-5 h-5" /> */}
+              <Icon name={link.icon || 'external-link'} className="w-5 h-5" />
             </a>
           ))}
         </div>
