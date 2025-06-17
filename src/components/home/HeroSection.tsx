@@ -37,7 +37,7 @@ export default function HeroSection() {
           {/* Professional summary and interests */}
           <p className="text-base text-gray-700 mb-8 max-w-xl">
             Building meaningful software with a focus on thoughtful design and real world impact.
-            Passionate about full-stack development, especially backend systems and collaborative
+            Passionate about fullstack development, especially backend systems and collaborative
             engineering. Always learning, both by design and by curiosity.
           </p>
 

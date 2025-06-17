@@ -4,7 +4,7 @@
 export const recentProjs = [
   {
     title: 'Hive',
-    description: 'Full-stack game with Python backend (FastAPI) and React frontend',
+    description: 'Fullstack game with Python backend (FastAPI) and React frontend',
     tech: ['Python', 'RESTful APIs', 'React', 'Typescript'],
     href: '/projects/hive',
   },

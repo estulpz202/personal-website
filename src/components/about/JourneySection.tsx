@@ -42,7 +42,7 @@ export default function JourneySection() {
             </p>
             <p className="mb-4">
               Through CMU coursework and hands-on projects, I've built a strong foundation in
-              everything from low-level systems programming to full-stack application development.
+              everything from low-level systems programming to fullstack application development.
               I'm fluent in multiple programming languages and comfortable with modern tools and
               practices.
             </p>

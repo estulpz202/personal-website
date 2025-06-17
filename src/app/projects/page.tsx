@@ -29,7 +29,7 @@ export default function ProjectsPage() {
           <div className="py-16">
             <h1 className="text-4xl font-bold mb-4">My Projects</h1>
             <p className="text-xl text-gray-700 max-w-3xl">
-              A showcase of my technical work across full-stack systems, AI, web development, and
+              A showcase of my technical work across fullstack systems, AI, web development, and
               mobile applications. Each project represents unique challenges and solutions.
             </p>
           </div>
