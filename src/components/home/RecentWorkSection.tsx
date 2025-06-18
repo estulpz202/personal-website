@@ -9,7 +9,7 @@ import Icon from '@/components/ui/Icon';
  */
 export default function RecentWorkSection() {
   return (
-    <section className="pt-10 pb-8 fade-in-up">
+    <section className="pt-12 pb-8 fade-in-up">
       <SectionHeader title="Recent Work" />
 
       {/* Project cards grid - single column on mobile, two columns on larger screens */}

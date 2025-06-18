@@ -6,7 +6,7 @@ import { PrimaryButton, SecondaryButton } from '@/components/ui/Button';
 
 export default function HeroSection() {
   return (
-    <section className="py-20 fade-in-up">
+    <section className="pt-20 pb-22 fade-in-up">
       <div className="flex flex-col-reverse md:flex-row items-center gap-12">
         {/* Left side: Personal information and call-to-actions */}
         <div className="md:w-2/3 text-center md:text-left">
