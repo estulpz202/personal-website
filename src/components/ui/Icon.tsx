@@ -9,6 +9,7 @@ export type IconName =
   | 'e-logo'
   | 'arrow-up'
   | 'arrow-right'
+  | 'arrow-left'
   | 'flip-right'
   | 'flip-left'
   | 'external-link'
@@ -102,6 +103,13 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
       return (
         <svg {...standardProps}>
           <path d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      );
+
+    case 'arrow-left':
+      return (
+        <svg {...standardProps} aria-label="Arrow Left">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
       );
 

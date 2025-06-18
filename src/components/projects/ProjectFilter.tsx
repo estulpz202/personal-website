@@ -1,5 +1,8 @@
 import { getProjectCategories, ProjectCategory } from './projectsData';
 
+/**
+ * Props for the ProjectFilter component
+ */
 interface ProjectFilterProps {
   onFilterChange: (category: ProjectCategory | null) => void;
   activeFilter: ProjectCategory | null;

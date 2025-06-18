@@ -1,80 +1,74 @@
-import { notFound } from 'next/navigation';
-import { projects } from '@/components/projects/projectsData';
-import Container from '@/components/common/Container';
-import SectionHeader from '@/components/common/SectionHeader';
+import { redirect } from 'next/navigation';
 import Link from 'next/link';
-
-type ProjectPageProps = {
-  params: Promise<{ slug: string }>;
-};
+import { projects } from '@/components/projects/projectsData';
+import Icon from '@/components/ui/Icon';
+import { Metadata } from 'next';
 
 /**
- * ProjectPage - Individual project detail page
- *
- * Renders a detailed page for a specific project based on the URL slug
- * Returns 404 if the project is not found
+ * Props for the ProjectDetailParams component
  */
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  // Extract and find the project data based on the URL slug
+interface ProjectDetailParams {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+/**
+ * Generate metadata for the project detail page
+ */
+export async function generateMetadata({ params }: ProjectDetailParams): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
-  // Return 404 if no matching project is found
+  // Redirect to non-existent path if project not found
   if (!project) {
-    notFound();
+    redirect('/project-not-found');
+  }
+
+  return {
+    title: `${project.title}`,
+  };
+}
+
+/**
+ * Generate static paths for all projects
+ */
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+/**
+ * ProjectDetailPage - Displays detailed information about a specific project
+ */
+export default async function ProjectDetailPage({ params }: ProjectDetailParams) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    redirect('/project-not-found');
   }
 
   return (
-    <main>
-      <Container>
-        <section className="py-12 fade-in-up">
-          {/* Project title as page header */}
-          <SectionHeader title={project.title} />
+    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      {/* Back to projects link */}
+      <div className="mb-6">
+        <Link
+          href="/projects"
+          className="inline-flex items-center text-[15px] text-indigo-600 hover:text-indigo-700 group"
+        >
+          <Icon
+            name="arrow-left"
+            className="w-4.5 h-4.5 mr-1 group-hover:-translate-x-1 transition-transform"
+          />
+          Back to Projects
+        </Link>
+      </div>
 
-          {/* Project description */}
-          <p className="text-base text-gray-700 mb-6">{project.description}</p>
-
-          {/* Technologies used */}
-          <div className="text-base text-gray-700 mb-6">
-            <strong>Technologies:</strong> {project.tech.join(', ')}
-          </div>
-
-          {/* Key project highlights as a bulleted list */}
-          {project.highlights && project.highlights.length > 0 && (
-            <div className="mb-6">
-              <strong className="block mb-2">Highlights:</strong>
-              <ul className="list-disc pl-5 text-base text-gray-700">
-                {project.highlights.map((highlight, index) => (
-                  <li key={index} className="mb-2">
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* External links to repositories, demos, etc. */}
-          {project.links && project.links.length > 0 && (
-            <div className="mb-6">
-              <strong className="block mb-2">Links:</strong>
-              <ul className="list-disc pl-5 text-base text-gray-700">
-                {project.links.map((link) => (
-                  <li key={link.url}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="link">
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Navigation back to the main projects page */}
-          <Link href="/projects" className="link text-sm">
-            ← Back to Projects
-          </Link>
-        </section>
-      </Container>
+      {/* Basic project information placeholder */}
+      <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
+      <p className="text-gray-600">{project.subtitle}</p>
     </main>
   );
 }
