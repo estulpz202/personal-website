@@ -16,7 +16,8 @@ export type IconName =
   | 'code-brackets'
   | 'users'
   | 'bulb'
-  | 'video';
+  | 'video'
+  | 'warning';
 
 /**
  * Props for the Icon component
@@ -166,6 +167,18 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
         <svg {...standardProps} strokeWidth="1.5">
           <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
           <path d="M10 9l5 3-5 3V9z" />
+        </svg>
+      );
+
+    case 'warning':
+      return (
+        <svg {...standardProps} aria-label="Warning">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+          />
         </svg>
       );
 
