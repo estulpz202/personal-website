@@ -21,7 +21,7 @@ export default function ProjectSidebar({ timeline, organization, tech }: Project
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Project Details</h3>
         <div className="space-y-4">
           <div>
-            <div className="text-sm font-medium text-gray-500 mb-1">Timeline</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Timeline</div>
             <div className="flex items-center text-gray-800">
               <Icon name="calendar" className="w-4 h-4 mr-2 text-gray-400" />
               {timeline}
@@ -29,7 +29,7 @@ export default function ProjectSidebar({ timeline, organization, tech }: Project
           </div>
 
           <div>
-            <div className="text-sm font-medium text-gray-500 mb-1">Organization</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Organization</div>
             <div className="flex items-center text-gray-800">
               <Icon name="users" className="w-4 h-4 mr-2 text-gray-400" />
               {organization}
@@ -38,7 +38,7 @@ export default function ProjectSidebar({ timeline, organization, tech }: Project
         </div>
       </div>
 
-      {/* Technologies - flex-grow to extend when needed */}
+      {/* Technologies */}
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex-grow flex flex-col">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Technologies</h3>
         <div className="flex flex-wrap gap-2">

@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import ProjectHero from '@/components/projects/proj/ProjectHero';
 import ProjectContent from '@/components/projects/proj/ProjectContent';
 import ProjectSidebar from '@/components/projects/proj/ProjectSidebar';
+import ProjectContainer from '@/components/projects/proj/ProjectContainer';
 
 /**
  * Props for the ProjectDetailParams component
@@ -56,7 +57,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
   return (
     <main className="pb-16">
       {/* Header with Back Navigation */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-4">
+      <ProjectContainer className="pt-6 pb-4">
         <Link
           href="/projects"
           className="inline-flex items-center text-[15px] text-indigo-600 hover:text-indigo-700 group"
@@ -67,9 +68,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
           />
           Back to Projects
         </Link>
-      </div>
+      </ProjectContainer>
 
-      {/* Project Hero Banner with Links */}
+      {/* Project Hero Banner */}
       <ProjectHero
         title={project.title}
         subtitle={project.subtitle}
@@ -79,8 +80,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
       />
 
       {/* Project Content Area - Grid with equal height columns */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:grid-rows-1 auto-rows-min">
+      <ProjectContainer>
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-8 auto-rows-min">
           {/* Main Content - Takes 2/3 on medium screens */}
           <div className="md:col-span-2 h-full">
             <ProjectContent description={project.description} highlights={project.highlights} />
@@ -95,7 +96,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
             />
           </div>
         </div>
-      </div>
+      </ProjectContainer>
     </main>
   );
 }

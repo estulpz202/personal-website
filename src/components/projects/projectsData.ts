@@ -35,7 +35,7 @@ export const projects: Project[] = [
     title: 'Hive',
     subtitle: 'Strategic Board Game',
     description:
-      'A Python and React fullstack implementation of Hive, featuring a responsive UI, modular backend, and advanced game logic.',
+      'A Python and React fullstack implementation of Hive. Features a responsive UI, modular backend, and advanced game logic.',
     imageUrl: '/images/projects/hive.jpg',
     bannerImageUrl: '/images/projects/hive_banner.jpg',
     category: ['fullstack'],
