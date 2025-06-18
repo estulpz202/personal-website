@@ -4,6 +4,8 @@ import { projects } from '@/components/projects/projectsData';
 import Icon from '@/components/ui/Icon';
 import { Metadata } from 'next';
 import ProjectHero from '@/components/projects/proj/ProjectHero';
+import ProjectContent from '@/components/projects/proj/ProjectContent';
+import ProjectSidebar from '@/components/projects/proj/ProjectSidebar';
 
 /**
  * Props for the ProjectDetailParams component
@@ -75,6 +77,25 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
         categories={project.category}
         links={project.links}
       />
+
+      {/* Project Content Area - Grid with equal height columns */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:grid-rows-1 auto-rows-min">
+          {/* Main Content - Takes 2/3 on medium screens */}
+          <div className="md:col-span-2 h-full">
+            <ProjectContent description={project.description} highlights={project.highlights} />
+          </div>
+
+          {/* Sidebar - Takes 1/3 on medium screens */}
+          <div className="h-full">
+            <ProjectSidebar
+              timeline={project.timeline}
+              organization={project.organization}
+              tech={project.tech}
+            />
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

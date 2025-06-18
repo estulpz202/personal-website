@@ -22,7 +22,8 @@ export interface Project {
     url: string;
     icon?: string;
   }[];
-  year: number; // When project was completed
+  timeline: string; // Timeline of the project
+  organization: string; // Organization or context
 }
 
 /**
@@ -53,7 +54,8 @@ export const projects: Project[] = [
         icon: 'video',
       },
     ],
-    year: 2025,
+    timeline: 'April 2025 - May 2025',
+    organization: 'Personal Project',
   },
   {
     slug: 'gcode-agent',
@@ -71,7 +73,8 @@ export const projects: Project[] = [
       'Worked under mentorship to understand modular backend design and infrastructure setup in an AI agent context',
     ],
     links: [],
-    year: 2025,
+    timeline: 'March 2025 - May 20255',
+    organization: 'PFLL',
   },
   {
     slug: 'personal-website',
@@ -92,7 +95,8 @@ export const projects: Project[] = [
     links: [
       { label: 'GitHub', url: 'https://github.com/estulpz202/personal-website', icon: 'github' },
     ],
-    year: 2025,
+    timeline: 'May 2025 - June 2025',
+    organization: 'Personal Project',
   },
   {
     slug: 'santorini',
@@ -116,7 +120,8 @@ export const projects: Project[] = [
         icon: 'video',
       },
     ],
-    year: 2025,
+    timeline: 'March 2025 - April 2025',
+    organization: 'CMU 17-214',
   },
   {
     slug: 'the-pack',
@@ -141,7 +146,8 @@ export const projects: Project[] = [
         icon: 'video',
       },
     ],
-    year: 2024,
+    timeline: 'June 2024 - August 2024',
+    organization: 'PFLL',
   },
 ];
 
