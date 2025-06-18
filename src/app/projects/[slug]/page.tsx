@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { projects } from '@/components/projects/projectsData';
 import Icon from '@/components/ui/Icon';
 import { Metadata } from 'next';
-import ProjectHero from '@/components/projects/ProjectHero';
+import ProjectHero from '@/components/projects/proj/ProjectHero';
 
 /**
  * Props for the ProjectDetailParams component
