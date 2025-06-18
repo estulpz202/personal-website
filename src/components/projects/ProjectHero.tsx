@@ -33,15 +33,23 @@ export default function ProjectHero({
             priority
           />
           {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/65 to-transparent"></div>
 
           {/* Project title on image */}
-          <div className="absolute bottom-0 left-0 right-0 p-6">
-            <div className="flex flex-wrap gap-2 mb-3">
+          <div className="absolute bottom-0 left-0 right-0 pl-5.5 pb-3.5">
+            <h1 className="text-3xl font-bold text-white">{title}</h1>
+          </div>
+        </div>
+
+        {/* Project subtitle and categories */}
+        <div className="p-6">
+          <div className="flex flex-wrap items-center justify-between mb-1">
+            <p className="text-gray-600">{subtitle}</p>
+            <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
               {categories.map((category) => (
                 <span
                   key={category}
-                  className="px-2.5 py-1 text-xs font-medium rounded-full bg-white/90 text-gray-800"
+                  className="px-2.5 py-1 text-sm font-[450] rounded-full bg-gray-100 text-gray-600"
                 >
                   {category === 'ai'
                     ? 'AI & ML'
@@ -49,13 +57,7 @@ export default function ProjectHero({
                 </span>
               ))}
             </div>
-            <h1 className="text-3xl font-bold text-white">{title}</h1>
           </div>
-        </div>
-
-        {/* Project basic info */}
-        <div className="p-6">
-          <p className="text-gray-600">{subtitle}</p>
         </div>
       </div>
     </div>
