@@ -12,6 +12,7 @@ export interface Project {
   subtitle: string; // Short tagline
   description: string; // Brief project overview
   imageUrl: string; // Main project image
+  bannerImageUrl: string; // Banner image for detail page
   category: ProjectCategory[]; // Project categories for filtering
   tech: string[]; // Technologies used
   highlights: string[]; // Key accomplishments/features
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     description:
       'A Python and React fullstack implementation of Hive, featuring a responsive UI, modular backend, and advanced game logic.',
     imageUrl: '/images/projects/hive.jpg',
+    bannerImageUrl: '/images/projects/hive_banner.jpg',
     category: ['fullstack'],
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'REST APIs', 'Pytest', 'Poetry'],
     highlights: [
@@ -60,6 +62,7 @@ export const projects: Project[] = [
     description:
       'An AI recruitment agent built with Mastra. Focused on backend behavior, DevOps workflows, and LLM features like retrieval-augmented generation.',
     imageUrl: '/images/projects/gcode_agent.jpg',
+    bannerImageUrl: '/images/projects/gcode_agent_banner.jpg',
     category: ['ai'],
     tech: ['Mastra', 'LLM', 'CI/CD', 'TypeScript', 'GitHub Actions', 'Docker', 'Codespaces'],
     highlights: [
@@ -77,6 +80,7 @@ export const projects: Project[] = [
     description:
       'A responsive personal portfolio website built with Next.js and Tailwind CSS, featuring a clean design, project showcase, and contact functionality.',
     imageUrl: '/images/projects/website.jpg',
+    bannerImageUrl: '/images/projects/website_banner.jpg',
     category: ['web'],
     tech: ['Next.js', 'Tailwind CSS', 'Vercel', 'React', 'TypeScript'],
     highlights: [
@@ -97,6 +101,7 @@ export const projects: Project[] = [
     description:
       'Built Santorini with a Java backend and React frontend, supported by comprehensive technical documentation.',
     imageUrl: '/images/projects/santorini.jpg',
+    bannerImageUrl: '/images/projects/santorini_banner.jpg',
     category: ['fullstack'],
     tech: ['Java', 'NanoHTTPD', 'UML', 'React', 'TypeScript'],
     highlights: [
@@ -120,6 +125,7 @@ export const projects: Project[] = [
     description:
       'An intuitive iOS app built with Swift to help users manage and track pet care routines. Developed with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
+    bannerImageUrl: '/images/projects/thepack_banner.jpg',
     category: ['mobile'],
     tech: ['Swift', 'UI/UX Design', 'Xcode', 'GitHub', 'Leadership'],
     highlights: [

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { projects } from '@/components/projects/projectsData';
 import Icon from '@/components/ui/Icon';
 import { Metadata } from 'next';
+import ProjectHero from '@/components/projects/ProjectHero';
 
 /**
  * Props for the ProjectDetailParams component
@@ -51,9 +52,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      {/* Back to projects link */}
-      <div className="mb-6">
+    <main className="pb-16">
+      {/* Header with Back Navigation */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-4">
         <Link
           href="/projects"
           className="inline-flex items-center text-[15px] text-indigo-600 hover:text-indigo-700 group"
@@ -66,9 +67,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
         </Link>
       </div>
 
-      {/* Basic project information placeholder */}
-      <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-      <p className="text-gray-600">{project.subtitle}</p>
+      {/* Project Hero Banner */}
+      <ProjectHero
+        title={project.title}
+        subtitle={project.subtitle}
+        bannerImageUrl={project.bannerImageUrl}
+        categories={project.category}
+      />
     </main>
   );
 }
