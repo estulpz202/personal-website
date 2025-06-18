@@ -67,12 +67,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
         </Link>
       </div>
 
-      {/* Project Hero Banner */}
+      {/* Project Hero Banner with Links */}
       <ProjectHero
         title={project.title}
         subtitle={project.subtitle}
         bannerImageUrl={project.bannerImageUrl}
         categories={project.category}
+        links={project.links}
       />
     </main>
   );

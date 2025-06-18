@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ProjectLinks from './ProjectLinks';
 
 /**
  * Props for the ProjectHero component
@@ -8,6 +9,11 @@ interface ProjectHeroProps {
   subtitle: string;
   bannerImageUrl: string;
   categories: string[];
+  links: {
+    label: string;
+    url: string;
+    icon?: string;
+  }[];
 }
 
 /**
@@ -19,6 +25,7 @@ export default function ProjectHero({
   subtitle,
   bannerImageUrl,
   categories,
+  links,
 }: ProjectHeroProps) {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-8">
@@ -58,6 +65,9 @@ export default function ProjectHero({
               ))}
             </div>
           </div>
+
+          {/* Project links */}
+          <ProjectLinks links={links} />
         </div>
       </div>
     </div>
