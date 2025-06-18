@@ -34,13 +34,7 @@ export default function ProjectHero({
         <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           {/* Banner Image */}
           <div className="relative h-64 w-full">
-            <Image
-              src={bannerImageUrl}
-              alt={`${title} project banner`}
-              className="object-cover"
-              fill
-              priority
-            />
+            <Image src={bannerImageUrl} alt={`${title} project banner`} fill priority />
             {/* Gradient overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/65 to-transparent"></div>
 

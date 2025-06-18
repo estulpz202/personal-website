@@ -18,7 +18,7 @@ export default function ProjectContent({ description, highlights }: ProjectConte
       <p className="text-gray-700 mb-8 leading-relaxed">{description}</p>
 
       {/* Key highlights */}
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Highlights</h3>
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">Highlights</h3>
       <ul className="space-y-4">
         {highlights.map((highlight, index) => (
           <li key={index} className="flex items-start">
