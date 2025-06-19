@@ -59,7 +59,7 @@ export const projects: Project[] = [
       { label: 'GitHub', url: 'https://github.com/estulpz202/hive-game', icon: 'github' },
       {
         label: 'Demo',
-        url: 'https://www.loom.com/share/97c65783f69949c595e1f93234da9af1',
+        url: 'https://vimeo.com/1094803625',
         icon: 'video',
       },
     ],
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     links: [
       {
         label: 'Demo',
-        url: 'https://www.loom.com/share/0322bac9ec2d42238ad54261231d5f29',
+        url: 'https://vimeo.com/1094829961',
         icon: 'video',
       },
     ],
@@ -152,11 +152,11 @@ export const projects: Project[] = [
       { label: 'GitHub', url: 'https://github.com/pflc3/ThePackApp', icon: 'github' },
       {
         label: 'Demo',
-        url: 'https://www.loom.com/share/3ef12a5b6511473c98ca58ffe85ad8f7',
+        url: 'https://vimeo.com/1094857073',
         icon: 'video',
       },
     ],
-    timeline: 'June 2024 - August 2024',
+    timeline: 'June 2024 - Aug 2024',
     organization: 'PFLL',
   },
 ];
