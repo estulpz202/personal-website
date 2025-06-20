@@ -9,18 +9,20 @@ import Icon from '@/components/ui/Icon';
  * List of notable courses
  */
 const courses = [
-  'Principles of Software Construction',
-  'Introduction to Computer Systems',
-  'Principles of Imperative Computation',
+  'Parallel and Sequential DS & Algos',
+  'Foundations of SWE',
+  'Princ of Software Construction',
+  'Princ of Imperative Computation',
+  'Intro to Computer Systems',
   'Great Ideas in Theoretical CS',
-  'Principles of Functional Programming',
+  'Princ of Functional Programming',
   'Mathematical Foundations for CS',
 ];
 
 /**
  * Campus activities
  */
-const activities = ['Acts2Fellowship', 'Spanish and Latin Student Association', 'Grappling Club'];
+const activities = ['Acts2Fellowship', 'SALSA', 'Grappling Club'];
 
 /**
  * EducationSection - Displays academic background and notable coursework
@@ -61,7 +63,7 @@ export default function EducationSection() {
                 </p>
                 <div className="flex items-center mt-4">
                   <span className="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-sm font-medium">
-                    QPA: 3.65
+                    QPA: 3.54
                   </span>
                 </div>
               </div>
@@ -81,7 +83,7 @@ export default function EducationSection() {
           >
             <div className="flex h-full pl-4">
               {/* Campus Involvement */}
-              <div className="w-[34%] border-r border-gray-100 pr-4">
+              <div className="w-[20%]">
                 <h4 className="text-gray-800 mb-3 tracking-wider">Campus Involvement</h4>
                 <ul className="space-y-3">
                   {activities.map((activity) => (
@@ -93,8 +95,11 @@ export default function EducationSection() {
                 </ul>
               </div>
 
+              {/* Separator */}
+              <div className="w-[10%] w-px bg-gray-100 ml-10 mr-12"></div>
+
               {/* Coursework */}
-              <div className="w-[66%] pl-6">
+              <div className="w-[70%]">
                 <h4 className="text-gray-800 mb-3 tracking-wider">Coursework</h4>
                 <div className="flex flex-wrap gap-2">
                   {courses.map((course) => (
