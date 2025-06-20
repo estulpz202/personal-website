@@ -94,7 +94,7 @@ export const projects: Project[] = [
     imageUrl: '/images/projects/website.jpg',
     bannerImageUrl: '/images/projects/website_banner.jpg',
     category: ['web'],
-    tech: ['Next.js', 'Tailwind CSS', 'Vercel', 'React', 'TypeScript'],
+    tech: ['Next.js', 'Tailwind CSS', 'Vercel', 'React', 'TypeScript', 'UI/UX'],
     highlights: [
       'Built with Next.js App Router for fast routing, SEO optimization, and layout control',
       'Styled using Tailwind CSS utility classes for a consistent, modern, and responsive design',
