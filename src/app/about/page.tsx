@@ -21,7 +21,7 @@ export default function AboutPage() {
       <Container>
         {/* Hero Banner - Minimal */}
         <div className="py-10 border-b border-gray-100 fade-in-up">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Hi, I'm Estuardo Lopez</h1>
+          <h1 className="text-4xl font-bold mb-4">Hi, I'm Estuardo Lopez</h1>
           <p className="text-xl text-gray-600 max-w-3xl">
             Building software that matters with purpose, precision, and passion.
           </p>

@@ -9,7 +9,7 @@ import { homeSkillsData, Skill } from './SkillsData';
  */
 const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
-    <div className="flex items-center gap-2 p-2 bg-white rounded-lg border border-gray-200 shadow-sm hover:border-gray-300 transition-colors">
+    <div className="flex items-center gap-2 p-2 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
       {skill.icon && (
         <div className="flex-shrink-0">
           <SkillsIcon name={skill.icon} className="h-6 w-6" />

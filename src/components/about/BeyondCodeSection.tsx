@@ -11,7 +11,7 @@ export default function BeyondCodeSection() {
       <div className="bg-white rounded-2xl py-8 px-10 border border-gray-100 shadow-sm">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-left md:max-w-xl mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Beyond the Code</h2>
+            <h2 className="text-2xl font-bold mb-2">Beyond the Code</h2>
             <p className="text-gray-700">
               There's more to me than just programming. Explore my life through family, martial
               arts, teaching, and the passions that shape how I live and grow.

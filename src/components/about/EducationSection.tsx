@@ -39,7 +39,7 @@ export default function EducationSection() {
         <div className="flip-card-inner">
           {/* Front Side */}
           <div
-            className="flip-card-front bg-white rounded-xl shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-all duration-300"
+            className="flip-card-front bg-white rounded-xl shadow-sm border border-gray-200 pb-6 pl-6 pr-6 pt-5.5 cursor-pointer hover:shadow-md transition-all duration-300"
             onClick={() => setIsFlipped(true)}
           >
             <div className="flex items-start">
@@ -54,8 +54,8 @@ export default function EducationSection() {
               </div>
               <div className="ml-5 flex-grow text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
-                  <h3 className="text-xl font-bold">Carnegie Mellon University</h3>
-                  <span className="text-gray-600 mt-1">Aug 2023 - May 2027</span>
+                  <h3 className="text-xl font-bold text-gray-800">Carnegie Mellon University</h3>
+                  <span className="text-gray-600 mt-2.5">Aug 2023 - May 2027</span>
                 </div>
                 <p className="text-indigo-600 font-medium mt-1 text-lg">B.S. in Computer Science</p>
                 <p className="text-gray-700">
@@ -78,7 +78,7 @@ export default function EducationSection() {
 
           {/* Back Side */}
           <div
-            className="flip-card-back bg-white rounded-xl shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-all duration-300 text-left"
+            className="flip-card-back bg-white rounded-xl shadow-sm border border-gray-200 pb-6 pl-6 pr-6 pt-5.5 cursor-pointer hover:shadow-md transition-all duration-300 text-left"
             onClick={() => setIsFlipped(false)}
           >
             <div className="flex h-full pl-4">

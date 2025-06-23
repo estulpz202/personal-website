@@ -42,7 +42,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         <div className="flex-grow">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
             <div>
-              <h3 className="text-xl font-bold">{title}</h3>
+              <h3 className="text-xl font-bold text-gray-800">{title}</h3>
               <div className="mt-1.5">
                 {companyUrl ? (
                   <Link
