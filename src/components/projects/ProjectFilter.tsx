@@ -16,12 +16,12 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
 
   return (
     <div className="mb-6">
-      <div className="flex flex-wrap gap-2">
+      <div className="flex overflow-x-auto gap-2">
         <button
           onClick={() => onFilterChange(null)}
-          className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
+          className={`px-3.75 py-1.75 text-sm font-medium whitespace-nowrap border transition-all duration-200 rounded-lg ${
             activeFilter === null
-              ? 'border-indigo-600 bg-indigo-600 text-white'
+              ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
               : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
           }`}
         >
@@ -32,9 +32,9 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
           <button
             key={category.id}
             onClick={() => onFilterChange(category.id)}
-            className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
+            className={`px-3.75 py-1.75 text-sm font-medium whitespace-nowrap border transition-all duration-200 rounded-lg ${
               activeFilter === category.id
-                ? 'border-indigo-600 bg-indigo-600 text-white'
+                ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
                 : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
             }`}
           >

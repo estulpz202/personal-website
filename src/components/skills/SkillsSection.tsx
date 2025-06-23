@@ -15,15 +15,15 @@ export default function SkillsSection() {
       <SectionHeader title="Technical Skills" />
 
       {/* Skills Navigation */}
-      <div className="flex overflow-x-auto mb-6 pb-2 gap-2">
+      <div className="flex overflow-x-auto mb-6 gap-2">
         {Object.entries(skillsData).map(([key, data]) => (
           <button
             key={key}
             onClick={() => setActiveTab(key)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+            className={`px-3.75 py-1.75 text-sm font-medium whitespace-nowrap transition-all duration-200 rounded-lg ${
               activeTab === key
-                ? 'bg-indigo-600 text-white shadow-md'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-sm'
+                ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:shadow-sm'
             }`}
           >
             {data.title}
@@ -43,7 +43,7 @@ export default function SkillsSection() {
               className="bg-gray-50 rounded-lg p-4 border border-gray-100 flex items-center gap-3 hover:border-indigo-200 transition-colors"
             >
               <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
-              <span className="text-gray-800">{skill.name}</span>
+              <span className="text-gray-700">{skill.name}</span>
             </div>
           ))}
         </div>
