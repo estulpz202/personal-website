@@ -44,7 +44,7 @@ export default function SkillsSectionHome() {
       <div className="mt-6 text-center">
         <Link
           href="/about"
-          className="text-indigo-500 font-medium hover:text-indigo-600 inline-flex items-center group px-1 py-0.5"
+          className="text-indigo-600 font-medium hover:text-indigo-700 inline-flex items-center group px-1 py-0.5"
         >
           More about me
           <Icon

@@ -17,7 +17,7 @@ export default function HeroSection() {
           </div>
 
           {/* Education background with university logo */}
-          <div className="bg-gray-50 border-l-4 border-indigo-500 pl-4 pr-4 py-3 mb-8 max-w-xl flex justify-between items-center">
+          <div className="bg-gray-50 border-l-4 border-indigo-600 pl-4 pr-4 py-3 mb-8 max-w-xl flex justify-between items-center">
             <div>
               <p className="text-lg text-gray-700">
                 Computer Science @ <span className="font-semibold">Carnegie Mellon University</span>
@@ -52,7 +52,7 @@ export default function HeroSection() {
         {/* Right side: Profile photo with decorative background */}
         <div className="md:w-1/3 flex justify-center">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-600 to-indigo-400 blur-md opacity-20 transform -rotate-6 scale-105"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-400 to-indigo-600 blur-md opacity-20 transform -rotate-6 scale-105"></div>
             <Image
               src="/images/profile/headshot.jpg"
               alt="Estuardo Lopez"
