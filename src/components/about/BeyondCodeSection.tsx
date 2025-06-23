@@ -7,7 +7,7 @@ import { PrimaryButton } from '@/components/ui/Button';
  */
 export default function BeyondCodeSection() {
   return (
-    <section className="py-10 fade-in-up">
+    <section className="py-15 fade-in-up">
       <div className="bg-white rounded-2xl py-8 px-10 border border-gray-100 shadow-sm">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-left md:max-w-xl mb-6 md:mb-0">
