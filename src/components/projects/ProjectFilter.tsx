@@ -21,7 +21,7 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
           onClick={() => onFilterChange(null)}
           className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
             activeFilter === null
-              ? 'border-indigo-500 bg-indigo-500 text-white'
+              ? 'border-indigo-600 bg-indigo-600 text-white'
               : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
           }`}
         >
@@ -34,7 +34,7 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
             onClick={() => onFilterChange(category.id)}
             className={`px-3.5 py-1.5 text-sm font-medium border transition-colors rounded-md ${
               activeFilter === category.id
-                ? 'border-indigo-500 bg-indigo-500 text-white'
+                ? 'border-indigo-600 bg-indigo-600 text-white'
                 : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-200'
             }`}
           >

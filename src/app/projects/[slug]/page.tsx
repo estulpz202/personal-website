@@ -57,7 +57,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
   return (
     <main className="py-10">
       {/* Header with Back Navigation */}
-      <ProjectContainer className="py-4">
+      <ProjectContainer className="pt-2 pb-4">
         <Link
           href="/projects"
           className="inline-flex items-center text-[15px] text-indigo-600 hover:text-indigo-700 group"

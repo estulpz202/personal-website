@@ -22,7 +22,7 @@ export default function ProjectContent({ description, highlights }: ProjectConte
       <ul className="space-y-4">
         {highlights.map((highlight, index) => (
           <li key={index} className="flex items-start">
-            <span className="inline-flex justify-center items-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 mt-0.5 mr-3 text-xs font-medium flex-shrink-0">
+            <span className="inline-flex justify-center items-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 mt-0.5 mr-3 text-xs font-medium flex-shrink-0">
               {index + 1}
             </span>
             <span className="text-gray-700">{highlight}</span>
