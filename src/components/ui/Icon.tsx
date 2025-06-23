@@ -18,7 +18,8 @@ export type IconName =
   | 'users'
   | 'bulb'
   | 'video'
-  | 'warning';
+  | 'warning'
+  | 'download';
 
 /**
  * Props for the Icon component
@@ -187,6 +188,15 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
             strokeWidth={2}
             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
           />
+        </svg>
+      );
+
+    case 'download':
+      return (
+        <svg {...standardProps} aria-label="Download">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
         </svg>
       );
 
