@@ -14,11 +14,11 @@ export default function ProjectContent({ description, highlights }: ProjectConte
   return (
     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-full">
       {/* Project overview */}
-      <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
+      <h2 className="text-xl font-bold text-gray-800 mb-4">Overview</h2>
       <p className="text-gray-700 mb-8 leading-relaxed">{description}</p>
 
       {/* Key highlights */}
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Highlights</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mb-4">Highlights</h3>
       <ul className="space-y-4">
         {highlights.map((highlight, index) => (
           <li key={index} className="flex items-start">

@@ -52,7 +52,7 @@ export default function ProjectHero({
                 {categories.map((category) => (
                   <span
                     key={category}
-                    className="px-2.5 py-1 text-sm font-[450] rounded-full bg-gray-100 text-gray-600"
+                    className="px-2.5 py-1 text-[15px] rounded-full bg-gray-100 text-gray-600"
                   >
                     {category === 'ai'
                       ? 'AI & ML'
