@@ -70,7 +70,7 @@ export default function EducationSection() {
             </div>
 
             {/* Flip indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-600 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Details</span>
               <Icon name="flip-right" className="w-5 h-5" />
             </div>
@@ -88,7 +88,7 @@ export default function EducationSection() {
                 <ul className="space-y-3">
                   {activities.map((activity) => (
                     <li key={activity} className="flex items-center">
-                      <span className="text-indigo-500 mr-2">•</span>
+                      <span className="text-indigo-600 mr-2">•</span>
                       <span className="text-gray-700 text-sm font-medium">{activity}</span>
                     </li>
                   ))}
@@ -115,7 +115,7 @@ export default function EducationSection() {
             </div>
 
             {/* Back indicator */}
-            <div className="absolute bottom-4 right-4 text-indigo-500 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
+            <div className="absolute bottom-4 right-4 text-indigo-600 bg-gray-50 rounded-full px-3 py-2 shadow-sm border border-gray-100 hover:bg-indigo-50 hover:scale-105 transition-all duration-200 flex items-center gap-1">
               <span className="text-sm">Back</span>
               <Icon name="flip-left" className="w-5 h-5" />
             </div>

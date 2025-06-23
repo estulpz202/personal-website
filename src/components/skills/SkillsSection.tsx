@@ -42,7 +42,7 @@ export default function SkillsSection() {
               key={skill.name}
               className="bg-gray-50 rounded-lg p-4 border border-gray-100 flex items-center gap-3 hover:border-indigo-200 transition-colors"
             >
-              <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+              <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
               <span className="text-gray-800">{skill.name}</span>
             </div>
           ))}

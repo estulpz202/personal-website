@@ -61,7 +61,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
             </div>
             <div className="mt-2 md:mt-0">
               <span className="bg-white mb-2 px-3 py-1 rounded-full text-gray-700 text-[14.5px] border border-indigo-100 inline-flex items-center">
-                <Icon name="calendar" className="w-4 h-4 mr-2 text-indigo-500" />
+                <Icon name="calendar" className="w-4 h-4 mr-2 text-indigo-600" />
                 {period}
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           <ul className="space-y-2 mb-4">
             {highlights.map((highlight, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-indigo-500 mr-2">•</span>
+                <span className="text-indigo-600 mr-2">•</span>
                 <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: highlight }} />
               </li>
             ))}
