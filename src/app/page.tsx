@@ -15,7 +15,7 @@ export default function HomePage() {
         <HeroSection />
 
         {/* Visual separator between main sections */}
-        <div className="w-full border-t border-gray-200 my-6"></div>
+        <div className="w-full border-t border-gray-200 my-6 fade-in-up"></div>
 
         {/* Featured projects showcase */}
         <RecentWorkSection />

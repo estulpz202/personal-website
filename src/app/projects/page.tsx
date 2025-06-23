@@ -21,7 +21,7 @@ function ProjectsContainer({ children }: { children: React.ReactNode }) {
  */
 export default function ProjectsPage() {
   return (
-    <main className="pb-10">
+    <main className="pb-10 fade-in-up">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50">
         <ProjectsContainer>
