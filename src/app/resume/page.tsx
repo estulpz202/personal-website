@@ -19,7 +19,7 @@ export default function ResumePage() {
         {/* Page header with title and actions */}
         <div className="mb-8">
           <SectionHeader title="Resume" />
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
             <p className="text-gray-700 my-auto">
               My professional background, skills, and qualifications.
             </p>
