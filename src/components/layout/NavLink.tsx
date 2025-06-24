@@ -10,6 +10,8 @@ type NavLinkProps = {
   href: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
+  isTouchDevice?: boolean;
 };
 
 /**
@@ -17,20 +19,31 @@ type NavLinkProps = {
  *
  * Renders a link that automatically shows active state when the current
  * URL matches the link's destination. Inactive links display a hover animation.
+ * Now includes support for mobile menu with onClick handler.
  */
-export default function NavLink({ href, children, className = '' }: NavLinkProps) {
+export default function NavLink({
+  href,
+  children,
+  className = '',
+  onClick,
+  isTouchDevice = false,
+}: NavLinkProps) {
   // Get current path to determine if this link is active
   const pathname = usePathname();
   const isActive = pathname === href;
 
+  // Determine if we should show hover effects
+  const showHoverEffect = !isTouchDevice;
+
   return (
     <Link
       href={href}
-      className={`nav-link relative py-2 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
+      className={`${!isTouchDevice ? 'nav-link' : ''} relative py-1 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
+      onClick={onClick}
     >
       {children}
       {/* Animated underline effect that appears on hover for inactive links */}
-      {!isActive && (
+      {!isActive && showHoverEffect && (
         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out" />
       )}
     </Link>
