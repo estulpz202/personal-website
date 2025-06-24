@@ -31,7 +31,9 @@ export default function NavLink({
   return (
     <Link
       href={href}
-      className={`${isTouchDevice ? '' : 'nav-link'} relative py-1 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
+      className={`${isTouchDevice ? 'active:text-indigo-400' : 'nav-link'} relative py-1 px-1 group ${
+        isActive ? 'nav-link-active' : ''
+      } ${className}`}
       onClick={onClick}
     >
       {children}

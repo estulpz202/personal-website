@@ -79,13 +79,13 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 lg:py-6">
         {/* Header - top of page */}
         <div className="flex justify-between items-center">
-          {/* Logo and site name link to homepage */}
+          {/* Logo and site name, link to homepage */}
           <Link
             href="/"
             className={
               isTouchDevice
-                ? 'flex items-center space-x-3 text-white'
-                : 'flex items-center space-x-3 nav-link'
+                ? 'flex items-center space-x-3 text-white active:text-indigo-400'
+                : 'flex items-center space-x-3 nav-link active:text-indigo-400'
             }
             onClick={() => setIsMenuOpen(false)}
           >
@@ -95,7 +95,7 @@ export default function Header() {
 
           {/* Desktop Navigation - hidden on smaller screens */}
           <div className="hidden md:flex items-center md:space-x-8 lg:space-x-16">
-            {/* Primary navigation menu */}
+            {/* Navigation menu */}
             <nav aria-label="Main navigation">
               <ul className="flex space-x-8 text-lg font-small m-0 p-0 list-none">
                 {navLinks.map((link) => (
@@ -108,7 +108,7 @@ export default function Header() {
               </ul>
             </nav>
 
-            {/* Social media profile links */}
+            {/* Social links */}
             <div className="flex items-center space-x-6">
               {socialLinks.map((social) => (
                 <a
@@ -117,7 +117,9 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={
-                    isTouchDevice ? 'text-white' : 'nav-link hover:scale-110 transition-transform'
+                    isTouchDevice
+                      ? 'text-white active:text-indigo-400 active:scale-110 transition-all'
+                      : 'nav-link hover:scale-110 active:scale-110 transition-transform'
                   }
                   aria-label={social.name}
                 >
@@ -132,12 +134,16 @@ export default function Header() {
 
           {/* Mobile menu button - visible only on smaller screens */}
           <button
-            className="md:hidden flex items-center text-white p-2"
+            className={
+              isMenuOpen
+                ? 'md:hidden flex items-center text-indigo-400 p-2 active:text-white transition-colors'
+                : 'md:hidden flex items-center text-white p-2 active:text-indigo-400 transition-colors'
+            }
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
           >
-            <Icon name={isMenuOpen ? 'x' : 'menu'} className="h-6.5 w-6.5" />
+            <Icon name={'menu'} className="h-6.5 w-6.5" />
           </button>
         </div>
 
@@ -149,6 +155,7 @@ export default function Header() {
               : 'max-h-0 opacity-0 mt-0'
           }`}
         >
+          {/* Mobile navigation menu */}
           <nav className="flex flex-col space-y-4 py-4">
             {navLinks.map((link) => (
               <NavLink
@@ -163,7 +170,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Social links in mobile menu */}
+          {/* Mobile social links */}
           <div className="flex space-x-6 pt-4 border-t border-gray-700">
             {socialLinks.map((social) => (
               <a
@@ -171,7 +178,7 @@ export default function Header() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white p-2"
+                className="text-white p-2 active:text-indigo-400 active:scale-110 transition-all"
                 aria-label={social.name}
               >
                 <Icon

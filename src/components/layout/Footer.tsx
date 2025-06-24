@@ -37,6 +37,7 @@ export default function Footer() {
             bg-gray-100 rounded-full flex items-center justify-center cursor-pointer
             transition-transform duration-300 
             hover:-translate-y-2
+            active:-translate-y-2
             shadow-lg
           "
           style={{
@@ -55,7 +56,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Copyright text with current year */}
           <div className="mb-3 md:mb-0 text-center md:text-left pt-2 md:pt-0">
-            <Link href="/" className="hover:text-indigo-400 transition-colors">
+            <Link
+              href="/"
+              className="hover:text-indigo-400 active:text-indigo-400 transition-colors"
+            >
               © {new Date().getFullYear()} Estuardo Lopez
             </Link>
           </div>
@@ -65,7 +69,10 @@ export default function Footer() {
             <ul className="flex space-x-6">
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-indigo-400 transition-colors">
+                  <Link
+                    href={link.href}
+                    className="hover:text-indigo-400 active:text-indigo-400 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
