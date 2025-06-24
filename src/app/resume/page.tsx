@@ -19,10 +19,10 @@ export default function ResumePage() {
         {/* Page header with title and actions */}
         <div className="mb-8">
           <SectionHeader title="Resume" />
-
-          <div className="flex justify-between">
-            <p className="text-gray-700">My professional background, skills, and qualifications.</p>
-
+          <div className="flex justify-between items-center">
+            <p className="text-gray-700 my-auto">
+              My professional background, skills, and qualifications.
+            </p>
             <div className="flex gap-3">
               <DownloadButton
                 href="/resume.pdf"

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import Icon from './Icon';
+import Icon, { IconName } from './Icon';
 
 /**
  * Common properties for all button variants
@@ -10,7 +10,7 @@ type ButtonProps = {
   children: ReactNode;
   className?: string;
   external?: boolean;
-  icon?: string;
+  icon?: IconName;
   size?: 'small' | 'medium';
 };
 
@@ -46,7 +46,7 @@ export function PrimaryButton({
   const content = (
     <>
       {children}
-      {icon && <Icon name={icon as any} className="w-4 h-4 ml-2" />}
+      {icon && <Icon name={icon} className="w-4 h-4 ml-2" />}
     </>
   );
 
@@ -85,7 +85,7 @@ export function SecondaryButton({
   const content = (
     <>
       {children}
-      {icon && <Icon name={icon as any} className="w-4 h-4 ml-2" />}
+      {icon && <Icon name={icon} className="w-4 h-4 ml-2" />}
     </>
   );
 
@@ -124,7 +124,7 @@ export function DownloadButton({
   return (
     <a href={href} className={allClasses} download={filename}>
       {children}
-      {icon && <Icon name={icon as any} className="w-4 h-4 ml-2" />}
+      {icon && <Icon name={icon} className="w-4 h-4 ml-2" />}
     </a>
   );
 }
