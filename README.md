@@ -4,7 +4,6 @@ A modern, responsive personal website and portfolio built with Next.js and Tailw
 
 ## 🚀 Features
 
-- **Responsive Design** - Optimized for all device sizes
 - **Project Showcase** - Detailed project pages with descriptions and links
 - **Resume Viewer** - Embedded PDF viewer with download option
 - **Animations** - Subtle animations for improved user experience
@@ -25,13 +24,14 @@ A modern, responsive personal website and portfolio built with Next.js and Tailw
 
 ## 🧰 Development Commands
 
-| Command          | Description                 |
-| ---------------- | --------------------------- |
-| `npm run dev`    | Start development server    |
-| `npm run build`  | Build for production        |
-| `npm run start`  | Start production server     |
-| `npm run lint`   | Run ESLint                  |
-| `npm run format` | Run Prettier to format code |
+| Command               | Description                 |
+| --------------------- | --------------------------- |
+| `npm run dev`         | Start development server    |
+| `npm run dev:network` | Start dev server on network |
+| `npm run build`       | Build for production        |
+| `npm run start`       | Start production server     |
+| `npm run lint`        | Run ESLint                  |
+| `npm run format`      | Run Prettier to format code |
 
 ## 📂 Project Structure
 
@@ -49,10 +49,12 @@ src/
 │   ├── layout.tsx
 │   └── page.tsx
 └── components/       # Reusable React components
+    ├── about/
     ├── common/
     ├── home/
     ├── layout/
     ├── projects/
+    │   └── proj/
     ├── skills/
     └── ui/
 ```

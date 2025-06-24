@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
-import NavLink from '@/components/ui/NavLink';
+import NavLink from './NavLink';
 
 /**
  * Primary navigation links for the site header
