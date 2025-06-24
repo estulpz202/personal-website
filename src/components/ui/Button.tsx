@@ -123,8 +123,8 @@ export function DownloadButton({
 
   return (
     <a href={href} className={allClasses} download={filename}>
-      {icon && <Icon name={icon as any} className="w-4 h-4 mr-2" />}
       {children}
+      {icon && <Icon name={icon as any} className="w-4 h-4 ml-2" />}
     </a>
   );
 }

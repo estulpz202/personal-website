@@ -1,4 +1,6 @@
 import SectionHeader from '@/components/common/SectionHeader';
+import Container from '@/components/common/Container';
+import { DownloadButton, SecondaryButton } from '@/components/ui/Button';
 
 /**
  * Page metadata for browser tab display
@@ -12,31 +14,42 @@ export const metadata = {
  */
 export default function ResumePage() {
   return (
-    <main>
-      {/* Page header and download option */}
-      <section className="py-12 px-4 max-w-5xl mx-auto fade-in-up">
-        <SectionHeader title="Resume" />
-        <p className="text-base text-gray-700 mb-6">
-          View my resume below. If the preview does not load, you can also{' '}
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="link">
-            download the PDF
-          </a>
-          .
-        </p>
-      </section>
+    <main className="py-10 fade-in-up">
+      <Container>
+        {/* Page header with title and actions */}
+        <div className="mb-8">
+          <SectionHeader title="Resume" />
 
-      {/* Embedded PDF viewer with responsive sizing */}
-      <section className="mb-12 px-4 fade-in-up">
-        <div className="max-w-screen-lg mx-auto border rounded overflow-hidden shadow">
+          <div className="flex justify-between">
+            <p className="text-gray-700">My professional background, skills, and qualifications.</p>
+
+            <div className="flex gap-3">
+              <DownloadButton
+                href="/resume.pdf"
+                filename="Estuardo-Lopez-Resume.pdf"
+                size="small"
+                icon="download"
+              >
+                Download PDF
+              </DownloadButton>
+
+              <SecondaryButton href="/resume.pdf" external={true} size="small" icon="external-link">
+                Open in New Tab
+              </SecondaryButton>
+            </div>
+          </div>
+        </div>
+
+        {/* Embedded PDF viewer */}
+        <div className="w-full rounded-lg overflow-hidden shadow-sm">
           <iframe
             src="/resume.pdf"
-            title="Resume"
+            title="Estuardo Lopez Resume"
             width="100%"
             height="1200px"
-            style={{ border: 'none' }}
           ></iframe>
         </div>
-      </section>
+      </Container>
     </main>
   );
 }
