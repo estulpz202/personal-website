@@ -16,10 +16,6 @@ type NavLinkProps = {
 
 /**
  * NavLink - Navigation link with active state indication
- *
- * Renders a link that automatically shows active state when the current
- * URL matches the link's destination. Inactive links display a hover animation.
- * Now includes support for mobile menu with onClick handler.
  */
 export default function NavLink({
   href,
@@ -32,18 +28,15 @@ export default function NavLink({
   const pathname = usePathname();
   const isActive = pathname === href;
 
-  // Determine if we should show hover effects
-  const showHoverEffect = !isTouchDevice;
-
   return (
     <Link
       href={href}
-      className={`${!isTouchDevice ? 'nav-link' : ''} relative py-1 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
+      className={`${isTouchDevice ? '' : 'nav-link'} relative py-1 px-1 group ${isActive ? 'nav-link-active' : ''} ${className}`}
       onClick={onClick}
     >
       {children}
-      {/* Animated underline effect that appears on hover for inactive links */}
-      {!isActive && showHoverEffect && (
+      {/* Underline hover effect for inactive links, on non touch devices */}
+      {!isActive && !isTouchDevice && (
         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out" />
       )}
     </Link>
