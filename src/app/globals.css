@@ -68,6 +68,10 @@ button:focus-visible {
   color: var(--indigo-450);
 }
 
+.link:active {
+  color: var(--indigo-450);
+}
+
 /* Navigation links */
 .nav-link {
   text-decoration: none;
@@ -78,6 +82,10 @@ button:focus-visible {
 }
 
 .nav-link:hover {
+  color: var(--indigo-400);
+}
+
+.nav-link:active {
   color: var(--indigo-400);
 }
 
@@ -115,7 +123,6 @@ h6 {
 
 /* 
  * Animations
- * Used for enhancing perceived performance and visual interest
  */
 
 /* Subtle entrance animation for content sections */

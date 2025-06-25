@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 /**
  * Props for the NavLink component
@@ -24,17 +25,30 @@ export default function NavLink({
   onClick,
   isTouchDevice = false,
 }: NavLinkProps) {
-  // Get current path to determine if this link is active
   const pathname = usePathname();
   const isActive = pathname === href;
+  const [isClicked, setIsClicked] = useState(false);
+
+  // Reset clicked state when pathname changes
+  useEffect(() => {
+    setIsClicked(false);
+  }, [pathname]);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    if (onClick) onClick();
+  };
+
+  // Apply styling based on device type, clicked state, and active state
+  const styleClass = `${isTouchDevice ? 'active:text-indigo-400' : 'nav-link'}
+    ${isClicked ? 'text-indigo-400' : ''}
+    ${isActive ? 'nav-link-active' : ''}`;
 
   return (
     <Link
       href={href}
-      className={`${isTouchDevice ? 'active:text-indigo-400' : 'nav-link'} relative py-1 px-1 group ${
-        isActive ? 'nav-link-active' : ''
-      } ${className}`}
-      onClick={onClick}
+      className={`relative py-1 px-1 group ${styleClass} ${className} transition-colors duration-200`}
+      onClick={handleClick}
     >
       {children}
       {/* Underline hover effect for inactive links, on non touch devices */}

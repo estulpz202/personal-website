@@ -44,26 +44,19 @@ export default function Header() {
 
   // Detect touch capability
   useEffect(() => {
-    // Check if device has touch capability
     const detectTouch = () => {
       setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
     };
-
-    // Run touch detection immediately
     detectTouch();
 
     const handleResize = () => {
-      // Re-detect touch capability (for connected/disconnected inputs)
       detectTouch();
-
-      // Close mobile menu on larger screens
       if (window.innerWidth >= 768) {
         setIsMenuOpen(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -74,6 +67,12 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Apply styling based on device type or menu state
+  const styleClass = `${isTouchDevice ? 'text-white active:text-indigo-400' : 'nav-link'}`;
+  const hoverClass = `${isTouchDevice ? 'active:scale-110' : 'active:scale-110 hover:scale-110'}`;
+  const menuButtonClass = `${isMenuOpen ? 'text-indigo-400 active:text-white' : 'text-white active:text-indigo-400'}`;
+  const menuClass = `${isMenuOpen ? 'max-h-[500px] opacity-100 mt-4 border-t border-gray-700' : 'max-h-0 opacity-0 mt-0'}`;
+
   return (
     <header className="bg-black text-white shadow-md">
       <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 lg:py-6">
@@ -82,11 +81,7 @@ export default function Header() {
           {/* Logo and site name, link to homepage */}
           <Link
             href="/"
-            className={
-              isTouchDevice
-                ? 'flex items-center space-x-3 text-white active:text-indigo-400'
-                : 'flex items-center space-x-3 nav-link active:text-indigo-400'
-            }
+            className={`flex items-center space-x-3 ${styleClass} transition-colors duration-200`}
             onClick={() => setIsMenuOpen(false)}
           >
             <Icon name="e-logo" className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-400" />
@@ -116,11 +111,7 @@ export default function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={
-                    isTouchDevice
-                      ? 'text-white active:text-indigo-400 active:scale-110 transition-all'
-                      : 'nav-link hover:scale-110 active:scale-110 transition-transform'
-                  }
+                  className={`${styleClass} ${hoverClass} transition-all duration-200`}
                   aria-label={social.name}
                 >
                   <Icon
@@ -134,11 +125,7 @@ export default function Header() {
 
           {/* Mobile menu button - visible only on smaller screens */}
           <button
-            className={
-              isMenuOpen
-                ? 'md:hidden flex items-center text-indigo-400 p-2 active:text-white transition-colors'
-                : 'md:hidden flex items-center text-white p-2 active:text-indigo-400 transition-colors'
-            }
+            className={`md:hidden flex items-center p-2 ${menuButtonClass} transition-colors duration-200`}
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
@@ -149,11 +136,7 @@ export default function Header() {
 
         {/* Mobile menu - slides in from top of page */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${
-            isMenuOpen
-              ? 'max-h-[500px] opacity-100 mt-4 border-t border-gray-700'
-              : 'max-h-0 opacity-0 mt-0'
-          }`}
+          className={`md:hidden overflow-hidden ${menuClass} transition-all duration-400 ease-in-out`}
         >
           {/* Mobile navigation menu */}
           <nav className="flex flex-col space-y-4 py-4">
@@ -178,13 +161,10 @@ export default function Header() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white p-2 active:text-indigo-400 active:scale-110 transition-all"
+                className=" p-2 text-white active:text-indigo-400 active:scale-110 transition-all duration-200"
                 aria-label={social.name}
               >
-                <Icon
-                  name={social.icon as 'github' | 'linkedin'}
-                  className="w-6.5 h-6.5 fill-current"
-                />
+                <Icon name={social.icon as IconName} className="w-6.5 h-6.5 fill-current" />
               </a>
             ))}
           </div>
