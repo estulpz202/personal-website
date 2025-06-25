@@ -20,14 +20,14 @@ const courses = [
 ];
 
 /**
- * Truncated courses for md screens
+ * Truncated courses
  */
 const truncatedCourses = courses.slice(0, 6);
 
 /**
- * List of notable courses with shorter names for mobile view
+ * Shorter name courses
  */
-const coursesShort = [
+const shorterCourses = [
   'Parallel and Seq DS & Algos',
   'Foundations of SWE',
   'Software Construction',
@@ -130,9 +130,9 @@ export default function EducationSection() {
             "
             onClick={() => setIsFlipped(false)}
           >
-            <div className="flex h-full pl-2">
-              {/* Campus Involvement - Hidden on <= small screens, visible on >= medium screens */}
-              <div className="hidden md:block w-[20%]">
+            <div className="flex h-full w-full px-2 sm:px-4">
+              {/* Campus Involvement - Hidden on smaller screens, visible on >= medium screens */}
+              <div className="hidden md:block w-[25%]">
                 <h4 className="text-gray-800 text-base mb-3 tracking-wider">Involvement</h4>
                 <ul className="space-y-3">
                   {activities.map((activity) => (
@@ -144,11 +144,8 @@ export default function EducationSection() {
                 </ul>
               </div>
 
-              {/* Separator - Hidden on <= small screens, visible on >= medium screens */}
-              <div className="hidden md:block w-[10%] w-px bg-gray-100 ml-[36px] mr-[52px] lg:ml-[14px] lg:mr-[74px]"></div>
-
-              {/* Coursework - Full width on <= small screens, 70% on >= medium screens */}
-              <div className="md:w-[70%]">
+              {/* Coursework - Full width on smaller screens, 75% on >= medium screens */}
+              <div className="w-full md:w-[75%]">
                 <h4 className="text-gray-800 text-sm sm:text-base mb-2 sm:mb-3 tracking-wider">
                   Coursework
                 </h4>
@@ -182,7 +179,7 @@ export default function EducationSection() {
 
                 {/* Less than small screens - shorter names */}
                 <div className="sm:hidden flex flex-wrap gap-1.5">
-                  {coursesShort.map((course) => (
+                  {shorterCourses.map((course) => (
                     <span
                       key={course}
                       className="inline-block px-2 py-0.5 mb-1.5 text-[10px] bg-gray-100 text-gray-700 font-medium rounded"
