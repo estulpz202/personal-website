@@ -17,12 +17,14 @@ export const metadata = {
  */
 export default function AboutPage() {
   return (
-    <main>
+    <main className="fade-in-up">
       <Container>
         {/* Hero Banner - Minimal */}
-        <div className="py-10 border-b border-gray-100 fade-in-up">
-          <h1 className="text-4xl font-bold mb-4">Hi, I'm Estuardo Lopez</h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
+        <div className="py-8 sm:py-9 md:py-10 border-b border-gray-100">
+          <h1 className="text-3xl sm:text-[33px] md:text-4xl font-bold mb-3 sm:mb-4">
+            Hi, I'm Estuardo Lopez
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl">
             Building software that matters with purpose, precision, and passion.
           </p>
         </div>
