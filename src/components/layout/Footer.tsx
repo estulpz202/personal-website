@@ -53,9 +53,9 @@ export default function Footer() {
 
       {/* Main footer content container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-7 py-6 relative">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col sm:flex-row justify-between items-center">
           {/* Copyright text with current year */}
-          <div className="mb-3 md:mb-0 text-center md:text-left pt-2 md:pt-0">
+          <div className="mb-2.5 sm:mb-0 text-center sm:text-left pt-2.5 sm:pt-0">
             <Link
               href="/"
               className="hover:text-indigo-400 active:text-indigo-400 transition-colors"
