@@ -20,10 +20,15 @@ const courses = [
 ];
 
 /**
+ * Truncated courses for md screens
+ */
+const truncatedCourses = courses.slice(0, 6);
+
+/**
  * List of notable courses with shorter names for mobile view
  */
 const coursesShort = [
-  'Parallel and Sequential DS & Algos',
+  'Parallel and Seq DS & Algos',
   'Foundations of SWE',
   'Software Construction',
   'Imperative Computation',
@@ -83,7 +88,7 @@ export default function EducationSection() {
                   </span>
                 </div>
 
-                <p className="text-indigo-600 font-medium mt-1 text-base sm:text-lg">
+                <p className="text-indigo-600 font-medium mt-2 md:mt-1 text-base sm:text-lg">
                   B.S. in Computer Science
                 </p>
 
@@ -125,10 +130,10 @@ export default function EducationSection() {
             "
             onClick={() => setIsFlipped(false)}
           >
-            <div className="flex h-full sm:pl-2">
-              {/* Campus Involvement - Hidden on mobile, visible on larger screens */}
-              <div className="hidden sm:block w-[20%]">
-                <h4 className="text-gray-800 text-base mb-3 tracking-wider">Campus Involvement</h4>
+            <div className="flex h-full pl-2">
+              {/* Campus Involvement - Hidden on <= small screens, visible on >= medium screens */}
+              <div className="hidden md:block w-[20%]">
+                <h4 className="text-gray-800 text-base mb-3 tracking-wider">Involvement</h4>
                 <ul className="space-y-3">
                   {activities.map((activity) => (
                     <li key={activity} className="flex items-center">
@@ -139,17 +144,17 @@ export default function EducationSection() {
                 </ul>
               </div>
 
-              {/* Separator - hidden on mobile, visible on larger screens */}
-              <div className="hidden sm:block w-[10%] w-px bg-gray-100 ml-8 md:ml-10 mr-9 md:mr-12"></div>
+              {/* Separator - Hidden on <= small screens, visible on >= medium screens */}
+              <div className="hidden md:block w-[10%] w-px bg-gray-100 ml-[36px] mr-[52px] lg:ml-[14px] lg:mr-[74px]"></div>
 
-              {/* Coursework - Full width on mobile, 70% on larger screens */}
-              <div className="sm:w-[70%]">
+              {/* Coursework - Full width on <= small screens, 70% on >= medium screens */}
+              <div className="md:w-[70%]">
                 <h4 className="text-gray-800 text-sm sm:text-base mb-2 sm:mb-3 tracking-wider">
                   Coursework
                 </h4>
 
-                {/* Desktop view courses */}
-                <div className="hidden sm:flex flex-wrap gap-2">
+                {/* Large screens - show all courses */}
+                <div className="hidden lg:flex flex-wrap gap-2">
                   {courses.map((course) => (
                     <span
                       key={course}
@@ -160,7 +165,22 @@ export default function EducationSection() {
                   ))}
                 </div>
 
-                {/* Mobile view courses (shorter names) */}
+                {/* Small & medium screens - show truncated courses */}
+                <div className="hidden lg:hidden sm:flex flex-wrap gap-2">
+                  {truncatedCourses.map((course) => (
+                    <span
+                      key={course}
+                      className="inline-block px-3 py-1 mb-1.5 text-xs bg-gray-100 text-gray-700 font-medium rounded"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                  <span className="inline-block px-3 py-1 mb-1.5 text-xs bg-gray-100 text-gray-700 font-medium rounded">
+                    ...
+                  </span>
+                </div>
+
+                {/* Less than small screens - shorter names */}
                 <div className="sm:hidden flex flex-wrap gap-1.5">
                   {coursesShort.map((course) => (
                     <span
