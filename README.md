@@ -35,7 +35,7 @@ A modern, responsive personal website and portfolio built with Next.js and Tailw
 
 ## 📂 Project Structure
 
-```
+```plaintext
 public/               # Static assets (images, resume PDF)
 src/
 ├── app/              # Next.js App Router pages
