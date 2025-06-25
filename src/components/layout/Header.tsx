@@ -70,7 +70,6 @@ export default function Header() {
   // Apply styling based on device type or menu state
   const styleClass = `${isTouchDevice ? 'text-white active:text-indigo-400' : 'nav-link'}`;
   const hoverClass = `${isTouchDevice ? 'active:scale-110' : 'active:scale-110 hover:scale-110'}`;
-  const menuButtonClass = `${isMenuOpen ? 'text-indigo-400 active:text-white' : 'text-white active:text-indigo-400'}`;
   const menuClass = `${isMenuOpen ? 'max-h-[500px] opacity-100 mt-4 border-t border-gray-700' : 'max-h-0 opacity-0 mt-0'}`;
 
   return (
@@ -125,12 +124,12 @@ export default function Header() {
 
           {/* Mobile menu button - visible only on smaller screens */}
           <button
-            className={`md:hidden flex items-center p-2 ${menuButtonClass} transition-colors duration-200`}
+            className="md:hidden flex items-center p-2 text-white active:text-indigo-400 transition-colors duration-200"
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
           >
-            <Icon name={'menu'} className="h-6.5 w-6.5" />
+            <Icon name={isMenuOpen ? 'x' : 'menu'} className="h-6.5 w-6.5" />
           </button>
         </div>
 
@@ -161,7 +160,7 @@ export default function Header() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" p-2 text-white active:text-indigo-400 active:scale-110 transition-all duration-200"
+                className="p-2 text-white active:text-indigo-400 active:scale-110 transition-all duration-200"
                 aria-label={social.name}
               >
                 <Icon name={social.icon as IconName} className="w-6.5 h-6.5 fill-current" />
