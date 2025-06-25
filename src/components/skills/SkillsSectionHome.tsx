@@ -27,12 +27,17 @@ export default function SkillsSectionHome() {
   return (
     <section className="pt-6 sm:pt-7 md:pt-8 pb-8 sm:pb-9 md:pb-10">
       <SectionHeader title="Technical Highlights" />
+
+      {/* Skills categories grid - single column on mobile, three columns on larger screens */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
         {homeSkillsData.map((category) => (
           <div key={category.title} className="space-y-2 sm:space-y-3">
+            {/* Category title */}
             <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-1.5 sm:mb-2">
               {category.title}
             </h3>
+
+            {/* Skills list for this category */}
             <div className="grid grid-cols-1 gap-1.5 sm:gap-2">
               {category.skills.map((skill) => (
                 <SkillCard key={skill.name} skill={skill} />
@@ -41,6 +46,8 @@ export default function SkillsSectionHome() {
           </div>
         ))}
       </div>
+
+      {/* "More" link with animated arrow icon */}
       <div className="mt-5 sm:mt-6 text-center">
         <Link
           href="/about"
