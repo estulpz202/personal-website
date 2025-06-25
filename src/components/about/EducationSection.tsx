@@ -20,7 +20,7 @@ const courses = [
 ];
 
 /**
- * List of notable courses with shorter names
+ * List of notable courses with shorter names for mobile view
  */
 const coursesShort = [
   'Parallel and Sequential DS & Algos',
@@ -55,24 +55,24 @@ export default function EducationSection() {
           <div
             className="
               flip-card-front bg-white rounded-xl shadow-sm border border-gray-200
-              pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 pt-3.5 sm:pt-4.5 md:pt-5.5
+              pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 pt-3 sm:pt-4 md:pt-5
               cursor-pointer hover:shadow-md active:shadow-md transition-all duration-300
             "
             onClick={() => setIsFlipped(true)}
           >
             <div className="flex items-start">
-              {/* Comment here */}
+              {/* University logo */}
               <div className="flex-shrink-0 mt-5">
                 <Image
                   src="/images/logos/cmu_logo.jpg"
                   alt="CMU Logo"
                   width={55}
-                  height={5}
+                  height={55}
                   className="w-[55px] h-[55px] sm:w-[65px] sm:h-[65px] md:w-[70px] md:h-[70px] rounded-lg"
                 />
               </div>
 
-              {/* Comment here */}
+              {/* University info */}
               <div className="ml-3 sm:ml-4 md:ml-5 flex-grow text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-800">
@@ -82,9 +82,11 @@ export default function EducationSection() {
                     Aug 2023 - May 2027
                   </span>
                 </div>
+
                 <p className="text-indigo-600 font-medium mt-1 text-base sm:text-lg">
                   B.S. in Computer Science
                 </p>
+
                 <p className="hidden sm:block text-gray-700 text-sm sm:text-base">
                   Concentration in SWE • Minor in Social & Political History
                 </p>
@@ -92,6 +94,7 @@ export default function EducationSection() {
                 <p className="sm:hidden text-gray-700 text-sm">
                   Minor in Social & Political History
                 </p>
+
                 <div className="flex items-center mt-3 sm:mt-4">
                   <span className="bg-indigo-50 text-indigo-600 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs sm:text-sm font-medium">
                     QPA: 3.54
@@ -117,7 +120,7 @@ export default function EducationSection() {
           <div
             className="
               flip-card-back bg-white rounded-xl shadow-sm border border-gray-200
-              pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 pt-3.5 sm:pt-4.5 md:pt-5.5
+              pb-4 sm:pb-5 md:pb-6 px-4 sm:px-5 md:px-6 pt-3 sm:pt-4 md:pt-5
               cursor-pointer hover:shadow-md active:shadow-md transition-all duration-300 text-left
             "
             onClick={() => setIsFlipped(false)}
@@ -144,11 +147,25 @@ export default function EducationSection() {
                 <h4 className="text-gray-800 text-sm sm:text-base mb-2 sm:mb-3 tracking-wider">
                   Coursework
                 </h4>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+
+                {/* Desktop view courses */}
+                <div className="hidden sm:flex flex-wrap gap-2">
                   {courses.map((course) => (
                     <span
                       key={course}
-                      className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 mb-1.5 text-[10px] sm:text-xs bg-gray-100 text-gray-700 font-medium rounded"
+                      className="inline-block px-3 py-1 mb-1.5 text-xs bg-gray-100 text-gray-700 font-medium rounded"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Mobile view courses (shorter names) */}
+                <div className="sm:hidden flex flex-wrap gap-1.5">
+                  {coursesShort.map((course) => (
+                    <span
+                      key={course}
+                      className="inline-block px-2 py-0.5 mb-1.5 text-[10px] bg-gray-100 text-gray-700 font-medium rounded"
                     >
                       {course}
                     </span>
