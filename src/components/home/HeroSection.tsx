@@ -24,7 +24,7 @@ export default function HeroSection() {
           <div
             className="
               bg-gray-50 border-l-4 border-indigo-600
-              pl-3 sm:pl-4 pr-3 sm:pr-4 py-2.5 sm:py-3 mb-6 sm:mb-7 md:mb-8
+              px-3 sm:px-4 py-2.5 sm:py-3 mb-6 sm:mb-7 md:mb-8
               max-w-xl flex justify-between items-center
             "
           >
