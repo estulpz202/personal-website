@@ -46,7 +46,7 @@ export default function NotFound() {
           </PrimaryButton>
           <SecondaryButton
             href="/projects"
-            className="x-5.2 py-2.7 sm:px-6.4 sm:py-3.4 text-base sm:text-[16.5px] font-medium sm:min-w-[155px] text-center"
+            className="px-5.2 py-2.7 sm:px-6.4 sm:py-3.4 text-base sm:text-[16.5px] font-medium sm:min-w-[155px] text-center"
           >
             View Projects
           </SecondaryButton>

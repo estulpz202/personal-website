@@ -40,7 +40,10 @@ export function PrimaryButton({
   size = 'medium',
 }: ButtonProps) {
   const sizeClasses = getSizeClasses(size);
-  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm inline-flex items-center justify-center`;
+  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all 
+    bg-indigo-600 text-white 
+    hover:bg-indigo-700 active:bg-indigo-700 
+    shadow-sm inline-flex items-center justify-center`;
   const allClasses = `${baseClasses} ${className}`;
 
   const content = (
@@ -79,7 +82,11 @@ export function SecondaryButton({
   size = 'medium',
 }: ButtonProps) {
   const sizeClasses = getSizeClasses(size);
-  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all bg-white text-indigo-600 border border-indigo-200 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 shadow-sm inline-flex items-center justify-center`;
+  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all 
+    bg-white text-indigo-600 border border-indigo-200 
+    hover:bg-indigo-600 hover:text-white hover:border-indigo-600 
+    active:bg-indigo-600 active:text-white active:border-indigo-600 
+    shadow-sm inline-flex items-center justify-center`;
   const allClasses = `${baseClasses} ${className}`;
 
   const content = (
@@ -118,7 +125,10 @@ export function DownloadButton({
   size = 'medium',
 }: DownloadButtonProps) {
   const sizeClasses = getSizeClasses(size);
-  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm inline-flex items-center justify-center`;
+  const baseClasses = `${sizeClasses} rounded-md font-medium transition-all 
+    bg-indigo-600 text-white 
+    hover:bg-indigo-700 active:bg-indigo-700
+    shadow-sm inline-flex items-center justify-center`;
   const allClasses = `${baseClasses} ${className}`;
 
   return (
