@@ -15,7 +15,7 @@ const footerLinks = [
 ];
 
 /**
- * Footer - Site-wide footer with navigation and scroll-to-top functionality
+ * Footer - Site-wide footer with scroll-to-top and navigation functionality
  */
 export default function Footer() {
   // Handler for smooth scroll to top functionality
@@ -64,7 +64,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Secondary navigation links - only visible on large screens */}
+          {/* Secondary navigation links - visible on large screens */}
           <nav aria-label="Footer navigation" className="hidden lg:block">
             <ul className="flex space-x-6">
               {footerLinks.map((link) => (

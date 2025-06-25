@@ -51,7 +51,7 @@ export default function NavLink({
       onClick={handleClick}
     >
       {children}
-      {/* Underline hover effect for inactive links, on non touch devices */}
+      {/* Underline hover effect for inactive links, on non-touch devices */}
       {!isActive && !isTouchDevice && (
         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out" />
       )}

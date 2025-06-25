@@ -33,7 +33,7 @@ const socialLinks = [
 ];
 
 /**
- * Header - Site-wide navigation header, provides consistent navigation across all pages.
+ * Header - Site wide navigation header, provides consistent navigation across all pages.
  *
  * Displays the site logo, main navigation links, and social media links.
  * Fully responsive with mobile hamburger menu for smaller screens.

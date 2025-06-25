@@ -2,7 +2,6 @@
 
 /* 
  * CSS variables for consistent theming across the site
- * These provide a single source of truth for colors and styles
  */
 :root {
   /* Core color palette */
@@ -16,7 +15,6 @@
   --background: var(--white);
   --foreground: var(--black);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
   /* Accessibility and interaction styles */
   --focus-ring: 0 0 0 2px var(--indigo-600);
@@ -33,7 +31,20 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   line-height: 1.6;
   font-size: 1rem;
-  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Typography: Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Enable smooth scrolling behavior site-wide */
@@ -50,8 +61,7 @@ button:focus-visible {
 }
 
 /* 
- * Link styling utilities
- * Different link types have specific styling for better UX
+ * Link styling utilities - Different types have specific styling
  */
 
 /* Standard text links */
@@ -89,36 +99,8 @@ button:focus-visible {
   color: var(--indigo-400);
 }
 
-/* Active state for navigation links */
 .nav-link-active {
   color: var(--indigo-400);
-}
-
-/* Project card wrapper links */
-.proj-card-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  text-underline-offset: 0;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    color 0.2s ease,
-    filter 0.2s ease;
-  cursor: pointer;
-}
-
-/* Typography: Heading styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
 }
 
 /* 
@@ -144,7 +126,6 @@ h6 {
 
 /*
  * 3D Card Flip Utilities
- * Used for interactive flip card components
  */
 
 .perspective {

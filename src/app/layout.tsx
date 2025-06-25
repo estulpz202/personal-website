@@ -5,7 +5,6 @@ import Footer from '@/components/layout/Footer';
 
 /**
  * Site metadata configuration for SEO optimization
- * Controls how the site appears in search results and when shared on social platforms
  */
 export const metadata: Metadata = {
   // Title configuration with default and template for child pages
@@ -70,7 +69,7 @@ export const viewport = {
 
 /**
  * Theme color for browser UI elements
- * Matches the site's indigo theme
+ * Matches the site's indigo theme (indigo-600)
  */
 export const themeColor = '#4f46e5';
 
