@@ -9,13 +9,13 @@ import ContactCTA from '@/components/home/ContactCTA';
  */
 export default function HomePage() {
   return (
-    <main>
+    <main className="fade-in-up">
       <Container>
         {/* Personal introduction with photo, education, and bio */}
         <HeroSection />
 
         {/* Visual separator between main sections */}
-        <div className="w-full border-t border-gray-200 my-6 fade-in-up"></div>
+        <div className="w-full border-t border-gray-200 my-6"></div>
 
         {/* Featured projects showcase */}
         <RecentWorkSection />
