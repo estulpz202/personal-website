@@ -54,20 +54,21 @@ export default function JourneySection() {
           </div>
 
           {/* Key Values */}
-          <div className="w-full lg:w-60 flex flex-col md:flex-row lg:flex-col gap-2 sm:gap-3">
+          <div className="w-full lg:w-60 flex flex-col md:flex-row lg:flex-col gap-3 sm:gap-4">
             {keyValues.map((value) => (
               <div
                 key={value.id}
                 className="
-                  flex-1 lg:flex-auto bg-white px-3 sm:px-4 py-1 sm:py-1.25
+                  bg-white px-3 sm:px-4 py-1 sm:py-1.25
                   rounded-lg border border-indigo-100 shadow-sm
-                  hover:shadow-md active:shadow-md transition-shadow duration-300"
+                  hover:shadow-md active:shadow-md transition-shadow duration-300
+                "
               >
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="bg-indigo-50 p-2 sm:p-2.5 ml-4 sm:ml-4.75 rounded-lg flex items-center justify-center">
+                  <div className="bg-indigo-50 p-2 sm:p-2.5 ml-4 sm:ml-3 rounded-lg flex items-center justify-center">
                     <Icon name={value.icon} className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
                   </div>
-                  <h3 className="font-medium text-sm sm:text-base text-gray-800 pb-2.5 sm:3.25">
+                  <h3 className="font-medium text-sm sm:text-base text-gray-800 pb-3.5">
                     {value.title}
                   </h3>
                 </div>
