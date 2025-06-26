@@ -19,8 +19,8 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
       <button
         onClick={() => onFilterChange(null)}
         className={`
-          px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium 
-          whitespace-nowrap border transition-all duration-200 rounded-lg 
+          px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium
+          whitespace-nowrap border transition-all duration-200 rounded-lg
           ${
             activeFilter === null
               ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
@@ -36,8 +36,8 @@ export default function ProjectFilter({ onFilterChange, activeFilter }: ProjectF
           key={category.id}
           onClick={() => onFilterChange(category.id)}
           className={`
-            px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium 
-            whitespace-nowrap border transition-all duration-200 rounded-lg 
+            px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium
+            whitespace-nowrap border transition-all duration-200 rounded-lg
             ${
               activeFilter === category.id
                 ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'

@@ -21,7 +21,7 @@ export default function SkillsSection() {
             key={key}
             onClick={() => setActiveTab(key)}
             className={`
-              px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium 
+              px-3 py-1.25 sm:px-3.75 sm:py-1.75 text-xs sm:text-sm font-medium
               whitespace-nowrap transition-all duration-200 rounded-lg
               ${
                 activeTab === key
