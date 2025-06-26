@@ -23,6 +23,7 @@ export interface Project {
     icon?: string;
   }[];
   timeline: string; // Timeline of the project
+  shortTimeline: string; // Shortened timeline for medium screens
   organization: string; // Organization or context
 }
 
@@ -64,6 +65,7 @@ export const projects: Project[] = [
       },
     ],
     timeline: 'April 2025 - May 2025',
+    shortTimeline: 'Apr - May 2025',
     organization: 'Personal Project',
   },
   {
@@ -83,6 +85,7 @@ export const projects: Project[] = [
     ],
     links: [],
     timeline: 'March 2025 - May 2025',
+    shortTimeline: 'Mar - May 2025',
     organization: 'PFLL',
   },
   {
@@ -104,6 +107,7 @@ export const projects: Project[] = [
       { label: 'GitHub', url: 'https://github.com/estulpz202/personal-website', icon: 'github' },
     ],
     timeline: 'May 2025 - June 2025',
+    shortTimeline: 'May - Jun 2025',
     organization: 'Personal Project',
   },
   {
@@ -130,6 +134,7 @@ export const projects: Project[] = [
       },
     ],
     timeline: 'March 2025 - April 2025',
+    shortTimeline: 'Mar - Apr 2025',
     organization: 'CMU 17-214',
   },
   {
@@ -137,7 +142,7 @@ export const projects: Project[] = [
     title: 'The Pack',
     subtitle: 'iOS Pet Care App',
     description:
-      'An  app built with Swift to help dog owners stay on top of pet care, developed in collaboration with a student team.',
+      'An app built with Swift to help dog owners stay on top of pet care, developed in collaboration with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
     bannerImageUrl: '/images/projects/thepack_banner.jpg',
     category: ['mobile'],
@@ -157,6 +162,7 @@ export const projects: Project[] = [
       },
     ],
     timeline: 'June 2024 - Aug 2024',
+    shortTimeline: 'Jun - Aug 2024',
     organization: 'PFLL',
   },
 ];

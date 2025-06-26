@@ -96,6 +96,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
           <div className="h-full">
             <ProjectSidebar
               timeline={project.timeline}
+              shortTimeline={project.shortTimeline}
               organization={project.organization}
               tech={project.tech}
             />

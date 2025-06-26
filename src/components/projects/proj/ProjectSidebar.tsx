@@ -7,13 +7,19 @@ interface ProjectSidebarProps {
   timeline: string;
   organization: string;
   tech: string[];
+  shortTimeline: string;
 }
 
 /**
  * ProjectSidebar - Displays sidebar with project metadata
  * Contains project details and technologies used
  */
-export default function ProjectSidebar({ timeline, organization, tech }: ProjectSidebarProps) {
+export default function ProjectSidebar({
+  timeline,
+  organization,
+  tech,
+  shortTimeline,
+}: ProjectSidebarProps) {
   return (
     <div className="md:sticky md:top-6 h-full flex flex-col">
       {/* Project Details */}
@@ -29,7 +35,9 @@ export default function ProjectSidebar({ timeline, organization, tech }: Project
             </div>
             <div className="flex items-center text-sm sm:text-base text-gray-700">
               <Icon name="calendar" className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-              {timeline}
+
+              <span className="block md:hidden lg:block">{timeline}</span>
+              <span className="hidden md:block lg:hidden">{shortTimeline}</span>
             </div>
           </div>
 
