@@ -150,7 +150,7 @@ export default function EducationSection() {
                   Coursework
                 </h4>
 
-                {/* Large screens - Show all courses */}
+                {/* All Courses - On large screens */}
                 <div className="hidden lg:flex flex-wrap gap-2">
                   {courses.map((course) => (
                     <span
@@ -162,7 +162,7 @@ export default function EducationSection() {
                   ))}
                 </div>
 
-                {/* Small & medium screens - show truncated courses */}
+                {/* Truncated Courses - On small & medium screens */}
                 <div className="hidden lg:hidden sm:flex flex-wrap gap-2">
                   {truncatedCourses.map((course) => (
                     <span
@@ -177,7 +177,7 @@ export default function EducationSection() {
                   </span>
                 </div>
 
-                {/* Less than small screens - shorter names */}
+                {/* Shorter Names - On less than small screens */}
                 <div className="sm:hidden flex flex-wrap gap-1.5">
                   {shorterCourses.map((course) => (
                     <span

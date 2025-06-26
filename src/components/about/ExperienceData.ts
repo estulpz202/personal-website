@@ -6,6 +6,7 @@ import { Experience } from './ExperienceCard';
 export const experiences: Experience[] = [
   {
     title: 'CS and Mobile Development Instructor',
+    shortTitle: 'CS & Mobile Dev Instructor',
     company: 'Prime Factors Learning Lab',
     companyUrl: 'https://primefactors.org/',
     period: 'Summer 2024',

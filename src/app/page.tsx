@@ -5,7 +5,7 @@ import SkillsSection from '@/components/skills/SkillsSectionHome';
 import ContactCTA from '@/components/home/ContactCTA';
 
 /**
- * HomePage component - main landing page of the portfolio site
+ * HomePage Component - Main landing page of the portfolio site
  */
 export default function HomePage() {
   return (
