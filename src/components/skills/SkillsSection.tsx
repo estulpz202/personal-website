@@ -26,7 +26,7 @@ export default function SkillsSection() {
               ${
                 activeTab === key
                   ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:shadow-sm active:bg-gray-200 active:shadow-sm transition-all'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:shadow-sm active:bg-gray-200 active:shadow-sm'
               }
             `}
           >

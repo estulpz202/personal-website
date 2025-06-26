@@ -21,13 +21,13 @@ function ProjectsContainer({ children }: { children: React.ReactNode }) {
  */
 export default function ProjectsPage() {
   return (
-    <main className="pb-10 fade-in-up">
+    <main className="pb-8 sm:pb-10 fade-in-up">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50">
         <ProjectsContainer>
-          <div className="py-16">
-            <h1 className="text-4xl font-bold mb-4">My Projects</h1>
-            <p className="text-xl text-gray-700 max-w-3xl">
+          <div className="py-10 sm:py-12 md:py-16">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">My Projects</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl">
               A showcase of my technical work across fullstack systems, AI, web development, and
               mobile applications. Each project represents unique challenges and solutions.
             </p>
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
 
       <ProjectsContainer>
         {/* Projects Section with Filtering */}
-        <div className="py-10">
+        <div className="py-5 sm:py-6.5 md:py-8">
           <FilteredProjects />
         </div>
       </ProjectsContainer>
