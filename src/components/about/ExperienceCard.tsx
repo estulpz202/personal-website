@@ -27,6 +27,27 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   const { title, shortTitle, company, companyUrl, timePeriod, logoSrc, highlights, skills } =
     experience;
 
+  /**
+   * Renders the company name with an optional external link
+   */
+  const CompanyLink = ({ className }: { className: string }) =>
+    companyUrl ? (
+      <Link
+        href={companyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`link font-medium flex items-center gap-1 ${className}`}
+      >
+        {company}
+        <Icon
+          name="external-link"
+          className={className === 'text-sm' ? 'w-3.5 h-3.5' : 'w-4 h-4'}
+        />
+      </Link>
+    ) : (
+      <span className={`text-indigo-600 font-medium ${className}`}>{company}</span>
+    );
+
   return (
     <div
       className="
@@ -51,19 +72,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           {/* Title and Company - Only on smaller screens */}
           <div className="md:hidden flex flex-col justify-center">
             <h3 className="text-lg font-bold text-gray-800">{shortTitle}</h3>
-            {companyUrl ? (
-              <Link
-                href={companyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link font-medium flex items-center gap-1 text-sm"
-              >
-                {company}
-                <Icon name="external-link" className="w-3.5 h-3.5" />
-              </Link>
-            ) : (
-              <span className="text-indigo-600 font-medium text-sm">{company}</span>
-            )}
+            <CompanyLink className="text-sm" />
           </div>
         </div>
 
@@ -74,19 +83,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
             <div>
               <h3 className="text-xl font-bold text-gray-800">{title}</h3>
               <div className="mt-1.5">
-                {companyUrl ? (
-                  <Link
-                    href={companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link font-medium flex items-center gap-1 text-[15px]"
-                  >
-                    {company}
-                    <Icon name="external-link" className="w-4 h-4" />
-                  </Link>
-                ) : (
-                  <span className="text-indigo-600 font-medium text-[15px]">{company}</span>
-                )}
+                <CompanyLink className="text-[15px]" />
               </div>
             </div>
 
