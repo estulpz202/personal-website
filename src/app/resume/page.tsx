@@ -20,11 +20,11 @@ export default function ResumePage() {
         {/* Page header with title and actions */}
         <div className="mb-6 sm:mb-7 md:mb-8">
           <SectionHeader title="Resume" />
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-4">
-            <p className="text-gray-700 text-sm sm:text-base my-2 sm:my-auto">
+          <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between gap-3 sm:gap-4">
+            <p className="text-gray-700 text-sm sm:text-base text-center sm:text-left my-2 sm:my-auto">
               My professional background, skills, and qualifications.
             </p>
-            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3">
+            <div className="flex gap-2 sm:gap-3">
               <DownloadButton
                 href="/resume.pdf"
                 filename="Estuardo_Lopez_Resume.pdf"
@@ -43,7 +43,7 @@ export default function ResumePage() {
 
         {/* Resume Display */}
         <div className="w-full rounded-lg overflow-hidden shadow-sm border border-gray-200">
-          {/* Image - For small to large screens */}
+          {/* Image - For large screens and below */}
           <div className="xl:hidden w-full">
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <Image
