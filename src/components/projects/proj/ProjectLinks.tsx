@@ -26,8 +26,8 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
   }
 
   return (
-    <div className="mt-5">
-      <div className="flex flex-wrap gap-4">
+    <div className="mt-2.5 sm:mt-3.5 md:mt-4.5">
+      <div className="flex flex-wrap gap-3 sm:gap-4">
         {links.map((link) => (
           <a
             key={link.url}
@@ -38,9 +38,9 @@ export default function ProjectLinks({ links }: ProjectLinksProps) {
           >
             <Icon
               name={(link.icon || 'external-link') as IconName}
-              className="w-4.25 h-4.25 mr-1.5"
+              className="w-4 h-4 sm:w-4.25 sm:h-4.25 mr-1 sm:mr-1.5"
             />
-            <span className="text-[15px]">{link.label}</span>
+            <span className="text-[13px] sm:text-[15px]">{link.label}</span>
           </a>
         ))}
       </div>

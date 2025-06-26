@@ -61,16 +61,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
   }
 
   return (
-    <main className="py-10">
+    <main className="py-6 sm:py-8 md:py-10 fade-in-up">
       <ProjectContainer>
         {/* Header with Back Navigation */}
         <Link
           href="/projects"
-          className="inline-flex items-center pt-2 pb-4 text-[15px] text-indigo-600 hover:text-indigo-700 group"
+          className="inline-flex items-center pt-1.5 sm:pt-2 pb-3 sm:pb-4 text-sm sm:text-[15px] text-indigo-600 hover:text-indigo-700 active:text-indigo-700 group"
         >
           <Icon
             name="arrow-left"
-            className="w-4.5 h-4.5 mr-1 group-hover:-translate-x-1 transition-transform"
+            className="w-4 h-4 sm:w-4.5 sm:h-4.5 mr-1 group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform"
           />
           Back to Projects
         </Link>
@@ -79,19 +79,20 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
         <ProjectHero
           title={project.title}
           subtitle={project.subtitle}
+          imageUrl={project.imageUrl}
           bannerImageUrl={project.bannerImageUrl}
           categories={project.category}
           links={project.links}
         />
 
         {/* Project Content Area - Grid with equal height columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-8 auto-rows-min">
-          {/* Main Content - Takes 2/3 on medium screens */}
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-6 sm:gap-7 md:gap-8 auto-rows-min">
+          {/* Main Content - Takes 2/3 on medium screens and above */}
           <div className="md:col-span-2 h-full">
             <ProjectContent description={project.description} highlights={project.highlights} />
           </div>
 
-          {/* Sidebar - Takes 1/3 on medium screens */}
+          {/* Sidebar - Takes 1/3 on medium screens and above */}
           <div className="h-full">
             <ProjectSidebar
               timeline={project.timeline}

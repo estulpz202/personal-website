@@ -54,7 +54,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Image
           src={project.imageUrl}
           alt={`${project.title} project screenshot`}
-          className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-500"
+          className={`
+            object-cover ${project.title == 'The Pack' || project.title == 'Santorini' ? 'object-[center_40%]' : 'object-top'} sm:object-center
+            group-hover:scale-105 group-active:scale-105 transition-transform duration-500
+          `}
           fill
         />
 
