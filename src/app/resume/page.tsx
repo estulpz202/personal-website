@@ -20,8 +20,17 @@ export default function ResumePage() {
         {/* Page header with title and actions */}
         <div className="mb-6 sm:mb-7 md:mb-8">
           <SectionHeader title="Resume" />
-          <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between gap-3 sm:gap-4">
-            <p className="text-gray-700 text-sm sm:text-base text-center sm:text-left my-2 sm:my-auto">
+          <div
+            className="flex flex-col items-center gap-3 max-[788px]:flex-col max-[788px]:items-center max-[788px]:gap-3
+              min-[788px]:flex-row min-[788px]:items-start min-[788px]:justify-between min-[788px]:gap-4
+            "
+          >
+            <p
+              className="text-gray-700 text-sm sm:text-base
+                text-center my-2 max-[788px]:text-center max-[788px]:my-2
+                min-[788px]:text-left min-[788px]:my-auto
+              "
+            >
               My professional background, skills, and qualifications.
             </p>
             <div className="flex gap-2 sm:gap-3">
