@@ -150,7 +150,7 @@ export default function EducationSection() {
                   Coursework
                 </h4>
 
-                {/* Large screens - show all courses */}
+                {/* Large screens - Show all courses */}
                 <div className="hidden lg:flex flex-wrap gap-2">
                   {courses.map((course) => (
                     <span

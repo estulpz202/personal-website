@@ -1,5 +1,5 @@
 /**
- * SectionHeader component - creates a consistently styled heading for page sections
+ * SectionHeader Component - Creates a consistently styled heading for page sections
  */
 export default function SectionHeader({ title }: { title: string }) {
   return (

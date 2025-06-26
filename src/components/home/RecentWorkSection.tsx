@@ -12,7 +12,7 @@ export default function RecentWorkSection() {
     <section className="pt-8 sm:pt-10 md:pt-12 pb-6 sm:pb-7 md:pb-8">
       <SectionHeader title="Recent Work" />
 
-      {/* Project cards grid - single column on mobile, two columns on larger screens */}
+      {/* Project Cards Grid - single column on mobile, two columns on larger screens */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
         {recentProjs.map((project) => (
           <MinimalProjCard

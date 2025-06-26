@@ -64,7 +64,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Secondary navigation links - visible on large screens */}
+          {/* Secondary Navigation Links - Visible on large screens */}
           <nav aria-label="Footer navigation" className="hidden lg:block">
             <ul className="flex space-x-6">
               {footerLinks.map((link) => (

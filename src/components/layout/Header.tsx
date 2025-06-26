@@ -75,7 +75,7 @@ export default function Header() {
   return (
     <header className="bg-black text-white shadow-md">
       <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 lg:py-6">
-        {/* Header - top of page */}
+        {/* Header - Top of page */}
         <div className="flex justify-between items-center">
           {/* Logo and site name, link to homepage */}
           <Link
@@ -87,7 +87,7 @@ export default function Header() {
             <span className="text-xl sm:text-2xl font-semibold">Estu</span>
           </Link>
 
-          {/* Desktop Navigation - hidden on smaller screens */}
+          {/* Desktop Navigation - Hidden on smaller screens */}
           <div className="hidden md:flex items-center md:space-x-8 lg:space-x-16">
             {/* Navigation menu */}
             <nav aria-label="Main navigation">
@@ -122,7 +122,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Mobile menu button - visible only on smaller screens */}
+          {/* Mobile Menu Button - Visible only on smaller screens */}
           <button
             className="md:hidden flex items-center p-2 text-white active:text-indigo-400 transition-colors duration-200"
             onClick={toggleMenu}
@@ -133,7 +133,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile menu - slides in from top of page */}
+        {/* Mobile Menu - Slides in from top of page */}
         <div
           className={`md:hidden overflow-hidden ${menuClass} transition-all duration-400 ease-in-out`}
         >
