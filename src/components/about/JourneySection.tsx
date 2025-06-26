@@ -59,13 +59,13 @@ export default function JourneySection() {
               <div
                 key={value.id}
                 className="
-                  bg-white px-3 sm:px-4 py-1 sm:py-1.25
+                  flex-grow bg-white px-3 sm:px-4 py-0.5 sm:py-1
                   rounded-lg border border-indigo-100 shadow-sm
                   hover:shadow-md active:shadow-md transition-shadow duration-300
                 "
               >
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="bg-indigo-50 p-2 sm:p-2.5 ml-4 sm:ml-3 rounded-lg flex items-center justify-center">
+                  <div className="bg-indigo-50 p-2 sm:p-2.5 ml-4 md:ml-1 lg:ml-3 rounded-lg flex items-center justify-center">
                     <Icon name={value.icon} className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
                   </div>
                   <h3 className="font-medium text-sm sm:text-base text-gray-800 pb-3.5">
