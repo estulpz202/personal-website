@@ -6,7 +6,6 @@ import { Metadata } from 'next';
 import ProjectHero from '@/components/projects/proj/ProjectHero';
 import ProjectContent from '@/components/projects/proj/ProjectContent';
 import ProjectSidebar from '@/components/projects/proj/ProjectSidebar';
-import ProjectContainer from '@/components/projects/proj/ProjectContainer';
 
 /**
  * Props for the ProjectDetailParams component
@@ -44,6 +43,13 @@ export function generateStaticParams() {
 }
 
 /**
+ * Custom container with thinner max-width for project detail display
+ */
+function ProjectContainer({ children }: { children: React.ReactNode }) {
+  return <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>;
+}
+
+/**
  * ProjectDetailPage - Displays detailed information about a specific project
  */
 export default async function ProjectDetailPage({ params }: ProjectDetailParams) {
@@ -56,11 +62,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
 
   return (
     <main className="py-10">
-      {/* Header with Back Navigation */}
-      <ProjectContainer className="pt-2 pb-4">
+      <ProjectContainer>
+        {/* Header with Back Navigation */}
         <Link
           href="/projects"
-          className="inline-flex items-center text-[15px] text-indigo-600 hover:text-indigo-700 group"
+          className="inline-flex items-center pt-2 pb-4 text-[15px] text-indigo-600 hover:text-indigo-700 group"
         >
           <Icon
             name="arrow-left"
@@ -68,19 +74,17 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
           />
           Back to Projects
         </Link>
-      </ProjectContainer>
 
-      {/* Project Hero Banner */}
-      <ProjectHero
-        title={project.title}
-        subtitle={project.subtitle}
-        bannerImageUrl={project.bannerImageUrl}
-        categories={project.category}
-        links={project.links}
-      />
+        {/* Project Hero Banner */}
+        <ProjectHero
+          title={project.title}
+          subtitle={project.subtitle}
+          bannerImageUrl={project.bannerImageUrl}
+          categories={project.category}
+          links={project.links}
+        />
 
-      {/* Project Content Area - Grid with equal height columns */}
-      <ProjectContainer>
+        {/* Project Content Area - Grid with equal height columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-8 auto-rows-min">
           {/* Main Content - Takes 2/3 on medium screens */}
           <div className="md:col-span-2 h-full">
