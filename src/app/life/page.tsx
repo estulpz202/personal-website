@@ -1,7 +1,7 @@
 import Container from '@/components/common/Container';
 import LifeHero from '@/components/life/LifeHero';
 import LifeMartialArts from '@/components/life/LifeMartialArts';
-import LifeOutdoor from '@/components/life/LifeOutdoor';
+import LifeRecreation from '@/components/life/LifeRecreation';
 import LifeDogs from '@/components/life/LifeDogs';
 import LifeTeaching from '@/components/life/LifeTeaching';
 import LifeFamily from '@/components/life/LifeFamily';
@@ -24,7 +24,7 @@ export default function LifePage() {
       <Container>
         <LifeHero />
         <LifeMartialArts />
-        <LifeOutdoor />
+        <LifeRecreation />
         <LifeDogs />
         <LifeTeaching />
         <LifeFamily />

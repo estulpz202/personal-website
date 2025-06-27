@@ -49,7 +49,7 @@ export function ImageWithOverlay({
       <Image src={src} alt={alt} fill className="object-cover" style={{ objectPosition }} />
       <div
         className="
-          absolute inset-0 opacity-0 hover:opacity-100 transition-opacit duration-300
+          absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300
           bg-black/30 flex items-center justify-center
         "
       >
