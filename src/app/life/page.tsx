@@ -21,7 +21,7 @@ export const metadata = {
  */
 export default function LifePage() {
   return (
-    <main>
+    <main className="py-10 fade-in-up">
       <Container>
         <LifeHero />
         <LifeCategories />
