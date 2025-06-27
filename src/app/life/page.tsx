@@ -52,14 +52,14 @@ export default function LifePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Image
-              src="/images/life/wrestling_team.jpg"
+              src="/images/life/team.jpg"
               alt="Wrestling team"
               width={450}
               height={340}
               className="object-cover rounded"
             />
             <Image
-              src="/images/life/wrestling_lift.jpg"
+              src="/images/life/lift.jpg"
               alt="Wrestling competition"
               width={350}
               height={340}
