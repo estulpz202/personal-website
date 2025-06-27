@@ -25,7 +25,6 @@ export type IconName =
   | 'email'
   | 'location'
   | 'copy'
-  // new from here
   | 'dumbbell'
   | 'mountains'
   | 'teaching'
@@ -35,9 +34,7 @@ export type IconName =
   | 'history'
   | 'game'
   | 'film'
-  | 'book'
-  | 'check'
-  | 'mail';
+  | 'book';
 
 /**
  * Props for the Icon component
@@ -268,56 +265,71 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
         </svg>
       );
 
-    // new from here
     case 'dumbbell':
       return (
-        <svg {...standardProps} aria-label="Dumbbell">
-          <path d="M6.5 6.5h11"></path>
-          <path d="M6.5 17.5h11"></path>
-          <path d="M4 9.5v5"></path>
-          <path d="M9 4v16"></path>
-          <path d="M15 4v16"></path>
-          <path d="M20 9.5v5"></path>
+        <svg
+          {...standardProps}
+          strokeWidth="0"
+          fill="currentColor"
+          aria-label="Dumbbell"
+          viewBox="0 0 24 24"
+        >
+          <path d="M18 6.5v11a1 1 0 0 1-2 0v-4.5H8v4.5a1 1 0 0 1-2 0v-11a1 1 0 0 1 2 0v4.5h8V6.5a1 1 0 0 1 2 0z"></path>
+          <path d="M4 9v6a1 1 0 0 1-2 0V9a1 1 0 0 1 2 0z"></path>
+          <path d="M22 9v6a1 1 0 0 1-2 0V9a1 1 0 0 1 2 0z"></path>
         </svg>
       );
 
     case 'mountains':
       return (
-        <svg {...standardProps} aria-label="Mountains">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Mountains">
           <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
         </svg>
       );
 
     case 'teaching':
       return (
-        <svg {...standardProps} aria-label="Teaching">
-          <path d="M12 10c-3.47 0-6.43-2.23-7.57-5.37A2 2 0 0 1 6 2h12a2 2 0 0 1 1.57 2.63C18.43 7.77 15.47 10 12 10z"></path>
-          <path d="M12 10v10"></path>
-          <path d="M12 20c4 0 8-1 8-5"></path>
-          <path d="M4 15c0 4 4 5 8 5"></path>
+        <svg {...standardProps} strokeWidth="0.25" aria-label="Teaching" viewBox="0 0 24 24">
+          <path
+            d="M7.5 14C5.6 14 4 12.4 4 10.5S5.6 7 7.5 7 11 8.6 11 10.5 9.4 14 7.5 14z"
+            strokeWidth="1.35"
+          ></path>
+          <path
+            d="M13 21h-1.2v-3.4c0-1.3-1.1-2.4-2.4-2.4H5.1c-1.3 0-2.4 1.1-2.4 2.4V21H1.5v-3.4c0-2 1.6-3.6 3.6-3.6h4.4c2 0 3.5 1.6 3.5 3.6V21z"
+            fill="currentColor"
+          ></path>
+          <path d="M22.5 19h-7v-1.1h5.9V4H6.5v2.5H5.4V2.9h17.1z" fill="currentColor"></path>
+          <path d="M11.9 20.9l4.3-9.6 1 0.5-4.3 9.6z" fill="currentColor"></path>
         </svg>
       );
 
     case 'paw':
       return (
-        <svg {...standardProps} aria-label="Paw">
-          <path d="M12 2c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3a2.7 2.7 0 0 1-2.18 1.6c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 10 2"></path>
-          <path d="M20 13c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3a2.7 2.7 0 0 1-2.18 1.6c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 18 13"></path>
-          <path d="M4 13c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3A2.7 2.7 0 0 1 2.91 22c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 2 13"></path>
-          <path d="M12 9v6"></path>
+        <svg
+          {...standardProps}
+          strokeWidth="0.25"
+          fill="currentColor"
+          aria-label="Paw"
+          viewBox="0 0 24 24"
+        >
+          <path d="M4 14.5c-1.4 0-2.5-1.6-2.5-3.7s1.1-3.7 2.5-3.7 2.5 1.6 2.5 3.7-1.1 3.7-2.5 3.7zM4 8.6c-.6 0-1.2 1-1.2 2.5s.6 2.4 1.2 2.4 1.2-1 1.2-2.4-.6-2.5-1.2-2.5z"></path>
+          <path d="M8.5 9.7c-1.3 0-2.4-1.6-2.4-3.6s1.1-3.6 2.4-3.6 2.4 1.6 2.4 3.6-1.1 3.6-2.4 3.6zM8.5 3.7c-.6 0-1.2 1-1.2 2.4s.6 2.4 1.2 2.4 1.2-1 1.2-2.4-.6-2.4-1.2-2.4z"></path>
+          <path d="M14.5 9.7c-1.3 0-2.4-1.6-2.4-3.6s1.1-3.6 2.4-3.6 2.4 1.6 2.4 3.6-1.1 3.6-2.4 3.6zM14.5 3.7c-.6 0-1.2 1-1.2 2.4s.6 2.4 1.2 2.4 1.2-1 1.2-2.4-.6-2.4-1.2-2.4z"></path>
+          <path d="M19.5 14.5c-1.4 0-2.5-1.6-2.5-3.7s1.1-3.7 2.5-3.7 2.5 1.6 2.5 3.7-1.1 3.7-2.5 3.7zM19.5 8.6c-.6 0-1.2 1-1.2 2.5s.6 2.4 1.2 2.4 1.2-1 1.2-2.4-.6-2.5-1.2-2.5z"></path>
+          <path d="M15.6 21.5c-1 0-1.7-0.4-2.4-0.7-0.6-0.3-1.1-0.5-1.8-0.5-0.8 0-1.3 0.2-1.8 0.5-0.6 0.3-1.3 0.7-2.4 0.7-0.7 0-1.3-0.4-1.7-1-0.8-1.1-0.8-2.8 0-4.6 1.3-3.3 3.5-5.2 6-5.2s4.6 1.9 6 5.2c0.7 1.8 0.7 3.5 0 4.6-0.4 0.6-1 1-1.7 1zM11.4 19.2c1 0 1.7 0.4 2.4 0.7 0.6 0.3 1.1 0.5 1.8 0.5 0.3 0 0.5-0.2 0.7-0.5 0.5-0.8 0.5-2.1-0.1-3.5-1.1-2.8-2.9-4.4-4.8-4.4s-3.7 1.6-4.8 4.4c-0.6 1.4-0.6 2.7-0.1 3.5 0.2 0.3 0.5 0.5 0.7 0.5 0.8 0 1.3-0.2 1.8-0.5 0.6-0.3 1.3-0.7 2.4-0.7z"></path>
         </svg>
       );
 
     case 'heart':
       return (
-        <svg {...standardProps} aria-label="Heart">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Heart">
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
         </svg>
       );
 
     case 'brain':
       return (
-        <svg {...standardProps} aria-label="Brain">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Brain">
           <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.2-4.28 2.5 2.5 0 0 1 4.56-1Z"></path>
           <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.2-4.28 2.5 2.5 0 0 0-4.56-1Z"></path>
         </svg>
@@ -325,7 +337,7 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'history':
       return (
-        <svg {...standardProps} aria-label="History">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="History">
           <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
           <path d="M3 3v5h5"></path>
           <path d="M12 7v5l3 3"></path>
@@ -334,7 +346,7 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'game':
       return (
-        <svg {...standardProps} aria-label="Game">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Game">
           <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
           <path d="M17 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
           <path d="M17 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
@@ -346,7 +358,7 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'film':
       return (
-        <svg {...standardProps} aria-label="Film">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Film">
           <rect width="20" height="16" x="2" y="4" rx="2"></rect>
           <path d="M2 8h20"></path>
           <path d="M2 16h20"></path>
@@ -357,24 +369,9 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'book':
       return (
-        <svg {...standardProps} aria-label="Book">
+        <svg {...standardProps} strokeWidth="1.5" aria-label="Book">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-        </svg>
-      );
-
-    case 'check':
-      return (
-        <svg {...standardProps} aria-label="Check">
-          <path d="M20 6 9 17l-5-5"></path>
-        </svg>
-      );
-
-    case 'mail':
-      return (
-        <svg {...standardProps} aria-label="Mail">
-          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
       );
 
