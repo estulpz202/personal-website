@@ -25,7 +25,7 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
     navigator.clipboard.writeText(value).then(
       () => {
         setCopied(true);
-        // Reset the copied state after 1 seconds
+        // Reset the copied state after 1 second
         setTimeout(() => setCopied(false), 1000);
       },
       (err) => {
@@ -62,10 +62,10 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
         <button
           onClick={() => handleCopy(method.copyValue)}
           className={`
-              p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
-              hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200
-              ${copied ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : ''}
-            `}
+            p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
+            hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200
+            ${copied ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : ''}
+          `}
           aria-label={`Copy ${method.label}`}
         >
           <Icon name="copy" className={`w-5 h-5 ${copied ? 'fill-current' : ''}`} />
