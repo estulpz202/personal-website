@@ -1,11 +1,11 @@
-import Icon from '@/components/ui/Icon';
+import Icon, { IconName } from '@/components/ui/Icon';
 import { SectionTitle } from './LifeAthletics';
 
 /**
  * Interest item data
  */
 interface InterestItem {
-  icon: 'history' | 'game' | 'film' | 'book';
+  icon: IconName;
   title: string;
   description: string;
 }
@@ -15,17 +15,17 @@ interface InterestItem {
  */
 const interests: InterestItem[] = [
   {
-    icon: 'history',
+    icon: 'scroll',
     title: 'History',
     description: 'Pursuing a History minor at CMU to understand how the past shapes our future',
   },
   {
-    icon: 'game',
+    icon: 'dice',
     title: 'Board Games',
     description: 'Strategic thinking and social connection through tabletop games',
   },
   {
-    icon: 'film',
+    icon: 'video',
     title: 'Movies',
     description: 'MCU enthusiast and film buff, appreciating storytelling across genres',
   },
@@ -44,7 +44,7 @@ const interests: InterestItem[] = [
 export default function LifeOther() {
   return (
     <section className="py-8 fade-in-up mb-6">
-      <SectionTitle icon="brain" title="Other Interests" />
+      <SectionTitle icon="dots" title="Other Interests" />
 
       <div className="grid grid-cols-4 gap-6 mb-8">
         {interests.map((interest, index) => (

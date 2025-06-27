@@ -30,10 +30,9 @@ export type IconName =
   | 'teaching'
   | 'paw'
   | 'heart'
-  | 'brain'
-  | 'history'
-  | 'game'
-  | 'film'
+  | 'dots'
+  | 'scroll'
+  | 'dice'
   | 'book';
 
 /**
@@ -282,7 +281,7 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'mountains':
       return (
-        <svg {...standardProps} strokeWidth="1.5" aria-label="Mountains">
+        <svg {...standardProps} strokeWidth="1.6" aria-label="Mountains">
           <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
         </svg>
       );
@@ -322,48 +321,42 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
 
     case 'heart':
       return (
-        <svg {...standardProps} strokeWidth="1.5" aria-label="Heart">
+        <svg {...standardProps} strokeWidth="1.6" aria-label="Heart">
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
         </svg>
       );
 
-    case 'brain':
+    case 'dots':
       return (
-        <svg {...standardProps} strokeWidth="1.5" aria-label="Brain">
-          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.2-4.28 2.5 2.5 0 0 1 4.56-1Z"></path>
-          <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.2-4.28 2.5 2.5 0 0 0-4.56-1Z"></path>
+        <svg {...standardProps} strokeWidth="1.5" fill="currentColor" aria-label="More">
+          <circle cx="12" cy="12" r="1.5"></circle>
+          <circle cx="6" cy="12" r="1.5"></circle>
+          <circle cx="18" cy="12" r="1.5"></circle>
         </svg>
       );
 
-    case 'history':
+    case 'scroll':
       return (
-        <svg {...standardProps} strokeWidth="1.5" aria-label="History">
-          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-          <path d="M3 3v5h5"></path>
-          <path d="M12 7v5l3 3"></path>
+        <svg
+          {...standardProps}
+          strokeWidth="0"
+          fill="currentColor"
+          aria-label="Scroll"
+          viewBox="0 0 1024 1024"
+        >
+          <path d="M844.384 0.008L844.184 0H844l-0.192 0.008c-1.696 0-3.384 0.072-5.072 0.136C837.832 0.08 836.92 0 836 0H310c-88.224 0-160 71.776-160 160 0 1.424 0.08 2.816 0.216 4.192 0.664 93.664 23.112 204.32 46.872 321.392 14.624 72.072 29.656 146.192 39.92 218.416H122c-7.384 0-14.624 2.048-20.92 5.904-3.28 2.016-79.648 50.04-80.984 151.392A38.728 38.728 0 0 0 20 864c0 88.224 71.776 160 160 160h524.264c88.024-0.208 159.6-71.88 159.616-159.96a40 40 0 0 0-80-0.016c-0.016 44.072-35.848 79.92-79.904 79.976-44.072-0.056-79.904-35.92-79.904-80 0-56.008 39.376-83.568 43.032-86.016 15.504-9.12 22.616-27.248 17.92-44.64C680.336 715.88 664.08 704 646 704H317.792c-10.6-78.12-26.68-157.36-42.296-234.32-23.304-114.792-45.304-223.2-45.304-309.712 0-0.848-0.08-1.68-0.128-2.512C231.416 114.52 266.744 80 310 80h395.72a158.992 158.992 0 0 0-21.52 79.968c0 94.544 22.768 206.792 46.896 325.616 13.232 65.224 26.92 132.664 36.992 198.52a40.016 40.016 0 0 0 45.584 33.496 40.008 40.008 0 0 0 33.496-45.592c-10.36-67.76-24.24-136.176-37.68-202.336-23.296-114.784-45.296-223.2-45.296-309.696 0.008-44.072 35.84-79.92 79.912-79.976 44.064 0.056 79.896 35.92 79.896 80a105.84 105.84 0 0 1-35.408 80h-6.592a40 40 0 1 0 0 80h20.072c7.384 0 14.624-2.048 20.92-5.904C926.296 312.064 1004 263.2 1004 160 1004 71.904 932.432 0.216 844.384 0.008zM565.544 944H180c-43.456 0-78.92-34.824-79.976-78.024 0.032-0.656 0.048-1.312 0.048-1.976 0-42.736 22.92-68.904 35.416-80H561.68c-10.264 21.68-17.616 48.264-17.616 80 0 29.12 7.816 56.456 21.472 80zM352 320a40 40 0 1 1 0-80h226a40 40 0 1 1 0 80H352z m250 140h-224a40 40 0 1 1 0-80h224a40 40 0 1 1 0 80zM552 520a40 40 0 1 1 0 80H410a40 40 0 1 1 0-80H552z" />
         </svg>
       );
 
-    case 'game':
+    case 'dice':
       return (
         <svg {...standardProps} strokeWidth="1.5" aria-label="Game">
-          <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-          <path d="M17 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-          <path d="M17 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-          <path d="M7 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
-          <path d="M7 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path fill="currentColor" d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path fill="currentColor" d="M17 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path fill="currentColor" d="M17 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path fill="currentColor" d="M7 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path fill="currentColor" d="M7 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
           <path d="M18.5 2h-13a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3Z"></path>
-        </svg>
-      );
-
-    case 'film':
-      return (
-        <svg {...standardProps} strokeWidth="1.5" aria-label="Film">
-          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-          <path d="M2 8h20"></path>
-          <path d="M2 16h20"></path>
-          <path d="M6 4v16"></path>
-          <path d="M18 4v16"></path>
         </svg>
       );
 

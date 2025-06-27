@@ -1,6 +1,5 @@
 import Container from '@/components/common/Container';
 import LifeHero from '@/components/life/LifeHero';
-import LifeCategories from '@/components/life/LifeCategories';
 import LifeAthletics from '@/components/life/LifeAthletics';
 import LifeOutdoor from '@/components/life/LifeOutdoor';
 import LifeDogs from '@/components/life/LifeDogs';
@@ -24,7 +23,6 @@ export default function LifePage() {
     <main className="py-10 fade-in-up">
       <Container>
         <LifeHero />
-        <LifeCategories />
         <LifeAthletics />
         <LifeOutdoor />
         <LifeDogs />
