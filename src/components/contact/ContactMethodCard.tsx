@@ -18,15 +18,12 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
   // State for copy feedback
   const [copied, setCopied] = useState(false);
 
-  /**
-   * Handle copying text to clipboard
-   */
+  // Handle copying text to clipboard
   const handleCopy = (value: string) => {
     navigator.clipboard.writeText(value).then(
       () => {
         setCopied(true);
-        // Reset the copied state after 1 second
-        setTimeout(() => setCopied(false), 1000);
+        setTimeout(() => setCopied(false), 1000); // Reset after 1 second
       },
       (err) => {
         console.error('Could not copy text: ', err);

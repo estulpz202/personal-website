@@ -15,7 +15,7 @@ export const metadata = {
  */
 export default function ResumePage() {
   return (
-    <main className="py-6 sm:py-8 md:py-10 fade-in-up">
+    <main className="py-7 mb-7 sm:py-8.5 md:py-10 fade-in-up">
       <Container>
         {/* Page header with title and actions */}
         <div className="mb-6 sm:mb-7 md:mb-8">
