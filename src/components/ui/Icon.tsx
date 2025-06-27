@@ -24,7 +24,20 @@ export type IconName =
   | 'x'
   | 'email'
   | 'location'
-  | 'copy';
+  | 'copy'
+  // new from here
+  | 'dumbbell'
+  | 'mountains'
+  | 'teaching'
+  | 'paw'
+  | 'heart'
+  | 'brain'
+  | 'history'
+  | 'game'
+  | 'film'
+  | 'book'
+  | 'check'
+  | 'mail';
 
 /**
  * Props for the Icon component
@@ -252,6 +265,116 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
         >
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+      );
+
+    // new from here
+    case 'dumbbell':
+      return (
+        <svg {...standardProps} aria-label="Dumbbell">
+          <path d="M6.5 6.5h11"></path>
+          <path d="M6.5 17.5h11"></path>
+          <path d="M4 9.5v5"></path>
+          <path d="M9 4v16"></path>
+          <path d="M15 4v16"></path>
+          <path d="M20 9.5v5"></path>
+        </svg>
+      );
+
+    case 'mountains':
+      return (
+        <svg {...standardProps} aria-label="Mountains">
+          <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+        </svg>
+      );
+
+    case 'teaching':
+      return (
+        <svg {...standardProps} aria-label="Teaching">
+          <path d="M12 10c-3.47 0-6.43-2.23-7.57-5.37A2 2 0 0 1 6 2h12a2 2 0 0 1 1.57 2.63C18.43 7.77 15.47 10 12 10z"></path>
+          <path d="M12 10v10"></path>
+          <path d="M12 20c4 0 8-1 8-5"></path>
+          <path d="M4 15c0 4 4 5 8 5"></path>
+        </svg>
+      );
+
+    case 'paw':
+      return (
+        <svg {...standardProps} aria-label="Paw">
+          <path d="M12 2c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3a2.7 2.7 0 0 1-2.18 1.6c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 10 2"></path>
+          <path d="M20 13c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3a2.7 2.7 0 0 1-2.18 1.6c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 18 13"></path>
+          <path d="M4 13c.95 0 1.77.92 1.76 2.1 0 1.75 0 3.66-.67 5.3A2.7 2.7 0 0 1 2.91 22c-.93 0-1.8-.57-2.18-1.6-.67-1.64-.67-3.55-.67-5.3A2 2 0 0 1 2 13"></path>
+          <path d="M12 9v6"></path>
+        </svg>
+      );
+
+    case 'heart':
+      return (
+        <svg {...standardProps} aria-label="Heart">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+        </svg>
+      );
+
+    case 'brain':
+      return (
+        <svg {...standardProps} aria-label="Brain">
+          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.2-4.28 2.5 2.5 0 0 1 4.56-1Z"></path>
+          <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.2-4.28 2.5 2.5 0 0 0-4.56-1Z"></path>
+        </svg>
+      );
+
+    case 'history':
+      return (
+        <svg {...standardProps} aria-label="History">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+          <path d="M3 3v5h5"></path>
+          <path d="M12 7v5l3 3"></path>
+        </svg>
+      );
+
+    case 'game':
+      return (
+        <svg {...standardProps} aria-label="Game">
+          <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path d="M17 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path d="M17 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path d="M7 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path d="M7 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+          <path d="M18.5 2h-13a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3Z"></path>
+        </svg>
+      );
+
+    case 'film':
+      return (
+        <svg {...standardProps} aria-label="Film">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="M2 8h20"></path>
+          <path d="M2 16h20"></path>
+          <path d="M6 4v16"></path>
+          <path d="M18 4v16"></path>
+        </svg>
+      );
+
+    case 'book':
+      return (
+        <svg {...standardProps} aria-label="Book">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+      );
+
+    case 'check':
+      return (
+        <svg {...standardProps} aria-label="Check">
+          <path d="M20 6 9 17l-5-5"></path>
+        </svg>
+      );
+
+    case 'mail':
+      return (
+        <svg {...standardProps} aria-label="Mail">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
       );
 
