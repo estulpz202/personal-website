@@ -9,7 +9,7 @@ export interface ContactMethod {
   value: string;
   url?: string;
   icon: IconName;
-  copy: string;
+  copyValue: string;
 }
 
 /**
@@ -22,14 +22,14 @@ export const contactMethods: ContactMethod[] = [
     value: 'elopezle@andrew.cmu.edu',
     url: 'mailto:elopezle@andrew.cmu.edu',
     icon: 'email',
-    copy: 'elopezle@andrew.cmu.edu',
+    copyValue: 'elopezle@andrew.cmu.edu',
   },
   {
     id: 'location',
     label: 'Location',
     value: 'Belleville, NJ, United States',
     icon: 'location',
-    copy: 'Belleville, NJ, United States',
+    copyValue: 'Belleville, NJ, United States',
   },
   {
     id: 'github',
@@ -37,7 +37,7 @@ export const contactMethods: ContactMethod[] = [
     value: 'github.com/estulpz202',
     url: 'https://github.com/estulpz202',
     icon: 'github',
-    copy: 'https://github.com/estulpz202',
+    copyValue: 'https://github.com/estulpz202',
   },
   {
     id: 'linkedin',
@@ -45,6 +45,6 @@ export const contactMethods: ContactMethod[] = [
     value: 'linkedin.com/in/estuardo-lopez-letona',
     url: 'https://www.linkedin.com/in/estuardo-lopez-letona',
     icon: 'linkedin',
-    copy: 'https://www.linkedin.com/in/estuardo-lopez-letona',
+    copyValue: 'https://www.linkedin.com/in/estuardo-lopez-letona',
   },
 ];

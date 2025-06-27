@@ -60,7 +60,7 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
         </div>
 
         <button
-          onClick={() => handleCopy(method.copy as string)}
+          onClick={() => handleCopy(method.copyValue)}
           className={`
               p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
               hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200
