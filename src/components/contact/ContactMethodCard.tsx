@@ -35,40 +35,46 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-xl px-6 py-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
-      <div className="flex items-center mb-4">
-        <div className="bg-indigo-50 rounded-full p-3 mr-4 mt-2">
-          <Icon name={method.icon} className="w-6 h-6 text-indigo-600" />
+    <div
+      className="
+        bg-white rounded-xl px-4 sm:px-5 md:px-6 py-4 sm:py-5 border border-gray-100
+        shadow-sm hover:shadow-md active:shadow-md transition-shadow duration-200
+      "
+    >
+      <div className="flex items-center mb-3 sm:mb-4">
+        <div className="bg-indigo-50 rounded-full p-2 sm:p-3 mr-3 sm:mr-4 mt-2">
+          <Icon name={method.icon} className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" />
         </div>
-        <h3 className="text-xl font-semibold text-gray-800 pb-1">{method.label}</h3>
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 pb-1">{method.label}</h3>
       </div>
 
       <div className="flex items-center justify-between">
-        <div className="flex-1">
+        <div className="flex-1 pr-2">
           {method.url ? (
             <a
               href={method.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base text-gray-700 hover:text-indigo-600 transition-colors duration-200"
+              className="text-sm sm:text-base text-gray-700 hover:text-indigo-600 active:text-indigo-600 transition-colors duration-200"
             >
               {method.value}
             </a>
           ) : (
-            <p className="text-base text-gray-700">{method.value}</p>
+            <p className="text-sm sm:text-base text-gray-700">{method.value}</p>
           )}
         </div>
 
         <button
           onClick={() => handleCopy(method.copyValue)}
           className={`
-            p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
+            p-1 sm:p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
             hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200
+            active:bg-indigo-50 active:text-indigo-600 active:border-indigo-200
             ${copied ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : ''}
           `}
           aria-label={`Copy ${method.label}`}
         >
-          <Icon name="copy" className={`w-5 h-5 ${copied ? 'fill-current' : ''}`} />
+          <Icon name="copy" className={`w-4 h-4 sm:w-5 sm:h-5 ${copied ? 'fill-current' : ''}`} />
         </button>
       </div>
     </div>
