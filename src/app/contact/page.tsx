@@ -38,7 +38,7 @@ export default function ContactPage() {
 
           {/* Decorative graphic */}
           <div className="flex justify-center mb-8">
-            <div className="w-80 h-1 bg-gradient-to-r from-transparent via-indigo-200 to-transparent rounded-full"></div>
+            <div className="w-96 h-1 bg-gradient-to-r from-transparent via-indigo-200 to-transparent rounded-full"></div>
           </div>
 
           {/* Closing message */}

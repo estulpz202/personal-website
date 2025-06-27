@@ -25,8 +25,8 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
     navigator.clipboard.writeText(value).then(
       () => {
         setCopied(true);
-        // Reset the copied state after 2 seconds
-        setTimeout(() => setCopied(false), 2000);
+        // Reset the copied state after 1 seconds
+        setTimeout(() => setCopied(false), 1000);
       },
       (err) => {
         console.error('Could not copy text: ', err);
@@ -35,7 +35,7 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white rounded-xl px-6 py-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
       <div className="flex items-center mb-4">
         <div className="bg-indigo-50 rounded-full p-3 mr-4 mt-2">
           <Icon name={method.icon} className="w-6 h-6 text-indigo-600" />
@@ -59,21 +59,17 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
           )}
         </div>
 
-        {method.copyable && (
-          <button
-            onClick={() => handleCopy(method.value)}
-            className={`
-              p-2 rounded-md transition-all duration-200
-              ${
-                copied ? 'bg-green-50 text-green-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'
-              }
+        <button
+          onClick={() => handleCopy(method.copy as string)}
+          className={`
+              p-1.5 rounded-md transition-all duration-200 bg-gray-100 text-gray-700 border border-gray-200
+              hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200
+              ${copied ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : ''}
             `}
-            aria-label={`Copy ${method.label}`}
-            title={copied ? 'Copied!' : `Copy ${method.label}`}
-          >
-            <Icon name="copy" className="w-5 h-5" />
-          </button>
-        )}
+          aria-label={`Copy ${method.label}`}
+        >
+          <Icon name="copy" className={`w-5 h-5 ${copied ? 'fill-current' : ''}`} />
+        </button>
       </div>
     </div>
   );
