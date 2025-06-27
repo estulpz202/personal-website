@@ -1,4 +1,4 @@
-import { SectionTitle, ImageWithOverlay } from './LifeAthletics';
+import { SectionTitle, ImageWithOverlay } from '@/components/life/LifeShared';
 
 /**
  * LifeDogs - Canine companions section

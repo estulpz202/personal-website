@@ -1,5 +1,5 @@
 import Icon, { IconName } from '@/components/ui/Icon';
-import { SectionTitle } from './LifeAthletics';
+import { SectionTitle } from '@/components/life/LifeShared';
 
 /**
  * Interest item data
