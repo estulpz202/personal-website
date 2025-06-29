@@ -1,7 +1,7 @@
 import { SectionTitle, ImageWithOverlay } from '@/components/life/LifeShared';
 
 /**
- * Sport activity data
+ * Props for sports activities data
  */
 interface ActivityItem {
   name: string;

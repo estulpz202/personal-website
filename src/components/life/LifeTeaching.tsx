@@ -1,7 +1,7 @@
 import { SectionTitle, ImageWithOverlay } from '@/components/life/LifeShared';
 
 /**
- * Community involvement data
+ * Props for community involvement data
  */
 interface CommunityItem {
   name: string;
@@ -37,12 +37,13 @@ export default function LifeTeaching() {
       <SectionTitle icon="teaching" title="Teaching & Leadership" />
 
       <div className="grid grid-cols-2 gap-6 mb-6">
+        {/* Left Column - Gcode & Text */}
         <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           <ImageWithOverlay
-            src="/images/life/gcode_teaching.jpg"
-            alt="Teaching students at GCode"
-            caption="CS Teaching at GCode"
-            className="h-60 w-full"
+            src="/images/life/gcode.jpg"
+            alt="Teaching students at Generation Code"
+            caption="Teaching at Gcode"
+            className="h-64 w-full"
             objectPosition="center"
             rounded={false}
           />
@@ -56,12 +57,13 @@ export default function LifeTeaching() {
           </div>
         </div>
 
+        {/* Right Column - Escape Room & Text */}
         <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           <ImageWithOverlay
-            src="/images/life/pfll_escaperoom.jpg"
-            alt="Tech Escape Room"
+            src="/images/life/escaperoom.jpg"
+            alt="Tech escape room for PFLL"
             caption="Tech Escape Room"
-            className="h-60 w-full"
+            className="h-64 w-full"
             objectPosition="center"
             rounded={false}
           />
@@ -76,6 +78,7 @@ export default function LifeTeaching() {
         </div>
       </div>
 
+      {/* Community Involvement Section */}
       <div className="bg-gray-100 rounded-xl p-5 pt-1 shadow-sm">
         <h3 className="text-xl font-semibold text-gray-800">Community Involvement</h3>
         <div className="grid grid-cols-3 gap-4">
