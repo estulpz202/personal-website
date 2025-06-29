@@ -45,7 +45,7 @@ export default function LifeTeaching() {
             caption="Teaching at Gcode"
             className="h-64 w-full"
             objectPosition="center"
-            rounded={false}
+            banner={true}
           />
           <p className="p-5 text-base text-gray-700">
             Teaching high school students through Prime Factors Learning Lab was one of my most
@@ -62,7 +62,7 @@ export default function LifeTeaching() {
             caption="Tech Escape Room"
             className="h-64 w-full"
             objectPosition="center"
-            rounded={false}
+            banner={true}
           />
           <p className="p-5 text-base text-gray-700">
             I helped design and run a Tech Escape Room for high school students—creating challenging
