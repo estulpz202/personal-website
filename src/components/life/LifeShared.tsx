@@ -32,6 +32,7 @@ interface ImageWithOverlayProps {
   caption: string;
   className?: string;
   objectPosition?: string;
+  rounded?: boolean;
 }
 
 /**
@@ -43,9 +44,12 @@ export function ImageWithOverlay({
   caption,
   className = 'h-80 w-full',
   objectPosition = 'center',
+  rounded = true,
 }: ImageWithOverlayProps) {
   return (
-    <div className={`relative ${className} rounded-xl overflow-hidden shadow-md`}>
+    <div
+      className={`relative ${className} ${rounded ? 'rounded-xl' : ''} overflow-hidden shadow-md`}
+    >
       <Image src={src} alt={alt} fill className="object-cover" style={{ objectPosition }} />
       <div
         className="

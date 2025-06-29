@@ -14,15 +14,15 @@ interface CommunityItem {
 const communities: CommunityItem[] = [
   {
     name: 'Acts2Fellowship',
-    description: 'Faith-based community and mentorship program at CMU',
+    description: 'Christian campus ministry focused on faith, fellowship, and personal growth',
   },
   {
     name: 'SALSA',
-    description: 'Supporting Latino and Spanish-speaking communities at CMU',
+    description: 'Raise awareness of issues facing Latino and Spanish-speaking students',
   },
   {
-    name: 'Red Cross',
-    description: 'Previously organized community service events',
+    name: 'GlamourGals',
+    description: 'Reducing social isolation among senior residents in care',
   },
 ];
 
@@ -33,48 +33,59 @@ const communities: CommunityItem[] = [
  */
 export default function LifeTeaching() {
   return (
-    <section className="py-8 fade-in-up">
+    <section className="py-8">
       <SectionTitle icon="teaching" title="Teaching & Leadership" />
 
-      <div className="grid grid-cols-2 gap-8 mb-8">
-        <div>
+      <div className="grid grid-cols-2 gap-6 mb-6">
+        <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           <ImageWithOverlay
             src="/images/life/gcode_teaching.jpg"
             alt="Teaching students at GCode"
             caption="CS Teaching at GCode"
-            className="h-64 w-full mb-6"
+            className="h-60 w-full"
+            objectPosition="center"
+            rounded={false}
           />
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">CS & Mobile Development</h3>
-          <p className="text-base text-gray-700">
-            Teaching high school students through Prime Factors Learning Lab was one of my most
-            rewarding experiences. I designed curriculum for mobile development, mentored teams
-            through their first app projects, and watched their confidence and skills grow.
-          </p>
+          <div className="p-5 pt-0">
+            <h3 className="text-xl font-semibold text-gray-800">CS & Mobile Development</h3>
+            <p className="text-base text-gray-700">
+              Teaching high school students through Prime Factors Learning Lab was one of my most
+              rewarding experiences. I designed curriculum for mobile development, mentored teams
+              through their first app projects, and watched their confidence and skills grow.
+            </p>
+          </div>
         </div>
 
-        <div>
+        <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           <ImageWithOverlay
             src="/images/life/pfll_escaperoom.jpg"
             alt="Tech Escape Room"
             caption="Tech Escape Room"
-            className="h-64 w-full mb-6"
+            className="h-60 w-full"
+            objectPosition="center"
+            rounded={false}
           />
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">Creative Education</h3>
-          <p className="text-base text-gray-700">
-            I helped design and run a Tech Escape Room for high school students—creating challenging
-            puzzles that required teamwork and problem-solving skills. It was a fun way to get
-            students engaged with technology concepts outside traditional classrooms.
-          </p>
+          <div className="p-5 pt-0">
+            <h3 className="text-xl font-semibold text-gray-800">Creative Education</h3>
+            <p className="text-base text-gray-700">
+              I helped design and run a Tech Escape Room for high school students—creating
+              challenging puzzles that required teamwork and problem-solving skills. It was a fun
+              way to get students engaged with technology concepts outside traditional classrooms.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-100 mb-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Community Involvement</h3>
-        <div className="grid grid-cols-3 gap-6">
+      <div className="bg-gray-100 rounded-xl p-5 pt-1 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-800">Community Involvement</h3>
+        <div className="grid grid-cols-3 gap-4">
           {communities.map((community, index) => (
-            <div key={index} className="bg-white rounded-lg p-5 shadow-sm">
-              <h4 className="text-lg font-medium text-indigo-600 mb-2">{community.name}</h4>
-              <p className="text-gray-700 text-sm">{community.description}</p>
+            <div
+              key={index}
+              className="bg-white rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow duration-200"
+            >
+              <div className="text-indigo-600 font-semibold mb-1">{community.name}</div>
+              <div className="text-sm text-gray-600">{community.description}</div>
             </div>
           ))}
         </div>

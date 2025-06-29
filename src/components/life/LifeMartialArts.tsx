@@ -53,7 +53,7 @@ export default function LifeMartialArts() {
           objectPosition="center 90%"
         />
         <div className="bg-gray-100 rounded-xl shadow-sm p-5">
-          <h4 className="text-lg font-semibold text-gray-800 mb-3">Lessons from the Mat</h4>
+          <h4 className="text-lg font-semibold text-gray-800">Lessons from the Mat</h4>
           <ul className="text-gray-700 space-y-2">
             {lessons.map((lesson, index) => (
               <li key={index} className="flex items-center">
