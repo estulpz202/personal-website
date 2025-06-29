@@ -18,7 +18,7 @@ export default function LifeHero() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-8 text-white">
-            <h2 className="text-3xl font-bold mb-2">Estuardo Lopez</h2>
+            <h2 className="text-3xl font-bold">Estuardo Lopez</h2>
             <p className="text-xl">Developer, mentor, athlete, and friend</p>
           </div>
         </div>
