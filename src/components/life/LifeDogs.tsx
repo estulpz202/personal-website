@@ -23,11 +23,10 @@ export default function LifeDogs() {
 
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex-grow">
             <p className="text-base text-gray-700">
-              At home, I'm a proud dog person. Our three dogs bring endless joy, energy, and
-              occasional chaos to our household. From training sessions to long walks to cozy
-              moments when they all pile onto their bed together, they're a constant reminder of the
-              simple joys in life. They've taught me patience, consistency, and the value of
-              unconditional enthusiasm.
+              At home, I'm proudly a dog person. Our three dogs fill the house with joy, energy, and
+              just the right amount of chaos. From training sessions and long walks to quiet moments
+              when they all pile onto their bed, they bring warmth and balance to our days. They've
+              taught me patience, empathy, and how to appreciate the little things.
             </p>
           </div>
         </div>
