@@ -14,11 +14,11 @@ interface SectionTitleProps {
  */
 export function SectionTitle({ icon, title }: SectionTitleProps) {
   return (
-    <div className="flex items-center mb-6">
+    <div className="flex items-center mb-4">
       <div className="bg-indigo-50 rounded-full p-3 mr-4 mt-3">
         <Icon name={icon} className="w-7 h-7 text-indigo-600" />
       </div>
-      <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+      <h2 className="text-2xl font-bold">{title}</h2>
     </div>
   );
 }
