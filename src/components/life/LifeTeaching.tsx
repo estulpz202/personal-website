@@ -47,14 +47,11 @@ export default function LifeTeaching() {
             objectPosition="center"
             rounded={false}
           />
-          <div className="p-5 pt-0">
-            <h3 className="text-xl font-semibold text-gray-800">CS & Mobile Development</h3>
-            <p className="text-base text-gray-700">
-              Teaching high school students through Prime Factors Learning Lab was one of my most
-              rewarding experiences. I designed curriculum for mobile development, mentored teams
-              through their first app projects, and watched their confidence and skills grow.
-            </p>
-          </div>
+          <p className="p-5 text-base text-gray-700">
+            Teaching high school students through Prime Factors Learning Lab was one of my most
+            rewarding experiences. I designed curriculum for mobile development, mentored teams
+            through their first app projects, and watched their confidence and skills grow.
+          </p>
         </div>
 
         {/* Right Column - Escape Room & Text */}
@@ -67,20 +64,17 @@ export default function LifeTeaching() {
             objectPosition="center"
             rounded={false}
           />
-          <div className="p-5 pt-0">
-            <h3 className="text-xl font-semibold text-gray-800">Creative Education</h3>
-            <p className="text-base text-gray-700">
-              I helped design and run a Tech Escape Room for high school students—creating
-              challenging puzzles that required teamwork and problem-solving skills. It was a fun
-              way to get students engaged with technology concepts outside traditional classrooms.
-            </p>
-          </div>
+          <p className="p-5 text-base text-gray-700">
+            I helped design and run a Tech Escape Room for high school students—creating challenging
+            puzzles that required teamwork and problem-solving skills. It was a fun way to get
+            students engaged with technology concepts outside traditional classrooms.
+          </p>
         </div>
       </div>
 
       {/* Community Involvement Section */}
       <div className="bg-gray-100 rounded-xl p-5 pt-1 shadow-sm">
-        <h3 className="text-xl font-semibold text-gray-800">Community Involvement</h3>
+        <h3 className="text-lg font-semibold text-gray-800">Community Involvement</h3>
         <div className="grid grid-cols-3 gap-4">
           {communities.map((community, index) => (
             <div

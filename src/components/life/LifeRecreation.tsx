@@ -63,7 +63,7 @@ export default function LifeRecreation() {
 
       {/* Sports Section */}
       <div className="bg-gray-100 rounded-xl p-5 pt-1 shadow-sm">
-        <h3 className="text-xl font-semibold text-gray-800">Favorite Sports</h3>
+        <h3 className="text-lg font-semibold text-gray-800">Favorite Sports</h3>
         <div className="grid grid-cols-4 gap-4">
           {activities.map((activity, index) => (
             <div
