@@ -45,14 +45,18 @@ src/
 │   ├── projects/
 │   │   └── [slug]/
 │   ├── resume/
+│   ├── icon.ico
 │   ├── globals.css
 │   ├── layout.tsx
+│   ├── not-found.tsx
 │   └── page.tsx
 └── components/       # Reusable React components
     ├── about/
     ├── common/
+    ├── contact/
     ├── home/
     ├── layout/
+    ├── life/
     ├── projects/
     │   └── proj/
     ├── skills/
