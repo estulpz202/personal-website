@@ -22,19 +22,19 @@ const communities: CommunityItem[] = [
   },
   {
     name: 'GlamourGals',
-    description: 'Reducing social isolation among senior residents in care',
+    description: 'Reducing social isolation among seniors in care through meaningful connection',
   },
 ];
 
 /**
- * LifeTeaching - Teaching and leadership section
+ * LifeTeachOutreach - Teaching and outreach section
  *
  * Showcases educational experiences and community involvement
  */
-export default function LifeTeaching() {
+export default function LifeTeachOutreach() {
   return (
     <section className="py-8">
-      <SectionTitle icon="teaching" title="Teaching & Leadership" />
+      <SectionTitle icon="teaching" title="Teaching & Outreach" />
 
       <div className="grid grid-cols-2 gap-6 mb-6">
         {/* Left Column - Gcode & Text */}
@@ -42,15 +42,16 @@ export default function LifeTeaching() {
           <ImageWithOverlay
             src="/images/life/gcode.jpg"
             alt="Teaching students at Generation Code"
-            caption="Teaching at Gcode"
+            caption="Generation Code"
             className="h-64 w-full"
             objectPosition="center"
             banner={true}
           />
           <p className="p-5 text-base text-gray-700">
-            Teaching high school students through Prime Factors Learning Lab was one of my most
-            rewarding experiences. I designed curriculum for mobile development, mentored teams
-            through their first app projects, and watched their confidence and skills grow.
+            Teaching high school students through Gcode at PFLL was one of my most rewarding
+            experiences. I helped design a curriculum in tech and computer science, guided student
+            teams through their first coding projects, and saw their confidence grow with every
+            milestone.
           </p>
         </div>
 
@@ -58,16 +59,16 @@ export default function LifeTeaching() {
         <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
           <ImageWithOverlay
             src="/images/life/escaperoom.jpg"
-            alt="Tech escape room for PFLL"
+            alt="Tech Escape Room for PFLL"
             caption="Tech Escape Room"
             className="h-64 w-full"
             objectPosition="center"
             banner={true}
           />
           <p className="p-5 text-base text-gray-700">
-            I helped design and run a Tech Escape Room for high school students—creating challenging
-            puzzles that required teamwork and problem-solving skills. It was a fun way to get
-            students engaged with technology concepts outside traditional classrooms.
+            I volunteered to help design and run a Tech Escape Room for high school students,
+            crafting puzzles that encouraged teamwork, critical thinking, and creativity. It was a
+            fun and interactive way to introduce tech concepts outside the traditional classroom.
           </p>
         </div>
       </div>

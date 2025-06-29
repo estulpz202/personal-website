@@ -3,7 +3,7 @@ import LifeHero from '@/components/life/LifeHero';
 import LifeMartialArts from '@/components/life/LifeMartialArts';
 import LifeRecreation from '@/components/life/LifeRecreation';
 import LifeDogs from '@/components/life/LifeDogs';
-import LifeTeaching from '@/components/life/LifeTeaching';
+import LifeTeachOutreach from '@/components/life/LifeTeachOutreach';
 import LifeFamily from '@/components/life/LifeFamily';
 import LifeOther from '@/components/life/LifeOther';
 import LifeCTA from '@/components/life/LifeCTA';
@@ -26,7 +26,7 @@ export default function LifePage() {
         <LifeMartialArts />
         <LifeRecreation />
         <LifeDogs />
-        <LifeTeaching />
+        <LifeTeachOutreach />
         <LifeFamily />
         <LifeOther />
         <LifeCTA />
