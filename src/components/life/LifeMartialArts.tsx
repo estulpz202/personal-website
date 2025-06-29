@@ -2,6 +2,15 @@ import Icon from '@/components/ui/Icon';
 import { SectionTitle, ImageWithOverlay } from '@/components/life/LifeShared';
 
 /**
+ * Lessons data
+ */
+const lessons = [
+  'Leading by example and lifting others up',
+  'Disciplined practice creates consistent results',
+  'Grit built from pressure, challenge, and persistence',
+];
+
+/**
  * LifeMartialArts - Martial arts section
  *
  * Showcases wrestling and martial arts experiences and skills
@@ -46,18 +55,12 @@ export default function LifeMartialArts() {
         <div className="bg-gray-100 rounded-xl shadow-sm p-5">
           <h4 className="text-lg font-semibold text-gray-800 mb-3">Lessons from the Mat</h4>
           <ul className="text-gray-700 space-y-2">
-            <li className="flex items-center">
-              <Icon name="check" className="w-4 h-4 text-indigo-600 mr-2 flex-shrink-0" />
-              <span>Leading by example and lifting others up</span>
-            </li>
-            <li className="flex items-center">
-              <Icon name="check" className="w-4 h-4 text-indigo-600 mr-2 flex-shrink-0" />
-              <span>Disciplined practice creates consistent results</span>
-            </li>
-            <li className="flex items-center">
-              <Icon name="check" className="w-4 h-4 text-indigo-600 mr-2 flex-shrink-0" />
-              <span>Grit built from pressure, challenge, and persistence</span>
-            </li>
+            {lessons.map((lesson, index) => (
+              <li key={index} className="flex items-center">
+                <Icon name="check" className="w-4 h-4 text-indigo-600 mr-2 flex-shrink-0" />
+                <span>{lesson}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
