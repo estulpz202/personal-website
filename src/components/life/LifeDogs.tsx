@@ -7,35 +7,42 @@ import { SectionTitle, ImageWithOverlay } from '@/components/life/LifeShared';
  */
 export default function LifeDogs() {
   return (
-    <section className="py-8 fade-in-up">
-      <SectionTitle icon="paw" title="My Canine Companions" />
+    <section className="py-8">
+      <SectionTitle icon="paw" title="My Pack" />
 
-      <div className="flex gap-8 mb-8">
-        <div className="flex-1">
+      <div className="grid grid-cols-5 gap-6">
+        {/* Left Column - Dogs & Text */}
+        <div className="col-span-3 flex flex-col gap-6">
           <ImageWithOverlay
             src="/images/life/dogs.jpg"
             alt="My three dogs on their bed"
-            caption="The Gang All Together"
-            className="h-80 w-full"
+            caption="Three of a Kind"
+            className="h-64 w-full"
+            objectPosition="center"
           />
+
+          <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex-grow">
+            <p className="text-base text-gray-700">
+              At home, I'm a proud dog person. Our three dogs bring endless joy, energy, and
+              occasional chaos to our household. From training sessions to long walks to cozy
+              moments when they all pile onto their bed together, they're a constant reminder of the
+              simple joys in life. They've taught me patience, consistency, and the value of
+              unconditional enthusiasm.
+            </p>
+          </div>
         </div>
 
-        <div className="flex-1">
+        {/* Right Column - Kane */}
+        <div className="col-span-2">
           <ImageWithOverlay
             src="/images/life/kane_sunglasses.jpg"
             alt="My dog Kane wearing sunglasses"
-            caption="Kane's Fashion Statement"
-            className="h-80 w-full"
+            caption="Kane in Style"
+            className="h-full min-h-[24rem] w-full"
+            objectPosition="bottom"
           />
         </div>
       </div>
-
-      <p className="text-base text-gray-700 mb-6">
-        At home, I'm a proud dog person. Our three dogs bring endless joy, energy, and occasional
-        chaos to our household. From training sessions to long walks to cozy moments when they all
-        pile onto their bed together, they're a constant reminder of the simple joys in life.
-        They've taught me patience, consistency, and the value of unconditional enthusiasm.
-      </p>
     </section>
   );
 }
