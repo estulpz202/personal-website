@@ -45,20 +45,26 @@ const interests: InterestItem[] = [
  */
 export default function LifeOther() {
   return (
-    <section className="py-8">
+    <section className="py-6 sm:py-7 md:py-8">
       <SectionTitle icon="dots" title="Other Interests" />
 
-      <div className="grid grid-cols-4 gap-6">
+      {/* Responsive grid - 1 column on mobile, 2 columns on small/medium, 4 columns on large screens */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
         {interests.map((interest, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+            className="bg-white rounded-xl p-4 pt-1 sm:p-5 sm:pt-1 lg:pt-5 shadow-sm border border-gray-100 hover:shadow-md active:shadow-md transition-shadow duration-200"
           >
             <div className="flex items-center mb-1">
-              <h3 className="text-lg font-semibold text-gray-800 mr-2">{interest.title}</h3>
-              <Icon name={interest.icon} className="w-5 h-5 text-indigo-600 mt-3.25" />
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mr-2">
+                {interest.title}
+              </h3>
+              <Icon
+                name={interest.icon}
+                className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 mt-3.25"
+              />
             </div>
-            <p className="text-sm text-gray-700">{interest.description}</p>
+            <p className="text-xs sm:text-sm text-gray-700">{interest.description}</p>
           </div>
         ))}
       </div>
