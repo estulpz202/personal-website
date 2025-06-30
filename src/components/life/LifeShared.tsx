@@ -15,7 +15,7 @@ interface SectionTitleProps {
 export function SectionTitle({ icon, title }: SectionTitleProps) {
   return (
     <div className="flex items-center mb-3 sm:mb-4">
-      <div className="bg-indigo-50 rounded-full p-2 sm:p-2.5 md:p-3 mr-2 sm:mr-3 md:mr-4 mt-1 sm:mt-2 md:mt-3">
+      <div className="bg-indigo-50 rounded-full p-2 sm:p-2.5 md:p-3 mr-2 sm:mr-3 md:mr-4 mt-3.25">
         <Icon name={icon} className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-indigo-600" />
       </div>
       <h2 className="text-xl sm:text-xl md:text-2xl font-bold">{title}</h2>
