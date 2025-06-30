@@ -72,7 +72,7 @@ export default function LifeMartialArts() {
 
         <div
           className="
-            bg-gray-100 rounded-xl shadow-sm p-4 pt-1 sm:p-5 sm:pt-1.25 md:pt-5
+            bg-gray-100 rounded-xl shadow-sm p-4 pt-1 sm:p-5 sm:pt-1 md:pt-5
             md:h-52 md:overflow-y-auto scrollbar-thin
           "
         >
