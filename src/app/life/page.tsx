@@ -1,10 +1,10 @@
 import Container from '@/components/common/Container';
 import LifeHero from '@/components/life/LifeHero';
+import LifeFamily from '@/components/life/LifeFamily';
 import LifeMartialArts from '@/components/life/LifeMartialArts';
+import LifeTeachOutreach from '@/components/life/LifeTeachOutreach';
 import LifeRecreation from '@/components/life/LifeRecreation';
 import LifeDogs from '@/components/life/LifeDogs';
-import LifeTeachOutreach from '@/components/life/LifeTeachOutreach';
-import LifeFamily from '@/components/life/LifeFamily';
 import LifeOther from '@/components/life/LifeOther';
 import LifeCTA from '@/components/life/LifeCTA';
 
@@ -20,14 +20,14 @@ export const metadata = {
  */
 export default function LifePage() {
   return (
-    <main className="py-10 fade-in-up">
+    <main className="py-6 sm:py-8 md:py-10 fade-in-up">
       <Container>
         <LifeHero />
+        <LifeFamily />
         <LifeMartialArts />
+        <LifeTeachOutreach />
         <LifeRecreation />
         <LifeDogs />
-        <LifeTeachOutreach />
-        <LifeFamily />
         <LifeOther />
         <LifeCTA />
       </Container>
