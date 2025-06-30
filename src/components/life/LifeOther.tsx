@@ -17,42 +17,46 @@ const interests: InterestItem[] = [
   {
     icon: 'scroll',
     title: 'History',
-    description: 'Pursuing a History minor at CMU to understand how the past shapes our future',
+    description: 'Exploring how past events shape our modern world through my minor at CMU',
   },
   {
     icon: 'dice',
     title: 'Board Games',
-    description: 'Strategic thinking and social connection through tabletop games',
+    description:
+      'Enjoying strategic thinking and social connection through game nights with friends',
   },
   {
     icon: 'video',
     title: 'Movies',
-    description: 'MCU enthusiast and film buff, appreciating storytelling across genres',
+    description: 'Marvel enthusiast with appreciation for compelling storytelling across genres',
   },
   {
     icon: 'book',
     title: 'Learning',
-    description: 'Constantly exploring new topics in AI, CS, and beyond',
+    description: 'Constantly curious, exploring new topics in technology, history, and beyond',
   },
 ];
 
 /**
- * LifeOtherInterests - Other personal interests section
+ * LifeOther - Other personal interests section
  *
  * Showcases additional hobbies and interests
  */
 export default function LifeOther() {
   return (
-    <section className="py-8 fade-in-up mb-6">
+    <section className="py-8">
       <SectionTitle icon="dots" title="Other Interests" />
 
-      <div className="grid grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-4 gap-6">
         {interests.map((interest, index) => (
-          <div key={index} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-            <div className="bg-indigo-50 rounded-full p-3 w-12 h-12 mb-4 flex items-center justify-center">
-              <Icon name={interest.icon} className="w-6 h-6 text-indigo-600" />
+          <div
+            key={index}
+            className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+          >
+            <div className="flex items-center mb-1">
+              <h3 className="text-lg font-semibold text-gray-800 mr-2">{interest.title}</h3>
+              <Icon name={interest.icon} className="w-5 h-5 text-indigo-600 mt-3.25" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{interest.title}</h3>
             <p className="text-sm text-gray-700">{interest.description}</p>
           </div>
         ))}
