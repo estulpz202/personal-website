@@ -56,7 +56,7 @@ export default function LifeRecreation() {
             src="/images/life/bear_mountain.jpg"
             alt="Hiking on Bear Mountain"
             caption="Bear Mountain"
-            className="h-104 sm:h-152 md:h-full w-full"
+            className="h-116 sm:h-152 md:h-full w-full"
             objectPosition="center"
           />
         </div>

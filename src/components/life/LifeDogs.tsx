@@ -37,7 +37,7 @@ export default function LifeDogs() {
             src="/images/life/kane_sunglasses.jpg"
             alt="My dog Kane wearing sunglasses"
             caption="Kane in Style"
-            className="h-88 sm:h-152 md:h-full w-full"
+            className="h-96 sm:h-152 md:h-full w-full"
             objectPosition="bottom"
           />
         </div>
