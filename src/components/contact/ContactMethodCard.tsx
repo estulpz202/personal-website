@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Icon from '@/components/ui/Icon';
 import { ContactMethod } from './contactData';
 
@@ -13,22 +13,56 @@ interface ContactMethodCardProps {
 
 /**
  * ContactMethodCard - Displays a single contact method in a card format
+ *
+ * With improved clipboard support for all devices
  */
 export default function ContactMethodCard({ method }: ContactMethodCardProps) {
   // State for copy feedback
   const [copied, setCopied] = useState(false);
+  // Reference for hidden textarea (fallback method)
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
-  // Handle copying text to clipboard
+  // Handle copying text to clipboard with fallbacks
   const handleCopy = (value: string) => {
-    navigator.clipboard.writeText(value).then(
-      () => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1000); // Reset after 1 second
-      },
-      (err) => {
-        console.error('Could not copy text: ', err);
+    // Try modern Clipboard API first
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard
+        .writeText(value)
+        .then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1000); // Reset after 1 second
+        })
+        .catch((err) => {
+          console.error('Could not copy text using Clipboard API: ', err);
+          fallbackCopy(value);
+        });
+    } else {
+      // Use fallback if Clipboard API not available
+      fallbackCopy(value);
+    }
+  };
+
+  // Fallback copy method for browsers without Clipboard API
+  const fallbackCopy = (value: string) => {
+    try {
+      if (textAreaRef.current) {
+        // Set the value in the hidden textarea
+        textAreaRef.current.value = value;
+        textAreaRef.current.select();
+        textAreaRef.current.setSelectionRange(0, 99999); // For mobile devices
+
+        // Try the execCommand method (deprecated but works as fallback)
+        if (document.execCommand('copy')) {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1000);
+        } else {
+          alert(`Copy this value: ${value}`);
+        }
       }
-    );
+    } catch (err) {
+      console.error('Could not copy text using fallback: ', err);
+      alert(`Copy this value: ${value}`);
+    }
   };
 
   return (
@@ -74,6 +108,9 @@ export default function ContactMethodCard({ method }: ContactMethodCardProps) {
           <Icon name="copy" className={`w-4 h-4 sm:w-5 sm:h-5 ${copied ? 'fill-current' : ''}`} />
         </button>
       </div>
+
+      {/* Hidden textarea for fallback copy method */}
+      <textarea ref={textAreaRef} aria-hidden="true" className="sr-only" tabIndex={-1} readOnly />
     </div>
   );
 }
