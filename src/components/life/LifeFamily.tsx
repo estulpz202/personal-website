@@ -22,10 +22,10 @@ export default function LifeFamily() {
           />
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex-grow">
             <p className="text-base text-gray-700">
-              Family grounds me and provides perspective. From celebrating holidays together to
-              sharing life's milestones, these connections remind me of what's truly important. The
-              values I've learned—integrity, care for others, and perseverance—shape how I approach
-              both personal and professional relationships.
+              Family means everything to me. It keeps me grounded and gives me perspective. From
+              holiday traditions to life's big milestones, these relationships remind me what truly
+              matters. The values they've instilled in me, like honesty, compassion, and
+              perseverance, shape how I show up in both life and work.
             </p>
           </div>
         </div>
