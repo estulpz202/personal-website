@@ -28,7 +28,7 @@ export default function LifeMartialArts() {
           alt="Wrestling team holding trophy"
           caption="HS Wrestling Team"
           className="md:hidden h-48 sm:h-60 w-full"
-          objectPosition="top"
+          objectPosition="center 10%"
         />
 
         {/* Description */}
@@ -66,13 +66,13 @@ export default function LifeMartialArts() {
           src="/images/life/takedown.jpg"
           alt="Takedown during wrestling match"
           caption="Takedown"
-          className="h-48 sm:h-50 md:h-52 w-full"
-          objectPosition="center 90%"
+          className="h-38 sm:h-50 md:h-52 w-full"
+          objectPosition="center 70%"
         />
 
         <div
           className="
-            bg-gray-100 rounded-xl shadow-sm p-4 sm:p-5 
+            bg-gray-100 rounded-xl shadow-sm p-4 pt-1 sm:p-5 sm:pt-1.25 md:pt-5
             md:h-52 md:overflow-y-auto scrollbar-thin
           "
         >
