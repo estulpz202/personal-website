@@ -22,7 +22,7 @@ export default function LifeMartialArts() {
 
       {/* Top grid - 1 column on mobile, 2 columns on larger screens */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 mb-4 sm:mb-5 md:mb-6">
-        {/* Wrestling Team */}
+        {/* Wrestling Team - Mobile only */}
         <ImageWithOverlay
           src="/images/life/wrest_team.jpg"
           alt="Wrestling team holding trophy"
@@ -32,7 +32,12 @@ export default function LifeMartialArts() {
         />
 
         {/* Description */}
-        <div className="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100 flex-grow">
+        <div
+          className="
+            bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100 
+            md:h-64 md:overflow-y-auto scrollbar-thin
+          "
+        >
           <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
             Wrestling shaped who I am today. As Varsity Captain in HS, I gained discipline, mental
             toughness, and leadership experience. The sport taught me to push through setbacks and
@@ -45,7 +50,7 @@ export default function LifeMartialArts() {
           </p>
         </div>
 
-        {/* Wrestling Team */}
+        {/* Wrestling Team - Larger screens only */}
         <ImageWithOverlay
           src="/images/life/wrest_team.jpg"
           alt="Wrestling team holding trophy"
@@ -65,7 +70,12 @@ export default function LifeMartialArts() {
           objectPosition="center 90%"
         />
 
-        <div className="bg-gray-100 rounded-xl shadow-sm p-4 sm:p-5">
+        <div
+          className="
+            bg-gray-100 rounded-xl shadow-sm p-4 sm:p-5 
+            md:h-52 md:overflow-y-auto scrollbar-thin
+          "
+        >
           <h4 className="text-base sm:text-lg font-semibold text-gray-800">Lessons from the Mat</h4>
           <ul className="text-gray-700 space-y-1.5 sm:space-y-2">
             {lessons.map((lesson, index) => (
