@@ -15,25 +15,26 @@ interface InterestItem {
  */
 const interests: InterestItem[] = [
   {
+    icon: 'dice',
+    title: 'Board Games',
+    description:
+      'Game nights with friends are my favorite way to unwind, think strategically, and share a few laughs.',
+  },
+  {
+    icon: 'video',
+    title: 'Movies',
+    description:
+      'Love the MCU and am drawn to any film with a strong story and thoughtful execution.',
+  },
+  {
     icon: 'scroll',
     title: 'History',
     description: 'Exploring how past events shape our modern world through my minor at CMU',
   },
   {
-    icon: 'dice',
-    title: 'Board Games',
-    description:
-      'Enjoying strategic thinking and social connection through game nights with friends',
-  },
-  {
-    icon: 'video',
-    title: 'Movies',
-    description: 'Marvel enthusiast with appreciation for compelling storytelling across genres',
-  },
-  {
     icon: 'book',
     title: 'Learning',
-    description: 'Constantly curious, exploring new topics in technology, history, and beyond',
+    description: 'Constantly curious, always diving into new ideas in tech, history, and beyond.',
   },
 ];
 
