@@ -42,9 +42,9 @@ export const contactMethods: ContactMethod[] = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    value: 'linkedin.com/in/estuardo-lopez-letona',
-    url: 'https://www.linkedin.com/in/estuardo-lopez-letona',
+    value: 'linkedin.com/in/estu-lopez',
+    url: 'https://www.linkedin.com/in/estu-lopez/',
     icon: 'linkedin',
-    copyValue: 'https://www.linkedin.com/in/estuardo-lopez-letona',
+    copyValue: 'https://www.linkedin.com/in/estu-lopez/',
   },
 ];

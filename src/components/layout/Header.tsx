@@ -28,7 +28,7 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: 'linkedin',
-    href: 'https://www.linkedin.com/in/estuardo-lopez-letona/',
+    href: 'https://www.linkedin.com/in/estu-lopez/',
   },
 ];
 
