@@ -21,6 +21,11 @@ const navLinks = [
  */
 const socialLinks = [
   {
+    name: 'LeetCode',
+    icon: 'leetcode',
+    href: 'https://leetcode.com/u/elopezle/',
+  },
+  {
     name: 'GitHub',
     icon: 'github',
     href: 'https://github.com/estulpz202',
@@ -91,7 +96,7 @@ export default function Header() {
           <div className="hidden md:flex items-center md:space-x-8 lg:space-x-16">
             {/* Navigation menu */}
             <nav aria-label="Main navigation">
-              <ul className="flex space-x-8 text-lg font-small m-0 p-0 list-none">
+              <ul className="flex space-x-6 lg:space-x-8 text-lg font-small m-0 p-0 list-none">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <NavLink href={link.href} isTouchDevice={isTouchDevice}>
@@ -103,7 +108,7 @@ export default function Header() {
             </nav>
 
             {/* Social links */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4 lg:space-x-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}

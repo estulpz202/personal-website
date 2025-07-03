@@ -12,9 +12,11 @@ export default function HeroSection() {
         <div className="md:w-2/3 text-center md:text-left">
           {/* Name and professional title */}
           <div className="mb-4 sm:mb-5 md:mb-6">
-            <h1 className="text-4xl sm:text-[42px] md:text-5xl font-extrabold mb-3 md:mb-4">
+            <h1 className="hidden lg:block text-5xl font-extrabold mb-4">Estuardo Lopez Letona</h1>
+            <h1 className="lg:hidden text-4xl sm:text-[42px] md:text-5xl font-extrabold mb-3 md:mb-4">
               Estuardo Lopez
             </h1>
+
             <h2 className="text-xl sm:text-[22px] md:text-2xl text-gray-600 font-medium">
               Software Engineer
             </h2>
