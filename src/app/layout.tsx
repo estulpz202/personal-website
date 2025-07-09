@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     // Image displayed in link previews (must be an absolute URL)
     images: [
       {
-        url: 'https://www.estuardolopez.com/og-preview.png',
+        url: 'https://www.estuardolopez.com/custom-banner.png',
         width: 1200,
         height: 630,
         alt: 'Estuardo Lopez Portfolio Preview',
