@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           src={project.imageUrl}
           alt={`${project.title} project screenshot`}
           className={`
-            object-cover ${project.title === 'The Pack' || project.title === 'Santorini' ? 'object-[center_40%]' : 'object-top'} sm:object-center
+            object-cover ${project.title === 'The Pack' || project.title === 'Santorini' || project.title === 'Gcode Academy' ? 'object-[center_40%]' : 'object-top'} sm:object-center
             group-hover:scale-105 group-active:scale-105 transition-transform duration-500
           `}
           fill

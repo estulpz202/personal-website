@@ -46,7 +46,7 @@ export default function ProjectHero({
             alt={`${title} project banner`}
             fill
             priority
-            className={`sm:hidden object-cover ${title === 'The Pack' || title === 'Santorini' ? 'object-center' : 'object-top'}`}
+            className={`sm:hidden object-cover ${title === 'The Pack' || title === 'Santorini' || title === 'Gcode Academy' ? 'object-center' : 'object-top'}`}
           />
 
           {/* Gradient overlay for text readability */}

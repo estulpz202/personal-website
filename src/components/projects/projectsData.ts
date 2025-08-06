@@ -32,6 +32,34 @@ export interface Project {
  */
 export const projects: Project[] = [
   {
+    slug: 'gcode-academy',
+    title: 'Gcode Academy',
+    subtitle: 'Educational iOS App',
+    description:
+      'A SwiftUI-based mobile learning platform making programming fundamentals accessible through visual, progressive learning experiences.',
+    imageUrl: '/images/projects/gcode_academy.jpg',
+    bannerImageUrl: '/images/projects/gcode_acad_banner.jpg',
+    category: ['mobile', 'fullstack'],
+    tech: ['Swift', 'SwiftUI', 'Python', 'FastAPI', 'MVVM', 'OpenAI API', 'UI/UX Design'],
+    highlights: [
+      'Designed a comprehensive learning platform with interactive lessons and a visually distinctive zig-zag learning path interface',
+      'Built an integrated AI Code Coach using Python, FastAPI, and OpenAI API to provide personalized programming assistance',
+      'Implemented a modular MVVM architecture with clean separation of concerns for maintainability',
+      'Developed a modern authentication system with animated backgrounds and intuitive user experience',
+    ],
+    links: [
+      { label: 'Frontend GitHub', url: 'https://github.com/pflc3/gcode-academy', icon: 'github' },
+      {
+        label: 'Backend GitHub',
+        url: 'https://github.com/pflc3/gcode-academy-agent',
+        icon: 'github',
+      },
+    ],
+    timeline: 'June 2025 - Present',
+    shortTimeline: 'Jun 2025 - Present',
+    organization: 'Prime Factors Learning Lab',
+  },
+  {
     slug: 'hive',
     title: 'Hive',
     subtitle: 'Strategic Board Game',
