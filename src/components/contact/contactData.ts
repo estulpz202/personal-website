@@ -27,9 +27,9 @@ export const contactMethods: ContactMethod[] = [
   {
     id: 'location',
     label: 'Location',
-    value: 'Belleville, NJ, United States',
+    value: 'Essex County, NJ, United States',
     icon: 'location',
-    copyValue: 'Belleville, NJ, United States',
+    copyValue: 'Essex County, NJ, United States',
   },
   {
     id: 'github',

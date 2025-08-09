@@ -12,9 +12,9 @@ interface ActivityItem {
  * Sports activities data
  */
 const activities: ActivityItem[] = [
+  { name: 'Pickleball', venue: 'Campus & local courts' },
   { name: 'Volleyball', venue: 'Parks with family & friends' },
   { name: 'Golf', venue: 'Driving range & TopGolf' },
-  { name: 'Tennis', venue: 'Campus & local courts' },
   { name: 'Spikeball', venue: 'Beach & park meetups' },
 ];
 
