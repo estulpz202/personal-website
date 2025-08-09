@@ -37,12 +37,12 @@ export const projects: Project[] = [
     title: 'Gcode Academy',
     subtitle: 'Educational iOS App',
     description:
-      'A learning platform making Swift and iOS development accessible through a progression-based learning path with integrated AI assistance.',
+      'A learning platform making Swift and iOS development accessible through a progression-based path with integrated AI assistance.',
     imageUrl: '/images/projects/gcode_academy.jpg',
     bannerImageUrl: '/images/projects/gcode_acad_banner.jpg',
     centerImage: true,
     category: ['mobile', 'ai', 'fullstack'],
-    tech: ['Swift', 'SwiftUI', 'Python', 'FastAPI', 'MVVM', 'OpenAI API', 'UI/UX Design'],
+    tech: ['SwiftUI', 'Python', 'FastAPI', 'OpenAI API', 'UI/UX', 'GitHub'],
     highlights: [
       'Created a Swift education app with a visually distinctive zig-zag lesson path',
       'Integrated an AI Code Coach using Python, FastAPI, and OpenAI API for personalized programming support',
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     bannerImageUrl: '/images/projects/santorini_banner.jpg',
     centerImage: true,
     category: ['fullstack'],
-    tech: ['Java', 'NanoHTTPD', 'React', 'TypeScript', 'UML'],
+    tech: ['Java', 'NanoHTTPD', 'React', 'TS', 'UML'],
     highlights: [
       'Built a fullstack Santorini game with a Java backend (NanoHTTPD) and React (TypeScript) frontend',
       'Implemented scalable, testable architecture with clean APIs and detailed UML documentation (class diagrams, sequence diagrams, domain/object models)',
@@ -173,7 +173,7 @@ export const projects: Project[] = [
   {
     slug: 'the-pack',
     title: 'The Pack',
-    subtitle: 'iOS Pet Care App',
+    subtitle: 'Pet Care iOS App',
     description:
       'An iOS frontend prototype built with SwiftUI to help dog owners manage pet care, created in collaboration with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
