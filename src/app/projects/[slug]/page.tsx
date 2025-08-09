@@ -81,6 +81,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailParams)
           subtitle={project.subtitle}
           imageUrl={project.imageUrl}
           bannerImageUrl={project.bannerImageUrl}
+          centerImage={project.centerImage}
           categories={project.category}
           links={project.links}
         />

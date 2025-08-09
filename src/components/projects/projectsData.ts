@@ -13,6 +13,7 @@ export interface Project {
   description: string; // Brief project overview
   imageUrl: string; // Main project image
   bannerImageUrl: string; // Banner image for detail page
+  centerImage: boolean; // Whether to center the image display instead of aligning to top
   category: ProjectCategory[]; // Project categories for filtering
   tech: string[]; // Technologies used
   highlights: string[]; // Key accomplishments/features
@@ -39,6 +40,7 @@ export const projects: Project[] = [
       'A SwiftUI-based mobile learning platform making programming fundamentals accessible through visual, progressive learning experiences.',
     imageUrl: '/images/projects/gcode_academy.jpg',
     bannerImageUrl: '/images/projects/gcode_acad_banner.jpg',
+    centerImage: true,
     category: ['mobile', 'fullstack'],
     tech: ['Swift', 'SwiftUI', 'Python', 'FastAPI', 'MVVM', 'OpenAI API', 'UI/UX Design'],
     highlights: [
@@ -67,6 +69,7 @@ export const projects: Project[] = [
       'A Python and React fullstack implementation of Hive. Features a responsive UI, modular backend, and advanced game logic.',
     imageUrl: '/images/projects/hive.jpg',
     bannerImageUrl: '/images/projects/hive_banner.jpg',
+    centerImage: false,
     category: ['fullstack'],
     tech: [
       'Python',
@@ -104,6 +107,7 @@ export const projects: Project[] = [
       "An AI assistant built with the Mastra framework to support PFLL's student outreach efforts.",
     imageUrl: '/images/projects/gcode_agent.jpg',
     bannerImageUrl: '/images/projects/gcode_agent_banner.jpg',
+    centerImage: false,
     category: ['ai'],
     tech: ['Mastra', 'LLM', 'CI/CD', 'TypeScript', 'Docker', 'GitHub Actions', 'RAG'],
     highlights: [
@@ -124,6 +128,7 @@ export const projects: Project[] = [
       'A fully responsive site built with Next.js and Tailwind CSS to highlight my work, skills, and personal story.',
     imageUrl: '/images/projects/website.jpg',
     bannerImageUrl: '/images/projects/website_banner.jpg',
+    centerImage: false,
     category: ['web'],
     tech: ['Next.js', 'Tailwind CSS', 'Vercel', 'React', 'TypeScript', 'UI/UX'],
     highlights: [
@@ -146,6 +151,7 @@ export const projects: Project[] = [
       'Santorini with a Java backend and React frontend, supported by detailed UML documentation and scalable software design.',
     imageUrl: '/images/projects/santorini.jpg',
     bannerImageUrl: '/images/projects/santorini_banner.jpg',
+    centerImage: true,
     category: ['fullstack'],
     tech: ['Java', 'NanoHTTPD', 'React', 'TypeScript', 'UML'],
     highlights: [
@@ -173,6 +179,7 @@ export const projects: Project[] = [
       'An app built with Swift to help dog owners stay on top of pet care, developed in collaboration with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
     bannerImageUrl: '/images/projects/thepack_banner.jpg',
+    centerImage: true,
     category: ['mobile'],
     tech: ['Swift', 'UI/UX Design', 'Xcode', 'GitHub', 'Leadership'],
     highlights: [

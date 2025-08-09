@@ -9,6 +9,7 @@ interface ProjectHeroProps {
   subtitle: string;
   imageUrl: string;
   bannerImageUrl: string;
+  centerImage: boolean;
   categories: string[];
   links: {
     label: string;
@@ -26,6 +27,7 @@ export default function ProjectHero({
   subtitle,
   imageUrl,
   bannerImageUrl,
+  centerImage,
   categories,
   links,
 }: ProjectHeroProps) {
@@ -46,7 +48,7 @@ export default function ProjectHero({
             alt={`${title} project banner`}
             fill
             priority
-            className={`sm:hidden object-cover ${title === 'The Pack' || title === 'Santorini' || title === 'Gcode Academy' ? 'object-center' : 'object-top'}`}
+            className={`sm:hidden object-cover ${centerImage ? 'object-center' : 'object-top'}`}
           />
 
           {/* Gradient overlay for text readability */}
