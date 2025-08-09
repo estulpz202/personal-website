@@ -37,17 +37,17 @@ export const projects: Project[] = [
     title: 'Gcode Academy',
     subtitle: 'Educational iOS App',
     description:
-      'A SwiftUI-based mobile learning platform making programming fundamentals accessible through visual, progressive learning experiences.',
+      'A learning platform making Swift and iOS development accessible through a progression-based learning path with integrated AI assistance.',
     imageUrl: '/images/projects/gcode_academy.jpg',
     bannerImageUrl: '/images/projects/gcode_acad_banner.jpg',
     centerImage: true,
-    category: ['mobile', 'fullstack'],
+    category: ['mobile', 'ai', 'fullstack'],
     tech: ['Swift', 'SwiftUI', 'Python', 'FastAPI', 'MVVM', 'OpenAI API', 'UI/UX Design'],
     highlights: [
-      'Designed a comprehensive learning platform with interactive lessons and a visually distinctive zig-zag learning path interface',
-      'Built an integrated AI Code Coach using Python, FastAPI, and OpenAI API to provide personalized programming assistance',
-      'Implemented a modular MVVM architecture with clean separation of concerns for maintainability',
-      'Developed a modern authentication system with animated backgrounds and intuitive user experience',
+      'Created a Swift education app with a visually distinctive zig-zag lesson path',
+      'Integrated an AI Code Coach using Python, FastAPI, and OpenAI API for personalized programming support',
+      'Implemented a modular MVVM architecture for scalability and clear separation of concerns',
+      'Built a modern authentication system with animated backgrounds and a smooth user experience',
     ],
     links: [
       { label: 'Frontend GitHub', url: 'https://github.com/pflc3/gcode-academy', icon: 'github' },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     ],
     timeline: 'June 2025 - Present',
     shortTimeline: 'Jun 2025 - Present',
-    organization: 'Prime Factors Learning Lab',
+    organization: 'PFLL',
   },
   {
     slug: 'hive',
