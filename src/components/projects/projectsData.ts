@@ -155,9 +155,8 @@ export const projects: Project[] = [
     category: ['fullstack'],
     tech: ['Java', 'NanoHTTPD', 'React', 'TypeScript', 'UML'],
     highlights: [
-      'Built a fullstack Santorini game using a Java backend (NanoHTTPD) and React (TypeScript) frontend',
-      'Designed a scalable, testable system using SWE best practices and clean API architecture',
-      'Authored comprehensive UML documentation, including class diagrams, sequence diagrams, and domain/object models',
+      'Built a fullstack Santorini game with a Java backend (NanoHTTPD) and React (TypeScript) frontend',
+      'Implemented scalable, testable architecture with clean APIs and detailed UML documentation (class diagrams, sequence diagrams, domain/object models)',
       'Private repository per academic policy — available upon request at elopezle@andrew.cmu.edu',
     ],
     links: [
