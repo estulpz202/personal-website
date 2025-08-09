@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
       'Created and taught a comprehensive program for 30 students, covering binary systems, data structures, GitHub workflows, and mobile app development using Swift and Python',
       'Guided a student team in developing a fullstack iOS application with backend integration, aiming for App Store release (<a href="/projects/gcode-academy" class="link">Gcode Academy</a>)',
     ],
-    skills: ['SwiftUI', 'GitHub', 'Fullstack', 'Python'],
+    skills: ['SwiftUI', 'Fullstack', 'Python', 'GitHub'],
   },
   {
     title: 'CS and Mobile Development Instructor',
