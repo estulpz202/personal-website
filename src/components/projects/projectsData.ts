@@ -44,10 +44,10 @@ export const projects: Project[] = [
     category: ['mobile', 'ai', 'fullstack'],
     tech: ['SwiftUI', 'Python', 'FastAPI', 'OpenAI API', 'UI/UX', 'GitHub'],
     highlights: [
-      'Created a Swift education app with a visually distinctive zig-zag lesson path',
+      'Created a Swift education app with a visually distinctive zig-zag lesson path, planned for App Store release',
       'Integrated an AI Code Coach using Python, FastAPI, and OpenAI API for personalized programming support',
-      'Implemented a modular MVVM architecture for scalability and clear separation of concerns',
-      'Built a modern authentication system with animated backgrounds and a smooth user experience',
+      'Applied a modular MVVM architecture for scalability and clear separation of concerns',
+      'Built a modern authentication system with animated visuals and a smooth user experience',
     ],
     links: [
       { label: 'Frontend GitHub', url: 'https://github.com/pflc3/gcode-academy', icon: 'github' },
