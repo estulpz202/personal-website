@@ -176,24 +176,20 @@ export const projects: Project[] = [
     title: 'The Pack',
     subtitle: 'iOS Pet Care App',
     description:
-      'An iOS app built with SwiftUI to help dog owners manage pet care, created in collaboration with a student team.',
+      'An iOS frontend prototype built with SwiftUI to help dog owners manage pet care, created in collaboration with a student team.',
     imageUrl: '/images/projects/thepack.jpg',
     bannerImageUrl: '/images/projects/thepack_banner.jpg',
     centerImage: true,
     category: ['mobile'],
     tech: ['SwiftUI', 'GitHub', 'Xcode', 'Leadership'],
     highlights: [
-      'Led development of a pet care tracking app, from ideation to functional prototype',
+      'Led development of a pet care tracking app, from ideation to a polished frontend',
       'Mentored high school students in Swift, Xcode, UI/UX design, and GitHub collaboration',
       'Focused on clean UI, maintainable code, and adaptable workflows to match student experience levels',
     ],
     links: [
       { label: 'GitHub', url: 'https://github.com/pflc3/ThePackApp', icon: 'github' },
-      {
-        label: 'Demo',
-        url: 'https://vimeo.com/1094857073',
-        icon: 'video',
-      },
+      { label: 'Demo', url: 'https://vimeo.com/1094857073', icon: 'video' },
     ],
     timeline: 'June 2024 - Aug 2024',
     shortTimeline: 'Jun - Aug 2024',
