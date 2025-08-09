@@ -9,13 +9,24 @@ export const experiences: Experience[] = [
     shortTitle: 'CS & Mobile Dev Instructor',
     company: 'Prime Factors Learning Lab',
     companyUrl: 'https://primefactors.org/',
+    timePeriod: 'Summer 2025',
+    logoSrc: '/images/logos/pfl_logo.jpg',
+    highlights: [
+      'Created and taught a comprehensive program for 30 students, covering binary systems, data structures, GitHub workflows, and mobile app development using Swift and Python',
+      'Guided a student team in developing a fullstack iOS application with backend integration, aiming for App Store release (<a href="/projects/gcode-academy" class="link">Gcode Academy</a>)',
+    ],
+    skills: ['SwiftUI', 'GitHub', 'Fullstack', 'Python'],
+  },
+  {
+    title: 'CS and Mobile Development Instructor',
+    shortTitle: 'CS & Mobile Dev Instructor',
+    company: 'Prime Factors Learning Lab',
+    companyUrl: 'https://primefactors.org/',
     timePeriod: 'Summer 2024',
     logoSrc: '/images/logos/pfl_logo.jpg',
     highlights: [
-      'Designed CS curriculum for 30 high school students covering fundamentals, hardware, and mobile dev',
-      'Taught UI/UX design, Swift programming, and Git version control best practices',
-      'Led student team through full development cycle of <a href="/projects/the-pack" class="link">The Pack</a>, a dog care management app',
+      'Taught core CS and mobile dev, guiding a team in creating a frontend iOS app prototype (<a href="/projects/the-pack" class="link">The Pack</a>)',
     ],
-    skills: ['Swift', 'GitHub', 'SDLC', 'Communication'],
+    skills: ['SwiftUI', 'Communication'],
   },
 ];

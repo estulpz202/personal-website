@@ -63,8 +63,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
             <Image
               src={logoSrc}
               alt={`${company} Logo`}
-              width={55}
-              height={55}
+              width={53}
+              height={53}
               className="w-[55px] h-[55px] sm:w-[65px] sm:h-[65px] md:w-[70px] md:h-[70px] rounded-xl"
             />
           </div>
