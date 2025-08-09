@@ -30,8 +30,9 @@ export const homeSkillsData: SkillCategory[] = [
     title: 'Fullstack',
     skills: [
       { name: 'FastAPI', icon: 'fastapi' },
-      { name: 'Node.js', icon: 'nodejs' },
+      // { name: 'Node.js', icon: 'nodejs' },
       { name: 'Next.js', icon: 'nextjs' },
+      { name: 'SwiftUI', icon: 'swiftui' },
       { name: 'Tailwind CSS', icon: 'tailwindcss' },
     ],
   },
@@ -71,9 +72,9 @@ export const skillsData: SkillsDataType = {
       { name: 'Next.js' },
       { name: 'Node.js' },
       { name: 'React' },
+      { name: 'SwiftUI' },
       { name: 'LLM APIs' },
       { name: 'Tailwind CSS' },
-      { name: 'Docker' },
     ],
   },
   tools: {
@@ -86,7 +87,7 @@ export const skillsData: SkillsDataType = {
       { name: 'DevOps' },
       { name: 'UI/UX Principles' },
       { name: 'Package Managers' },
-      { name: 'Iterative Dev' },
+      { name: 'Docker' },
     ],
   },
   cs_soft: {
