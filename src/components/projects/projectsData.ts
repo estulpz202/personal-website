@@ -52,10 +52,10 @@ export const projects: Project[] = [
       'Built a modern authentication system with animated visuals and a smooth user experience',
     ],
     links: [
-      { label: 'Frontend GitHub', url: 'https://github.com/pflc3/gcode-academy', icon: 'github' },
+      { label: 'Frontend GitHub', url: 'https://github.com/pflc3/swift-academy', icon: 'github' },
       {
         label: 'Backend GitHub',
-        url: 'https://github.com/pflc3/gcode-academy-agent',
+        url: 'https://github.com/pflc3/swift-academy-agent',
         icon: 'github',
       },
     ],
