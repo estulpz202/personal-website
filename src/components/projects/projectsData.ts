@@ -40,8 +40,8 @@ export const projects: Project[] = [
     subtitle: 'Educational iOS App',
     description:
       'A learning platform making Swift and iOS development accessible through a progression-based path with integrated AI assistance.',
-    imageUrl: '/images/projects/gcode_academy.jpg',
-    bannerImageUrl: '/images/projects/gcode_acad_banner.jpg',
+    imageUrl: '/images/projects/swift_academy.jpg',
+    bannerImageUrl: '/images/projects/swift_academy_banner.jpg',
     centerImage: true,
     category: ['mobile', 'ai', 'fullstack'],
     tech: ['SwiftUI', 'Python', 'FastAPI', 'OpenAI API', 'UI/UX', 'GitHub'],
