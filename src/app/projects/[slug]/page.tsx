@@ -17,13 +17,22 @@ interface ProjectDetailParams {
 }
 
 /**
+ * Find a project by its main slug or any of its aliases
+ * Returns the project object if found, undefined if not found
+ */
+function findProjectBySlug(slug: string) {
+  return projects.find((project) => project.slug === slug || project.aliases?.includes(slug));
+}
+
+/**
  * Generate metadata for the project detail page
+ * This runs before the page renders to set the HTML <title> tag
  */
 export async function generateMetadata({ params }: ProjectDetailParams): Promise<Metadata> {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = findProjectBySlug(slug);
 
-  // Redirect to non-existent path if project not found
+  // If no project found, redirect to 404
   if (!project) {
     redirect('/project-not-found');
   }
@@ -34,12 +43,32 @@ export async function generateMetadata({ params }: ProjectDetailParams): Promise
 }
 
 /**
- * Generate static paths for all projects
+ * Generate static paths for all projects at build time
+ * This tells Next.js which URLs to pre-build as static pages
+ *
+ * For each project, we generate paths for:
+ * - The main slug
+ * - All aliases
+ *
+ * This ensures both /projects/swift-academy and /projects/gcode-academy
+ * are valid URLs that Next.js knows how to handle
  */
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+  const allSlugs: { slug: string }[] = [];
+
+  projects.forEach((project) => {
+    // Add the main slug
+    allSlugs.push({ slug: project.slug });
+
+    // Add all aliases (if any exist)
+    if (project.aliases) {
+      project.aliases.forEach((alias) => {
+        allSlugs.push({ slug: alias });
+      });
+    }
+  });
+
+  return allSlugs;
 }
 
 /**
@@ -54,10 +83,20 @@ function ProjectContainer({ children }: { children: React.ReactNode }) {
  */
 export default async function ProjectDetailPage({ params }: ProjectDetailParams) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = findProjectBySlug(slug);
 
+  // If no project found with this slug or alias, go to 404
   if (!project) {
     redirect('/project-not-found');
+  }
+
+  if (slug !== project.slug) {
+    redirect(`/projects/${project.slug}`);
+  }
+  // If user accessed via an alias, redirect to main slug
+  // Ensures: Consistency, better SEO (search engines see one canonical URL), and analytics use the main URL
+  if (slug !== project.slug) {
+    redirect(`/projects/${project.slug}`);
   }
 
   return (

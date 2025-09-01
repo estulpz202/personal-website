@@ -8,6 +8,7 @@ export type ProjectCategory = 'fullstack' | 'ai' | 'web' | 'mobile';
  */
 export interface Project {
   slug: string; // URL-friendly identifier
+  aliases?: string[]; // Optional alternate slugs that should route to this project
   title: string; // Project name
   subtitle: string; // Short tagline
   description: string; // Brief project overview
@@ -33,8 +34,9 @@ export interface Project {
  */
 export const projects: Project[] = [
   {
-    slug: 'gcode-academy',
-    title: 'Gcode Academy',
+    slug: 'swift-academy',
+    aliases: ['gcode-academy'],
+    title: 'Swift Academy',
     subtitle: 'Educational iOS App',
     description:
       'A learning platform making Swift and iOS development accessible through a progression-based path with integrated AI assistance.',
