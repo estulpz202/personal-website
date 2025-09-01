@@ -1,9 +1,9 @@
 export const recentProjs = [
   {
-    title: 'Gcode Academy',
+    title: 'Swift Academy',
     description: 'Educational iOS app with AI assistance and MVVM architecture',
     tech: ['SwiftUI', 'OpenAI API', 'Python'],
-    href: '/projects/gcode-academy',
+    href: '/projects/swift-academy',
   },
   {
     title: 'Hive',
