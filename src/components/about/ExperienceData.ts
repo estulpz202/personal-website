@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
     logoSrc: '/images/logos/pfl_logo.jpg',
     highlights: [
       'Created and taught a comprehensive program for 30 students, covering binary systems, data structures, GitHub workflows, and mobile app development using Swift and Python',
-      'Guided a student team in developing a fullstack iOS application with backend integration, aiming for App Store release (<a href="/projects/gcode-academy" class="link">Gcode Academy</a>)',
+      'Guided a student team in developing a fullstack iOS application with backend integration, aiming for App Store release (<a href="/projects/swift-academy" class="link">Swift Academy</a>)',
     ],
     skills: ['SwiftUI', 'Fullstack', 'Python', 'GitHub'],
   },
