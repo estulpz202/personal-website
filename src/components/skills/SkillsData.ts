@@ -41,9 +41,10 @@ export const homeSkillsData: SkillCategory[] = [
     title: 'Tools & Practices',
     skills: [
       { name: 'GitHub', icon: 'github' },
+      { name: 'Agile & Scrum', icon: 'scrum' },
       { name: 'LLM API', icon: 'llmapi' },
       { name: 'DevOps', icon: 'devops' },
-      { name: 'Testing', icon: 'testing' },
+      // { name: 'Testing', icon: 'testing' },
     ],
   },
 ];
@@ -83,12 +84,13 @@ export const skillsData: SkillsDataType = {
     title: 'Tools & Practices',
     skills: [
       { name: 'GitHub' },
+      { name: 'Agile + Scrum' },
       { name: 'CI/CD' },
       { name: 'CLI Tools' },
       { name: 'Test + Debug' },
       { name: 'DevOps' },
       { name: 'UI/UX Principles' },
-      { name: 'Package Managers' },
+      // { name: 'Package Managers' },
       { name: 'Docker' },
     ],
   },
