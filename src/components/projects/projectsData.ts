@@ -44,7 +44,7 @@ export const projects: Project[] = [
     bannerImageUrl: '/images/projects/swift_academy_banner.jpg',
     centerImage: true,
     category: ['mobile', 'ai', 'fullstack'],
-    tech: ['SwiftUI', 'Python', 'FastAPI', 'OpenAI API', 'UI/UX', 'GitHub'],
+    tech: ['SwiftUI', 'Firebase', 'Python', 'FastAPI', 'OpenAI API', 'UI/UX', 'GitHub'],
     highlights: [
       'Created a Swift education app with a visually distinctive zig-zag lesson path, planned for App Store release',
       'Integrated an AI Code Coach using Python, FastAPI, and OpenAI API for personalized programming support',

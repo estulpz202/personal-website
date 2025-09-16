@@ -2,7 +2,7 @@ export const recentProjs = [
   {
     title: 'Swift Academy',
     description: 'Educational iOS app with AI assistance and MVVM architecture',
-    tech: ['SwiftUI', 'OpenAI API', 'Python'],
+    tech: ['SwiftUI', 'Firebase', 'OpenAI API'],
     href: '/projects/swift-academy',
   },
   {
