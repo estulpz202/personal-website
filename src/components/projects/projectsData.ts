@@ -39,7 +39,7 @@ export const projects: Project[] = [
     title: 'Swift Academy',
     subtitle: 'Educational iOS App',
     description:
-      'A learning platform making Swift and iOS development accessible through a progression-based path with integrated AI assistance.',
+      'A learning platform making Swift and iOS development accessible with an AI tutor and Firebase for auth/data.',
     imageUrl: '/images/projects/swift_academy.jpg',
     bannerImageUrl: '/images/projects/swift_academy_banner.jpg',
     centerImage: true,
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     highlights: [
       'Created a Swift education app with a visually distinctive zig-zag lesson path, planned for App Store release',
       'Integrated an AI Code Coach using Python, FastAPI, and OpenAI API for personalized programming support',
+      'Implemented Firebase Auth and Firestore for secure sign-in and persistent progress tracking',
       'Applied a modular MVVM architecture for scalability and clear separation of concerns',
-      'Built a modern authentication system with animated visuals and a smooth user experience',
     ],
     links: [
       { label: 'Frontend GitHub', url: 'https://github.com/pflc3/swift-academy', icon: 'github' },
