@@ -35,15 +35,20 @@ export default function ResumePage() {
             </p>
             <div className="flex gap-2 sm:gap-3">
               <DownloadButton
-                href="/resume.pdf"
-                filename="Estuardo_Lopez_Resume.pdf"
+                href="/EstuardoLopez.pdf"
+                filename="EstuardoLopez.pdf"
                 size="small"
                 icon="download"
               >
                 Download PDF
               </DownloadButton>
 
-              <SecondaryButton href="/resume.pdf" external={true} size="small" icon="external-link">
+              <SecondaryButton
+                href="/EstuardoLopez.pdf"
+                external={true}
+                size="small"
+                icon="external-link"
+              >
                 Open in New Tab
               </SecondaryButton>
             </div>
@@ -54,7 +59,7 @@ export default function ResumePage() {
         <div className="w-full rounded-lg overflow-hidden shadow-sm border border-gray-200">
           {/* Image - For large screens and below */}
           <div className="xl:hidden w-full">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/EstuardoLopez.pdf" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/resume/resume_preview.jpg"
                 alt="Estuardo Lopez Resume"
@@ -69,7 +74,7 @@ export default function ResumePage() {
           {/* Embedded PDF Viewer - For xl screens and above */}
           <div className="hidden xl:block">
             <iframe
-              src="/resume.pdf"
+              src="/EstuardoLopez.pdf"
               title="Estuardo Lopez Resume"
               width="100%"
               height="1200px"
