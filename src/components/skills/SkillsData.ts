@@ -31,7 +31,7 @@ export const homeSkillsData: SkillCategory[] = [
     title: 'Technologies',
     skills: [
       { name: 'FastAPI', icon: 'fastapi' },
-      { name: 'MySQL', icon: 'mysql' },
+      { name: 'SQL & MySQL', icon: 'mysql' },
       { name: 'Firebase', icon: 'firebase' },
       // { name: 'Node.js', icon: 'nodejs' },
       { name: 'Next.js', icon: 'nextjs' },
@@ -74,7 +74,7 @@ export const skillsData: SkillsDataType = {
     title: 'Technologies & Frameworks',
     skills: [
       { name: 'FastAPI' },
-      { name: 'MySQL' },
+      { name: 'SQL + MySQL' },
       { name: 'Firebase' },
       { name: 'Next.js' },
       { name: 'SwiftUI' },
