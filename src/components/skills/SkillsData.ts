@@ -28,7 +28,7 @@ export const homeSkillsData: SkillCategory[] = [
     ],
   },
   {
-    title: 'Fullstack',
+    title: 'Technologies',
     skills: [
       { name: 'FastAPI', icon: 'fastapi' },
       { name: 'MySQL', icon: 'mysql' },
@@ -40,13 +40,13 @@ export const homeSkillsData: SkillCategory[] = [
     ],
   },
   {
-    title: 'Tools & Practices',
+    title: 'Dev & Systems',
     skills: [
       { name: 'GitHub', icon: 'github' },
       { name: 'Agile & Scrum', icon: 'scrum' },
-      { name: 'Data Pipelines/Wrangling', icon: 'data' },
-      { name: 'LLM API', icon: 'llmapi' },
-      { name: 'DevOps', icon: 'devops' },
+      { name: 'Data Pipelines & ETL', icon: 'data' },
+      { name: 'DevOps (CI/CD, Docker)', icon: 'devops' },
+      { name: 'LLMs', icon: 'llm' },
       // { name: 'Testing', icon: 'testing' },
     ],
   },
