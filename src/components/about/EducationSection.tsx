@@ -10,13 +10,17 @@ import Icon from '@/components/ui/Icon';
  */
 const courses = [
   'Parallel and Sequential DS & Algos',
+  'Data Engineering',
+  'Intro to Computer Systems',
+
   'Foundations of SWE',
   'Princ of Software Construction',
   'Princ of Imperative Computation',
-  'Intro to Computer Systems',
-  'Great Ideas in Theoretical CS',
+
   'Princ of Functional Programming',
-  'Mathematical Foundations for CS',
+  'Math Foundations for CS',
+  'Great Ideas in Theoretical CS',
+  // 'Practical DS for Devs',
 ];
 
 /**
@@ -29,13 +33,17 @@ const truncatedCourses = courses.slice(0, 6);
  */
 const shorterCourses = [
   'Parallel and Seq DS & Algos',
+  'Data Engineering',
+  'Computer Systems',
+
   'Foundations of SWE',
   'Software Construction',
   'Imperative Computation',
-  'Computer Systems',
-  'Great Ideas in Theoretical CS',
+
   'Functional Programming',
   'Math Foundations for CS',
+  'Great Ideas in Theoretical CS',
+  // 'DS for Devs',
 ];
 
 /**
