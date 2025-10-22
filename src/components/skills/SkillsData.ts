@@ -24,12 +24,14 @@ export const homeSkillsData: SkillCategory[] = [
       { name: 'TypeScript', icon: 'typescript' },
       { name: 'Java', icon: 'java' },
       { name: 'C', icon: 'c' },
+      { name: 'Swift', icon: 'swift' },
     ],
   },
   {
     title: 'Fullstack',
     skills: [
       { name: 'FastAPI', icon: 'fastapi' },
+      { name: 'MySQL', icon: 'mysql' },
       { name: 'Firebase', icon: 'firebase' },
       // { name: 'Node.js', icon: 'nodejs' },
       { name: 'Next.js', icon: 'nextjs' },
@@ -42,6 +44,7 @@ export const homeSkillsData: SkillCategory[] = [
     skills: [
       { name: 'GitHub', icon: 'github' },
       { name: 'Agile & Scrum', icon: 'scrum' },
+      { name: 'Data Pipelines/Wrangling', icon: 'data' },
       { name: 'LLM API', icon: 'llmapi' },
       { name: 'DevOps', icon: 'devops' },
       // { name: 'Testing', icon: 'testing' },
