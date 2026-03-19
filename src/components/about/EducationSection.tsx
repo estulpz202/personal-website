@@ -9,16 +9,17 @@ import Icon from '@/components/ui/Icon';
  * List of notable courses
  */
 const courses = [
+  'Algo Design and Analysis',
   'Parallel and Sequential DS & Algos',
-  'Data Engineering',
+  'Foundations of SWE',
   'Intro to Computer Systems',
 
-  'Foundations of SWE',
   'Princ of Software Construction',
+  'Math Foundations for CS',
   'Princ of Imperative Computation',
 
   'Princ of Functional Programming',
-  'Math Foundations for CS',
+  'Data Engineering',
   'Great Ideas in Theoretical CS',
   // 'Practical DS for Devs',
 ];
@@ -32,16 +33,17 @@ const truncatedCourses = courses.slice(0, 6);
  * Shorter name courses
  */
 const shorterCourses = [
+  'Algo Design & Analys',
   'Parallel and Seq DS & Algos',
-  'Data Engineering',
+  'Foundations of SWE',
   'Computer Systems',
 
-  'Foundations of SWE',
   'Software Construction',
+  'Math Foundations for CS',
   'Imperative Computation',
 
   'Functional Programming',
-  'Math Foundations for CS',
+  'Data Engineering',
   'Great Ideas in Theoretical CS',
   // 'DS for Devs',
 ];
@@ -110,7 +112,7 @@ export default function EducationSection() {
 
                 <div className="flex items-center mt-3 sm:mt-4">
                   <span className="bg-indigo-50 text-indigo-600 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs sm:text-sm font-medium">
-                    QPA: 3.54
+                    QPA: 3.47
                   </span>
                 </div>
               </div>
