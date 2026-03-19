@@ -18,7 +18,7 @@ export default function HeroSection() {
             </h1>
 
             <h2 className="text-xl sm:text-[22px] md:text-2xl text-gray-600 font-medium">
-              Software Engineer
+              Incoming SWE @ Barclays
             </h2>
           </div>
 
@@ -55,9 +55,9 @@ export default function HeroSection() {
 
           {/* Professional summary and interests */}
           <p className="text-sm sm:text-base text-gray-700 mb-6 sm:mb-7 md:mb-8 max-w-xl">
-            Building meaningful software with a focus on thoughtful design and real world impact.
-            Passionate about fullstack development, especially backend systems and collaborative
-            engineering. Always learning, both by design and by curiosity.
+            Building meaningful software with a focus on thoughtful design and real-world impact.
+            Interested in full-stack development, especially backend systems and collaborative
+            engineering. Always learning through both design and curiosity.
           </p>
 
           {/* CTA navigation buttons to key sections */}
