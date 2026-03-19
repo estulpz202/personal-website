@@ -74,7 +74,7 @@ export const skillsData: SkillsDataType = {
     title: 'Technologies & Frameworks',
     skills: [
       { name: 'FastAPI' },
-      { name: 'SQL + MySQL' },
+      { name: 'MySQL + MongoDB' },
       { name: 'Firebase' },
       { name: 'Next.js' },
       { name: 'SwiftUI' },

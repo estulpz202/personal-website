@@ -25,8 +25,8 @@ export default function LifeFamily() {
             <p className="text-sm sm:text-base text-gray-700">
               Family means everything to me. It keeps me grounded and gives me perspective. From
               holiday traditions to life's big milestones, these relationships remind me what truly
-              matters. The values they've instilled in me, like honesty, compassion, and
-              perseverance, shape how I show up in both life and work.
+              matters. The values they've instilled in me, like compassion and perseverance, shape
+              how I show up in both life and work.
             </p>
           </div>
         </div>

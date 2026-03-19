@@ -37,19 +37,19 @@ export default function JourneySection() {
           <div className="flex-1 text-gray-700">
             <p className="text-base sm:text-lg mb-3 sm:mb-4">
               I'm a Computer Science student at Carnegie Mellon University, pursuing a concentration
-              in Software Engineering and a minor in History. My path in tech has been driven by a
-              fascination with how software can solve complex problems and improve lives.
+              in Software Engineering and a minor in History. My interest in tech started with a
+              curiosity about how software can solve real problems and make things work better in
+              everyday life.
             </p>
             <p className="mb-3 sm:mb-4">
-              Through CMU coursework and hands-on projects, I've built a strong foundation in
-              everything from low-level programming to fullstack application development. I'm fluent
-              in multiple programming languages and comfortable with modern tools and practices.
+              At CMU, that curiosity has grown through coursework and hands-on projects, from
+              low-level systems to fullstack applications. I've worked with a range of languages and
+              tools, and this summer I'll be joining Barclays as a Technology Developer Intern.
             </p>
             <p>
-              I'm motivated by the opportunity to build technology that makes a meaningful impact,
-              whether it's designing applications with RESTful APIs or mentoring high school
-              students through their first coding experiences. I aim to create software that serves
-              real needs while maintaining technical excellence.
+              I enjoy building software that is clean, practical, and reliable, and I've also spent
+              time mentoring students as they learn to code. I'm interested in creating technology
+              that's not just technically strong, but genuinely useful.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default function JourneySection() {
                   hover:shadow-md active:shadow-md transition-shadow duration-300
                 "
               >
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <div className="bg-indigo-50 p-2 sm:p-2.5 ml-4 md:ml-1 lg:ml-3 rounded-lg flex items-center justify-center">
                     <Icon name={value.icon} className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
                   </div>
