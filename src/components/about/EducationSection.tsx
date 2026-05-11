@@ -112,7 +112,7 @@ export default function EducationSection() {
 
                 <div className="flex items-center mt-3 sm:mt-4">
                   <span className="bg-indigo-50 text-indigo-600 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs sm:text-sm font-medium">
-                    QPA: 3.47
+                    QPA: 3.25
                   </span>
                 </div>
               </div>

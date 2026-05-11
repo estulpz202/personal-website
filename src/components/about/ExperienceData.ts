@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     timePeriod: 'Summer 2026',
     logoSrc: '/images/logos/bcs_logo.svg',
     highlights: [
-      'Incoming intern focused on building scalable software, collaborating with cross-functional teams, and applying best practices in backend development and code quality within a fintech environment.',
+      'Incoming Technology Developer Intern at Barclays for Summer 2026, working within a global fintech environment.',
     ],
     skills: ['FinTech', 'Backend', 'Scale', 'Collaboration'],
   },
